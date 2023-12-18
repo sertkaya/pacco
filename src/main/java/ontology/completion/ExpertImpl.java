@@ -18,43 +18,43 @@ import org.semanticweb.owlapi.model.OWLOntologyCreationException;
  * An expert implementation that completes queries w.r.t. an expert ontology.
  */
 public class ExpertImpl implements ExpertOracle {
-	private Set<OWLClassExpression> C;
-	private OWLDataFactory df;
-	private OWLOntology o;
-	private OWLReasoner r;
+	private Set<OWLClassExpression> baseSet;
+	private OWLDataFactory dataFactory;
+	private OWLOntology ontology;
+	private OWLReasoner reasoner;
 	
 	public ExpertImpl(IRI iri, Set<OWLClassExpression> C) {
 		OWLOntologyManager om = OWLManager.createOWLOntologyManager();
 		OWLDataFactory df = om.getOWLDataFactory();
 		try {
-			this.o = om.loadOntology(iri);
+			this.ontology = om.loadOntology(iri);
 		}
 		catch (OWLOntologyCreationException e) {
 			System.err.print("Error loading ontology");
 			System.exit(-1);
 		}
 		OWLReasonerFactory rf = new ReasonerFactory();
-		this.r = rf.createReasoner(o);
-		r.precomputeInferences(InferenceType.CLASS_HIERARCHY);
-		this.df = df;
-		this.C = C;
+		this.reasoner = rf.createReasoner(ontology);
+		reasoner.precomputeInferences(InferenceType.CLASS_HIERARCHY);
+		this.dataFactory = df;
+		this.baseSet = C;
 	}
 
-	public Set<OWLClassExpression> complete(Set<OWLClassExpression> X) {
-		OWLClassExpression xExpr = df.getOWLObjectIntersectionOf(X);
+	public Set<OWLClassExpression> complete(Set<OWLClassExpression> query) {
+		OWLClassExpression queryConjunction = dataFactory.getOWLObjectIntersectionOf(query);
 		
-		if (xExpr.isBottomEntity())
-			return(this.C);
+		if (queryConjunction.isBottomEntity())
+			return(this.baseSet);
 
-		Set<OWLClassExpression> y = X;
-		for (OWLClassExpression c : this.C) {
-			if (!X.contains(c)) {
-				OWLSubClassOfAxiom ax = df.getOWLSubClassOfAxiom(xExpr, c);
-				if (r.isEntailed(ax))
-					y.add(c);
+		Set<OWLClassExpression> completion = query;
+		for (OWLClassExpression c : this.baseSet) {
+			if (!query.contains(c)) {
+				OWLSubClassOfAxiom ax = dataFactory.getOWLSubClassOfAxiom(queryConjunction, c);
+				if (reasoner.isEntailed(ax))
+					completion.add(c);
 			}
 		}
 		
-		return(y);
+		return(completion);
 	}
 }
