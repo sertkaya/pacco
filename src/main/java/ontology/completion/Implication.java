@@ -30,4 +30,16 @@ public class Implication {
 	public Set<OWLClassExpression> getConclusion() {
 		return(this.conclusion);
 	}
+	
+	public String toString() {
+		String s = "{";
+		for (OWLClassExpression clsExp : this.getPremise())
+			s += clsExp.toString() + " ";
+		s += "} => {";
+		for (OWLClassExpression clsExp : this.getConclusion())
+			s += clsExp.toString() + " ";
+		s += "}";
+		
+		return(s);
+	}
 }

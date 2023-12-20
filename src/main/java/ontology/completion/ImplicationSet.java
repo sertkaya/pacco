@@ -16,13 +16,21 @@ public class ImplicationSet extends LinkedHashSet<Implication>{
 	 */
 	private final Hashtable<OWLClassExpression, Set<Implication>> occursInPremises;
 	
-	public ImplicationSet() {
+	public ImplicationSet(Set<OWLClassExpression> baseSet) {
 		super();
 		this.occursInPremises = new Hashtable<>();
+		for (OWLClassExpression clsExp : baseSet) {
+			this.occursInPremises.put(clsExp, new HashSet<>());
+		}
 	}
 	
 	@Override
 	public boolean add(Implication imp) {
+		// First check if an implication with the same premise and conclusion already exists
+		for (Implication x : this) {
+			if (x.getPremise().equals(imp.getPremise()) && x.getConclusion().equals(imp.getConclusion()))
+				return(true);
+		}
 		Set<Implication> tmp;
 		for (OWLClassExpression clsExpr : imp.getPremise()) {
 			tmp = this.occursInPremises.get(clsExpr);

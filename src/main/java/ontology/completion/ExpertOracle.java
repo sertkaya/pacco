@@ -1,12 +1,15 @@
 package ontology.completion;
 
-import java.util.Set;
-import org.semanticweb.owlapi.model.OWLClassExpression;
+import org.semanticweb.owlapi.model.OWLOntology;
+import org.semanticweb.owlapi.model.OWLSubClassOfAxiom;
 
 public interface ExpertOracle {
 
 	/*
-	 * Completes a given set of concept expression w.r.t. expert knowledge
+	 * Does the implication hold in expert's view?
 	 */
-	public Set<OWLClassExpression> complete(Set<OWLClassExpression> X);
+	public boolean holds(OWLSubClassOfAxiom ax);
+	
+	public OWLOntology getExpertOntology();
+	
 }

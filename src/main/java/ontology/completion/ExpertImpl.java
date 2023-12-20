@@ -40,7 +40,8 @@ public class ExpertImpl implements ExpertOracle {
 		this.baseSet = C;
 	}
 
-	public Set<OWLClassExpression> complete(Set<OWLClassExpression> query) {
+	/*
+	public Set<OWLClassExpression> complete(Set<OWLClassExpression> query, OWLOntology o) {
 		OWLClassExpression queryConjunction = dataFactory.getOWLObjectIntersectionOf(query);
 		
 		if (queryConjunction.isBottomEntity())
@@ -56,5 +57,19 @@ public class ExpertImpl implements ExpertOracle {
 		}
 		
 		return(completion);
+	}
+	*/
+	
+	public boolean holds(Implication imp) {
+		OWLSubClassOfAxiom ax = imp.toGCI();
+		return(reasoner.isEntailed(ax));
+	}
+
+	public boolean holds(OWLSubClassOfAxiom ax) {
+		return(reasoner.isEntailed(ax));
+	}
+
+	public OWLOntology getExpertOntology() {
+		return(ontology);
 	}
 }
