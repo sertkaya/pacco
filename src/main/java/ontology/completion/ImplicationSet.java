@@ -29,7 +29,7 @@ public class ImplicationSet extends LinkedHashSet<Implication>{
 		// First check if an implication with the same premise and conclusion already exists
 		for (Implication x : this) {
 			if (x.getPremise().equals(imp.getPremise()) && x.getConclusion().equals(imp.getConclusion()))
-				return(true);
+				return(false);
 		}
 		Set<Implication> tmp;
 		for (OWLClassExpression clsExpr : imp.getPremise()) {
@@ -76,6 +76,16 @@ public class ImplicationSet extends LinkedHashSet<Implication>{
 			}
 		}
 		return newDep;
+	}
+	
+	/*
+	 * Return the implication with the given premise and conclusion. null if not found.
+	 */
+	public Implication getImplication(Set<OWLClassExpression> premise, Set<OWLClassExpression> conclusion) {
+		for (Implication imp : this)
+			if (imp.getPremise().equals(premise) && imp.getConclusion().equals(conclusion))
+				return(imp);
+		return(null);
 	}
 	
 	/**
