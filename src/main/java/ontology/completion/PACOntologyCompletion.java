@@ -65,26 +65,40 @@ public class PACOntologyCompletion {
 			}
 		}
 		
-		// TODO: is returning emptyset correct in this case? Check.
-		Set<OWLClassExpression> ce = Collections.<OWLClassExpression>emptySet();
-		return(ce);
+		// TODO Check this: is returning emptyset correct in this case? .
+		// Set<OWLClassExpression> ce = Collections.<OWLClassExpression>emptySet();
+		// return(ce);
+		return(null);
 	}
 	
+	/*
+	 * Given epsilon, delta, and iteration i returns the number of calls to the sampling oracle.
+	 */
 	public int callsToSamplingOracle(double epsilon, double delta, int i) {
 		return((int) Math.ceil(Math.log(delta/(i*(i + 1))) / Math.log(1 - epsilon)));
 	}
 	
-	public Set<OWLClassExpression> complete(Set<OWLClassExpression> baseSet, Set<OWLClassExpression> query, OWLOntology o, ExpertOracle e) {
+	/*
+	 * Complete a given set of concept expressions 
+	 * baseSet: The base set of concept expressions 
+	 * query: The set of concept expressions to be completed
+	 * ontology: 
+	 * expert: The domain expert
+	 */
+	public Set<OWLClassExpression> complete(Set<OWLClassExpression> baseSet, Set<OWLClassExpression> query, OWLOntology ontology, ExpertOracle expert) {
 		OWLClassExpression queryConjunction = df.getOWLObjectIntersectionOf(query);
 		
-		if (queryConjunction.isBottomEntity())
-			return(baseSet);
+		if (queryConjunction.isBottomEntity()) {
+			Set<OWLClassExpression> s = new HashSet<OWLClassExpression>();
+			s.add(df.getOWLNothing());
+			return(s);
+		}
 
-		Set<OWLClassExpression> completion = query;
+		Set<OWLClassExpression> completion = new HashSet<OWLClassExpression>(query);
 		for (OWLClassExpression c : baseSet) {
 			if (!query.contains(c)) {
 				OWLSubClassOfAxiom ax = df.getOWLSubClassOfAxiom(queryConjunction, c);
-				if (r.isEntailed(ax) || e.holds(ax))
+				if (r.isEntailed(ax) || expert.holds(ax))
 					completion.add(c);
 			}
 		}
@@ -92,25 +106,33 @@ public class PACOntologyCompletion {
 		return(completion);
 	}
 	
-	public OWLOntology upperApproximation(Set<OWLClassExpression> baseSet, ExpertOracle eo, SamplingOracle so, OWLOntology o, double epsilon, double delta) {
+	/*
+	 * Computes an upper approximation of expert's view of the domain.
+	 * ontology: the initial ontology
+	 */
+	public OWLOntology upperApproximation(Set<OWLClassExpression> baseSet, ExpertOracle expert, SamplingOracle sampler, OWLOntology ontology, double epsilon, double delta) {
 		ImplicationSet imps = new ImplicationSet(baseSet);
 		Set<OWLClassExpression> counterExample;
 		
-		// Hashtable storing implication->GCI
-		// key: implicaton 
-		// value: corresponding GCI
+		// Hashtable for storing implication -> GCI. 
+		// Later used to find out the GCI to remove from the ontology
+		// Key: implicaton 
+		// Value: corresponding GCI
 		Hashtable<Implication, OWLSubClassOfAxiom> implicationAxiomHash = new Hashtable<>();
 		
 		int iteration = 0;
 		boolean found = false;
-		while (!(counterExample = getCounterExample(baseSet, imps, o, eo, so, callsToSamplingOracle(epsilon, delta, iteration))).equals(Collections.emptySet())) {
+		// TODO: Check whether the assignment returns a value (like in C)
+		while ((counterExample = getCounterExample(baseSet, imps, ontology, expert, sampler, callsToSamplingOracle(epsilon, delta, iteration))) != null) { 
 			found = false;
 			for (Implication imp : imps) {
 				if (!counterExample.containsAll(imp.getPremise())) {
 					Set<OWLClassExpression> newPremise = new HashSet<OWLClassExpression>(imp.getPremise());
 					newPremise.retainAll(counterExample);
-					
-					Set<OWLClassExpression> newConclusion = new HashSet<OWLClassExpression>(complete(baseSet, newPremise, o, eo));
+				
+					// ontology is the initial ontology extended with GCIs resulting from new implications.
+					// every change to the implication set (like adding or removing implications) should be reflected to the ontology
+					Set<OWLClassExpression> newConclusion = new HashSet<OWLClassExpression>(complete(baseSet, newPremise, ontology, expert));
 					if (!newPremise.equals(newConclusion)) {
 						found = true;
 						// remove imp from imps
@@ -118,7 +140,7 @@ public class PACOntologyCompletion {
 						// get the GCI corresponding to imp
 						OWLSubClassOfAxiom ax = implicationAxiomHash.get(imp);
 						// remove the GCI constructed from imp from the ontology
-						o.remove(ax);
+						ontology.remove(ax);
 
 						// construct the new implication
 						Implication newImp = new Implication(newPremise, newConclusion, df);
@@ -127,27 +149,27 @@ public class PACOntologyCompletion {
 							// add the GCI constructed from newImp to the ontology
 							OWLSubClassOfAxiom newAx = newImp.toGCI();
 							implicationAxiomHash.put(newImp, newAx);
-							o.add(newAx);
+							ontology.add(newAx);
 						}
 
 					}
 				}
 			}
 			if (!found) {
-				Set<OWLClassExpression> newConclusion = new HashSet<OWLClassExpression>(complete(baseSet, counterExample, o, eo));
+				Set<OWLClassExpression> newConclusion = new HashSet<OWLClassExpression>(complete(baseSet, counterExample, ontology, expert));
 				// construct the new implication
 				Implication newImp = new Implication(counterExample, newConclusion, df);
 				if (imps.add(newImp)) {
 					// add the GCI constructed from newImp to the ontology
 					OWLSubClassOfAxiom newAx = newImp.toGCI();
 					implicationAxiomHash.put(newImp, newAx);
-					o.add(newAx);
+					ontology.add(newAx);
 				}
 			}
 			++iteration;
 		}
 		
-		return(o);
+		return(ontology);
 	}
 
 }
