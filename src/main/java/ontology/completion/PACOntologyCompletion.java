@@ -63,7 +63,7 @@ public class PACOntologyCompletion {
 		
 	}
 	
-	public Set<OWLClassExpression> getCounterExample(ImplicationSet imps, int k) {
+	public Set<OWLClassExpression> getCounterExample(ImplicationList imps, int k) {
 		for (int i = 0; i < k; ++i) {
 			Set<OWLClassExpression> query = this.sampler.sample();
 			Set<OWLClassExpression> closure = imps.closure(query);
@@ -113,7 +113,7 @@ public class PACOntologyCompletion {
 	 * ontology: the initial ontology
 	 */
 	public OWLOntology upperApproximation(double epsilon, double delta) {
-		ImplicationSet imps = new ImplicationSet(baseSet);
+		ImplicationList imps = new ImplicationList(baseSet);
 		Set<OWLClassExpression> counterExample;
 		
 		// Hashtable for storing implication -> GCI. 
@@ -127,7 +127,9 @@ public class PACOntologyCompletion {
 
 		while ((counterExample = getCounterExample(imps, callsToSamplingOracle(epsilon, delta, iteration))) != null) { 
 			found = false;
-			for (Implication imp : imps) {
+			Implication imp = null;
+			for (int i = 0; i < imps.size(); i++) {
+				imp = imps.get(i);
 				if (!counterExample.containsAll(imp.getPremise())) {
 					Set<OWLClassExpression> newPremise = new HashSet<OWLClassExpression>(imp.getPremise());
 					newPremise.retainAll(counterExample);
@@ -137,23 +139,21 @@ public class PACOntologyCompletion {
 					Set<OWLClassExpression> newConclusion = new HashSet<OWLClassExpression>(complete(newPremise));
 					if (!newPremise.equals(newConclusion)) {
 						found = true;
-						// remove imp from imps
-						imps.remove(imp);
+						// construct the new implication
+						Implication newImp = new Implication(newPremise, newConclusion, df);
+						
+						// replace imp with the newImp
+						imps.set(i, newImp);
+						
 						// get the GCI corresponding to imp
 						OWLSubClassOfAxiom ax = implicationAxiomHash.get(imp);
 						// remove the GCI constructed from imp from the ontology
 						this.ontology.remove(ax);
 
-						// construct the new implication
-						Implication newImp = new Implication(newPremise, newConclusion, df);
-						// add newImp to imps if the same implication is not already in imps
-						if (imps.add(newImp)) {
-							// add the GCI constructed from newImp to the ontology
-							OWLSubClassOfAxiom newAx = newImp.toGCI();
-							implicationAxiomHash.put(newImp, newAx);
-							this.ontology.add(newAx);
-						}
-
+						// add the GCI constructed from newImp to the ontology
+						OWLSubClassOfAxiom newAx = newImp.toGCI();
+						implicationAxiomHash.put(newImp, newAx);
+						this.ontology.add(newAx);
 					}
 				}
 			}
