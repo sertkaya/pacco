@@ -31,9 +31,9 @@ public class PACOntologyCompletion {
 	private SamplingOracle sampler;
 
 
-	/*
+	/**
 	 * 
-	 * ontology: IRI of the (possibly empty) initial ontology 
+	 * @param ontology: IRI of the (possibly empty) initial ontology 
 	 */
 	public PACOntologyCompletion(IRI ontologyIRI, ExpertOracle expert, SamplingOracle sampler) {
 		om = OWLManager.createOWLOntologyManager();
@@ -76,7 +76,7 @@ public class PACOntologyCompletion {
 		return(null);
 	}
 	
-	/*
+	/**
 	 * Given epsilon, delta, and iteration i returns the number of calls to the sampling oracle.
 	 */
 	public int callsToSamplingOracle(double epsilon, double delta, int i) {
