@@ -1,6 +1,5 @@
 package ontology.completion;
 
-import java.util.Collections;
 import java.util.Set;
 import java.util.HashSet;
 import java.util.Hashtable;
@@ -21,53 +20,59 @@ import org.semanticweb.owlapi.reasoner.OWLReasonerFactory;
 
 public class PACOntologyCompletion {
 	
-	private static OWLOntologyManager om = OWLManager.createOWLOntologyManager();
-	private static OWLDataFactory df = om.getOWLDataFactory();
-	private static OWLReasonerFactory rf = new ReasonerFactory();
-	private static OWLReasoner r;
+	private OWLOntology ontology;
+	private OWLOntologyManager om;
+	private OWLDataFactory df;
+	private OWLReasonerFactory rf;
+	private OWLReasoner reasoner;
+	
+	private Set<OWLClassExpression> baseSet;
+	private ExpertOracle expert;
+	private SamplingOracle sampler;
 
 
-	public static void main(String[] args) throws OWLOntologyCreationException {
+	/*
+	 * 
+	 * ontology: IRI of the (possibly empty) initial ontology 
+	 */
+	public PACOntologyCompletion(IRI ontologyIRI, ExpertOracle expert, SamplingOracle sampler) {
+		om = OWLManager.createOWLOntologyManager();
+		df = om.getOWLDataFactory();
+		rf = new ReasonerFactory();
 
-		// IRI of the initial ontology
-		IRI initialOntology = IRI.create(args[0]);
-		
-		// IRI of the expert ontology
-		IRI expertOntology = IRI.create(args[1]);
-		
-		Set<OWLClassExpression> baseSet = null;
+		this.baseSet = new HashSet<OWLClassExpression>();
 		// TODO: read the baseSet! From file? 
 		// or let the user select from a list?
 
-		OWLOntology o = null;
+		OWLOntology ontology = null;
 		try {
-			o = om.loadOntology(initialOntology);
+			ontology = om.loadOntology(ontologyIRI);
 		}
 		catch (OWLOntologyCreationException e) {
 			System.err.print("Error loading ontology");
 			System.exit(-1);
 		}
-		r = rf.createReasoner(o);
-		r.precomputeInferences(InferenceType.CLASS_HIERARCHY);
+		this.ontology = ontology;
 		
-		ExpertOracle eo = new ExpertImpl(expertOntology, baseSet);
-		SamplingOracle so = new SamplingOracle(baseSet);
+		this.reasoner = rf.createReasoner(ontology);
+		this.reasoner.precomputeInferences(InferenceType.CLASS_HIERARCHY);
+
+		this.expert = expert;
+		this.sampler = sampler;
+		
 		
 	}
 	
-	public Set<OWLClassExpression> getCounterExample(Set<OWLClassExpression> baseSet, ImplicationSet imps, OWLOntology o, ExpertOracle eo, SamplingOracle so, int k) {
+	public Set<OWLClassExpression> getCounterExample(ImplicationSet imps, int k) {
 		for (int i = 0; i < k; ++i) {
-			Set<OWLClassExpression> query = so.sample();
+			Set<OWLClassExpression> query = this.sampler.sample();
 			Set<OWLClassExpression> closure = imps.closure(query);
-			Set<OWLClassExpression> completion = complete(baseSet, closure, o, eo);
+			Set<OWLClassExpression> completion = complete(closure);
 			if (!closure.equals(completion)) {
 				return(closure);
 			}
 		}
 		
-		// TODO Check this: is returning emptyset correct in this case? .
-		// Set<OWLClassExpression> ce = Collections.<OWLClassExpression>emptySet();
-		// return(ce);
 		return(null);
 	}
 	
@@ -80,13 +85,10 @@ public class PACOntologyCompletion {
 	
 	/*
 	 * Complete a given set of concept expressions 
-	 * baseSet: The base set of concept expressions 
 	 * query: The set of concept expressions to be completed
-	 * ontology: 
-	 * expert: The domain expert
 	 */
-	public Set<OWLClassExpression> complete(Set<OWLClassExpression> baseSet, Set<OWLClassExpression> query, OWLOntology ontology, ExpertOracle expert) {
-		OWLClassExpression queryConjunction = df.getOWLObjectIntersectionOf(query);
+	public Set<OWLClassExpression> complete(Set<OWLClassExpression> query) {
+		OWLClassExpression queryConjunction = this.df.getOWLObjectIntersectionOf(query);
 		
 		if (queryConjunction.isBottomEntity()) {
 			Set<OWLClassExpression> s = new HashSet<OWLClassExpression>();
@@ -95,10 +97,10 @@ public class PACOntologyCompletion {
 		}
 
 		Set<OWLClassExpression> completion = new HashSet<OWLClassExpression>(query);
-		for (OWLClassExpression c : baseSet) {
+		for (OWLClassExpression c : this.baseSet) {
 			if (!query.contains(c)) {
 				OWLSubClassOfAxiom ax = df.getOWLSubClassOfAxiom(queryConjunction, c);
-				if (r.isEntailed(ax) || expert.holds(ax))
+				if (this.reasoner.isEntailed(ax) || this.expert.holds(ax))
 					completion.add(c);
 			}
 		}
@@ -110,7 +112,7 @@ public class PACOntologyCompletion {
 	 * Computes an upper approximation of expert's view of the domain.
 	 * ontology: the initial ontology
 	 */
-	public OWLOntology upperApproximation(Set<OWLClassExpression> baseSet, ExpertOracle expert, SamplingOracle sampler, OWLOntology ontology, double epsilon, double delta) {
+	public OWLOntology upperApproximation(double epsilon, double delta) {
 		ImplicationSet imps = new ImplicationSet(baseSet);
 		Set<OWLClassExpression> counterExample;
 		
@@ -122,8 +124,8 @@ public class PACOntologyCompletion {
 		
 		int iteration = 0;
 		boolean found = false;
-		// TODO: Check whether the assignment returns a value (like in C)
-		while ((counterExample = getCounterExample(baseSet, imps, ontology, expert, sampler, callsToSamplingOracle(epsilon, delta, iteration))) != null) { 
+
+		while ((counterExample = getCounterExample(imps, callsToSamplingOracle(epsilon, delta, iteration))) != null) { 
 			found = false;
 			for (Implication imp : imps) {
 				if (!counterExample.containsAll(imp.getPremise())) {
@@ -132,7 +134,7 @@ public class PACOntologyCompletion {
 				
 					// ontology is the initial ontology extended with GCIs resulting from new implications.
 					// every change to the implication set (like adding or removing implications) should be reflected to the ontology
-					Set<OWLClassExpression> newConclusion = new HashSet<OWLClassExpression>(complete(baseSet, newPremise, ontology, expert));
+					Set<OWLClassExpression> newConclusion = new HashSet<OWLClassExpression>(complete(newPremise));
 					if (!newPremise.equals(newConclusion)) {
 						found = true;
 						// remove imp from imps
@@ -140,7 +142,7 @@ public class PACOntologyCompletion {
 						// get the GCI corresponding to imp
 						OWLSubClassOfAxiom ax = implicationAxiomHash.get(imp);
 						// remove the GCI constructed from imp from the ontology
-						ontology.remove(ax);
+						this.ontology.remove(ax);
 
 						// construct the new implication
 						Implication newImp = new Implication(newPremise, newConclusion, df);
@@ -149,21 +151,21 @@ public class PACOntologyCompletion {
 							// add the GCI constructed from newImp to the ontology
 							OWLSubClassOfAxiom newAx = newImp.toGCI();
 							implicationAxiomHash.put(newImp, newAx);
-							ontology.add(newAx);
+							this.ontology.add(newAx);
 						}
 
 					}
 				}
 			}
 			if (!found) {
-				Set<OWLClassExpression> newConclusion = new HashSet<OWLClassExpression>(complete(baseSet, counterExample, ontology, expert));
+				Set<OWLClassExpression> newConclusion = new HashSet<OWLClassExpression>(complete(counterExample));
 				// construct the new implication
 				Implication newImp = new Implication(counterExample, newConclusion, df);
 				if (imps.add(newImp)) {
 					// add the GCI constructed from newImp to the ontology
 					OWLSubClassOfAxiom newAx = newImp.toGCI();
 					implicationAxiomHash.put(newImp, newAx);
-					ontology.add(newAx);
+					this.ontology.add(newAx);
 				}
 			}
 			++iteration;
