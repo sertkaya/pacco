@@ -83,9 +83,9 @@ public class PACOntologyCompletion {
 		return((int) Math.ceil(Math.log(delta/(i*(i + 1))) / Math.log(1 - epsilon)));
 	}
 	
-	/*
+	/**
 	 * Complete a given set of concept expressions 
-	 * query: The set of concept expressions to be completed
+	 * @param query The set of concept expressions to be completed
 	 */
 	public Set<OWLClassExpression> complete(Set<OWLClassExpression> query) {
 		OWLClassExpression queryConjunction = this.df.getOWLObjectIntersectionOf(query);
@@ -108,9 +108,9 @@ public class PACOntologyCompletion {
 		return(completion);
 	}
 	
-	/*
+	/**
 	 * Computes an upper approximation of expert's view of the domain.
-	 * ontology: the initial ontology
+	 * @param ontology the initial ontology
 	 */
 	public OWLOntology upperApproximation(double epsilon, double delta) {
 		ImplicationList imps = new ImplicationList(baseSet);

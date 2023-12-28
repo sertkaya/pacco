@@ -35,7 +35,6 @@ public class TestImplicationList {
 		baseSet.add(existsRA);
 		baseSet.add(existsRB);
 		
-	
 		Set<OWLClassExpression> premise1 = new HashSet<OWLClassExpression>();
 		Set<OWLClassExpression> conclusion1 = new HashSet<OWLClassExpression>();
 		
@@ -84,7 +83,5 @@ public class TestImplicationList {
 		Set<OWLClassExpression> closure = imps.closure(x);
 		
 		System.out.println(closure);
-
 	}
-
 }

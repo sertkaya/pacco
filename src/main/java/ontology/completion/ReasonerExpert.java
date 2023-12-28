@@ -14,16 +14,16 @@ import org.semanticweb.owlapi.reasoner.OWLReasoner;
 import org.semanticweb.owlapi.reasoner.OWLReasonerFactory;
 import org.semanticweb.owlapi.model.OWLOntologyCreationException;
 
-/*
- * An expert implementation that completes queries w.r.t. an expert ontology.
+/**
+ * An expert implementation that answers questions w.r.t. an expert ontology.
  */
-public class ExpertImpl implements ExpertOracle {
+public class ReasonerExpert implements ExpertOracle {
 	private Set<OWLClassExpression> baseSet;
 	private OWLDataFactory dataFactory;
 	private OWLOntology ontology;
 	private OWLReasoner reasoner;
 	
-	public ExpertImpl(IRI iri, Set<OWLClassExpression> C) {
+	public ReasonerExpert(IRI iri, Set<OWLClassExpression> baseSet) {
 		OWLOntologyManager om = OWLManager.createOWLOntologyManager();
 		OWLDataFactory df = om.getOWLDataFactory();
 		try {
@@ -37,29 +37,9 @@ public class ExpertImpl implements ExpertOracle {
 		this.reasoner = rf.createReasoner(ontology);
 		reasoner.precomputeInferences(InferenceType.CLASS_HIERARCHY);
 		this.dataFactory = df;
-		this.baseSet = C;
+		this.baseSet = baseSet;
 	}
 
-	/*
-	public Set<OWLClassExpression> complete(Set<OWLClassExpression> query, OWLOntology o) {
-		OWLClassExpression queryConjunction = dataFactory.getOWLObjectIntersectionOf(query);
-		
-		if (queryConjunction.isBottomEntity())
-			return(this.baseSet);
-
-		Set<OWLClassExpression> completion = query;
-		for (OWLClassExpression c : this.baseSet) {
-			if (!query.contains(c)) {
-				OWLSubClassOfAxiom ax = dataFactory.getOWLSubClassOfAxiom(queryConjunction, c);
-				if (reasoner.isEntailed(ax))
-					completion.add(c);
-			}
-		}
-		
-		return(completion);
-	}
-	*/
-	
 	public boolean holds(Implication imp) {
 		OWLSubClassOfAxiom ax = imp.toGCI();
 		return(reasoner.isEntailed(ax));
