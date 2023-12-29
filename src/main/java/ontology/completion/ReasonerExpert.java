@@ -35,21 +35,25 @@ public class ReasonerExpert implements ExpertOracle {
 		}
 		OWLReasonerFactory rf = new ReasonerFactory();
 		this.reasoner = rf.createReasoner(ontology);
-		reasoner.precomputeInferences(InferenceType.CLASS_HIERARCHY);
+		this.reasoner.precomputeInferences(InferenceType.CLASS_HIERARCHY);
 		this.dataFactory = df;
 		this.baseSet = baseSet;
 	}
 
 	public boolean holds(Implication imp) {
 		OWLSubClassOfAxiom ax = imp.toGCI();
-		return(reasoner.isEntailed(ax));
+		return(this.reasoner.isEntailed(ax));
 	}
 
 	public boolean holds(OWLSubClassOfAxiom ax) {
-		return(reasoner.isEntailed(ax));
+		return(this.reasoner.isEntailed(ax));
 	}
 
 	public OWLOntology getExpertOntology() {
-		return(ontology);
+		return(this.ontology);
+	}
+	
+	public OWLReasoner getReasoner() {
+		return(this.reasoner);
 	}
 }

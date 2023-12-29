@@ -12,6 +12,7 @@ import org.semanticweb.owlapi.model.OWLDataFactory;
 import org.semanticweb.owlapi.model.OWLOntology;
 import org.semanticweb.owlapi.model.OWLOntologyCreationException;
 import org.semanticweb.owlapi.model.OWLOntologyManager;
+import org.semanticweb.owlapi.model.OWLOntologyStorageException;
 import org.semanticweb.owlapi.model.OWLSubClassOfAxiom;
 import org.semanticweb.owlapi.reasoner.InferenceType;
 import org.semanticweb.owlapi.reasoner.OWLReasoner;
@@ -32,15 +33,17 @@ public class PACOntologyCompletion {
 
 
 	/**
-	 * 
+	 * @param baseSet
 	 * @param ontology: IRI of the (possibly empty) initial ontology 
+	 * @param expert: The domain expert 
+	 * @param sampler
 	 */
-	public PACOntologyCompletion(IRI ontologyIRI, ExpertOracle expert, SamplingOracle sampler) {
+	public PACOntologyCompletion(IRI ontologyIRI, Set<OWLClassExpression> baseSet, ExpertOracle expert, SamplingOracle sampler) {
 		om = OWLManager.createOWLOntologyManager();
 		df = om.getOWLDataFactory();
 		rf = new ReasonerFactory();
 
-		this.baseSet = new HashSet<OWLClassExpression>();
+		this.baseSet = new HashSet<OWLClassExpression>(baseSet);
 		// TODO: read the baseSet! From file? 
 		// or let the user select from a list?
 
@@ -122,14 +125,16 @@ public class PACOntologyCompletion {
 		// Value: corresponding GCI
 		Hashtable<Implication, OWLSubClassOfAxiom> implicationAxiomHash = new Hashtable<>();
 		
-		int iteration = 0;
+		int iteration = 1;
 		boolean found = false;
 
 		while ((counterExample = getCounterExample(imps, callsToSamplingOracle(epsilon, delta, iteration))) != null) { 
+			System.out.println("iteration:" + iteration);
 			found = false;
 			Implication imp = null;
 			for (int i = 0; i < imps.size(); i++) {
 				imp = imps.get(i);
+				System.out.println(imp);
 				if (!counterExample.containsAll(imp.getPremise())) {
 					Set<OWLClassExpression> newPremise = new HashSet<OWLClassExpression>(imp.getPremise());
 					newPremise.retainAll(counterExample);
@@ -171,6 +176,12 @@ public class PACOntologyCompletion {
 			++iteration;
 		}
 		
+		try {
+			ontology.saveOntology();
+		} catch (OWLOntologyStorageException e) {
+			System.err.println("Error while saving ontology");
+			e.printStackTrace();
+		}
 		return(ontology);
 	}
 
