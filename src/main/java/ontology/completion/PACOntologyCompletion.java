@@ -91,7 +91,12 @@ public class PACOntologyCompletion {
 	 * @param query The set of concept expressions to be completed
 	 */
 	public Set<OWLClassExpression> complete(Set<OWLClassExpression> query) {
-		OWLClassExpression queryConjunction = this.df.getOWLObjectIntersectionOf(query);
+
+		OWLClassExpression queryConjunction;
+		if (query.isEmpty())
+			queryConjunction = df.getOWLThing();
+		else
+			queryConjunction = this.df.getOWLObjectIntersectionOf(query);
 		
 		if (queryConjunction.isBottomEntity()) {
 			Set<OWLClassExpression> s = new HashSet<OWLClassExpression>();
