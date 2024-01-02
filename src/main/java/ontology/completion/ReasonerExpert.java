@@ -18,12 +18,10 @@ import org.semanticweb.owlapi.model.OWLOntologyCreationException;
  * An expert implementation that answers questions w.r.t. an expert ontology.
  */
 public class ReasonerExpert implements ExpertOracle {
-	private Set<OWLClassExpression> baseSet;
-	private OWLDataFactory dataFactory;
 	private OWLOntology ontology;
 	private OWLReasoner reasoner;
 	
-	public ReasonerExpert(IRI iri, Set<OWLClassExpression> baseSet) {
+	public ReasonerExpert(IRI iri) {
 		OWLOntologyManager om = OWLManager.createOWLOntologyManager();
 		OWLDataFactory df = om.getOWLDataFactory();
 		try {
@@ -36,8 +34,6 @@ public class ReasonerExpert implements ExpertOracle {
 		OWLReasonerFactory rf = new ReasonerFactory();
 		this.reasoner = rf.createReasoner(ontology);
 		this.reasoner.precomputeInferences(InferenceType.CLASS_HIERARCHY);
-		this.dataFactory = df;
-		this.baseSet = baseSet;
 	}
 
 	public boolean holds(Implication imp) {

@@ -120,7 +120,7 @@ public class PACOntologyCompletion {
 	 * Computes an upper approximation of expert's view of the domain.
 	 * @param ontology the initial ontology
 	 */
-	public OWLOntology upperApproximation(double epsilon, double delta) {
+	public OWLOntology upperApproximation(double epsilon, double delta, IRI resultOntologyIRI) {
 		ImplicationList imps = new ImplicationList(baseSet);
 		Set<OWLClassExpression> counterExample;
 		
@@ -139,7 +139,6 @@ public class PACOntologyCompletion {
 			Implication imp = null;
 			for (int i = 0; i < imps.size(); i++) {
 				imp = imps.get(i);
-				System.out.println(imp);
 				if (!counterExample.containsAll(imp.getPremise())) {
 					Set<OWLClassExpression> newPremise = new HashSet<OWLClassExpression>(imp.getPremise());
 					newPremise.retainAll(counterExample);
@@ -150,6 +149,7 @@ public class PACOntologyCompletion {
 					if (!newPremise.equals(newConclusion)) {
 						found = true;
 						// construct the new implication
+						newConclusion.removeAll(newPremise);
 						Implication newImp = new Implication(newPremise, newConclusion, df);
 						
 						// replace imp with the newImp
@@ -159,30 +159,34 @@ public class PACOntologyCompletion {
 						OWLSubClassOfAxiom ax = implicationAxiomHash.get(imp);
 						// remove the GCI constructed from imp from the ontology
 						this.ontology.remove(ax);
+						System.out.println("Removed axiom: " + ax);
 
 						// add the GCI constructed from newImp to the ontology
 						OWLSubClassOfAxiom newAx = newImp.toGCI();
 						implicationAxiomHash.put(newImp, newAx);
 						this.ontology.add(newAx);
+						System.out.println("Added axiom: " + newAx);
 					}
 				}
 			}
 			if (!found) {
 				Set<OWLClassExpression> newConclusion = new HashSet<OWLClassExpression>(complete(counterExample));
 				// construct the new implication
+				newConclusion.removeAll(counterExample);
 				Implication newImp = new Implication(counterExample, newConclusion, df);
 				if (imps.add(newImp)) {
 					// add the GCI constructed from newImp to the ontology
 					OWLSubClassOfAxiom newAx = newImp.toGCI();
 					implicationAxiomHash.put(newImp, newAx);
 					this.ontology.add(newAx);
+					System.out.println("Added axiom: " + newAx);
 				}
 			}
 			++iteration;
 		}
 		
 		try {
-			ontology.saveOntology();
+			ontology.saveOntology(resultOntologyIRI);
 		} catch (OWLOntologyStorageException e) {
 			System.err.println("Error while saving ontology");
 			e.printStackTrace();
