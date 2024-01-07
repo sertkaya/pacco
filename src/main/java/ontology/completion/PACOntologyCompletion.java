@@ -166,6 +166,9 @@ public class PACOntologyCompletion {
 						implicationAxiomHash.put(newImp, newAx);
 						this.ontology.add(newAx);
 						System.out.println("Added axiom: " + newAx);
+						if (!counterExample.containsAll(newConclusion)) {
+						    break;
+						}
 					}
 				}
 			}
