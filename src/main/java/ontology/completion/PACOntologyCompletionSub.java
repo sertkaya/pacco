@@ -32,7 +32,7 @@ import ontology.completion.sampler.SubsumptionSamplingOracle;
 
 
 // with subsumption queries
-public class PACOntologyLearningSub {
+public class PACOntologyCompletionSub {
 	
 	private OWLOntology ontology;
 	private OWLOntology auxiliaryOntology;
@@ -60,9 +60,9 @@ public class PACOntologyLearningSub {
 	 * @param expert: The domain expert 
 	 * @param sampler
 	 */
-	public PACOntologyLearningSub(IRI ontologyIRI,
-                                    Set<OWLClassExpression> baseSet, 
-                                    ExpertOracle expert, 
+	public PACOntologyCompletionSub(IRI ontologyIRI,
+                                    Set<OWLClassExpression> baseSet,
+                                    ExpertOracle expert,
                                     SubsumptionSamplingOracle sampler) {
 		om = OWLManager.createOWLOntologyManager();
 		df = om.getOWLDataFactory();

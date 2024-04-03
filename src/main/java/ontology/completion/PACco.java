@@ -30,7 +30,7 @@ import org.semanticweb.owlapi.util.mansyntax.ManchesterOWLSyntaxParser;
 import org.apache.logging.log4j.Logger;
 import org.apache.logging.log4j.LogManager;
 
-public class PAClo {
+public class PACco {
 	protected static final Logger logger = LogManager.getLogger("PAClo");
 	
 
@@ -62,7 +62,7 @@ public class PAClo {
 
 		Instant start = Instant.now();
 		// PACOntologyCompletion pacCompletion = new PACOntologyCompletion(initialOntologyIRI, baseSet, expert, sampler);
-		PACOntologyLearningSub pacCompletion = new PACOntologyLearningSub(initialOntologyIRI, baseSet, expert, sampler);
+		PACOntologyCompletionSub pacCompletion = new PACOntologyCompletionSub(initialOntologyIRI, baseSet, expert, sampler);
 		pacCompletion.upperApproximation(epsilon, delta, resultOntologyIRI);
 		Instant finish = Instant.now();
 		long timeElapsed = Duration.between(start, finish).toMillis();
