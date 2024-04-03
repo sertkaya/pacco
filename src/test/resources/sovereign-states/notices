@@ -1,0 +1,56 @@
+
+================================================================================
+Prepration of countries.ttl: 
+================================================================================
+
+1) Fetched tripes with the query:
+
+SELECT DISTINCT ?c ?p ?o WHERE {
+  ?c wdt:P31 wd:Q3624078.
+  ?c ?p ?o.
+  SERVICE wikibase:label { 
+    bd:serviceParam wikibase:language "[AUTO_LANGUAGE],en". 
+  } 
+  FILTER(?p != schema:description).
+  FILTER(?p != rdfs:label).
+  FILTER(?p != skos:altLabel).
+  FILTER NOT EXISTS {
+    ?c wdt:P31 wd:Q3024240
+  }
+}
+
+The result consists of 213493 triples.
+
+2) Downloaded it in json format.
+
+3) Converted to ttl using the python script 
+
+4) Cleaned 145 triples that gave syntax errors when loaded into Jena.
+These were triples like:
+
+<http://www.wikidata.org/entity/Q28> <http://www.wikidata.org/prop/direct/P9070> "H\U\Hungary" 
+
+or 
+
+<http://www.wikidata.org/entity/Q1033> <http://www.wikidata.org/prop/direct/P4839> "Entity["Country", "Nigeria"]" .
+
+5) The remaining 213348 triples are in the file countries.ttl
+
+================================================================================
+Preparation of baseSet-countries-P31-objects
+================================================================================
+
+From the above countries.ttl file selected the objects of the triples whose 
+predicates are P31 and whose objects do not contain "statement". There are
+63 such objects (entities). They are in the file baseSet-countries-P31-objects
+
+
+================================================================================
+Preparation of countries-declarations.owx
+================================================================================
+
+The file countries-declarations.owx has to contain declaration axioms for 
+class and property names that appear in the base set. These classes and 
+properties have to be known to the Manchester Syntax parser that reads the
+base set.
+

@@ -1,0 +1,11 @@
+PREFIX wd: <http://www.wikidata.org/entity/> 
+PREFIX ex: <http://example.org/> 
+PREFIX wdt: <http://www.wikidata.org/prop/direct/> 
+
+ASK { 
+    ?s wdt:P31 ex:A.
+    ?s wdt:P31 ex:B.
+    FILTER NOT EXISTS {
+      ?s wdt:P31 ex:C.
+    }
+}

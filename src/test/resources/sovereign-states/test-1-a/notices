@@ -1,0 +1,6 @@
+
+- Copied from test-1.
+
+- The difference: Update to construction of SPARQL quieries:
+
+Now using wdt:P31/wdt:P279*  instead of wdt:P31.

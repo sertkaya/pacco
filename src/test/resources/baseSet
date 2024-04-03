@@ -1,0 +1,8 @@
+# A concept description in Manchester style syntax on each line.
+# Lines starting with # are comments :)
+A
+B
+C
+(r some B)
+(r some C)
+D

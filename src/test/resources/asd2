@@ -1,0 +1,843 @@
+11:09:29 DEBUG PACOntologyLearningSub - Successfully loaded ontology
+11:09:29 DEBUG ontology.learning.expert.TripleStoreExpert - ax: SubClassOf(ObjectIntersectionOf(<http://www.wikidata.org/entity/Q5> <http://www.wikidata.org/entity/Q84048852> ObjectSomeValuesFrom(<http://www.wikidata.org/prop/direct/P40> <http://www.wikidata.org/entity/Q5>)) ObjectSomeValuesFrom(<http://www.wikidata.org/prop/direct/P40> <http://www.wikidata.org/entity/Q84048852>))
+11:09:29 DEBUG ontology.learning.expert.TripleStoreExpert - queryStrLhs:PREFIX owl: <http://www.w3.org/2002/07/owl/>
+PREFIX wd: <http://www.wikidata.org/entity/>
+PREFIX wdt: <http://www.wikidata.org/prop/direct/>
+
+SELECT DISTINCT ?1 WHERE {
+?1 wdt:P31/wdt:P279* <http://www.wikidata.org/entity/Q5>.
+?1 wdt:P31/wdt:P279* <http://www.wikidata.org/entity/Q84048852>.
+?1 <http://www.wikidata.org/prop/direct/P40> ?10. 
+?10 wdt:P31/wdt:P279* <http://www.wikidata.org/entity/Q5>.
+}
+11:09:29 DEBUG ontology.learning.expert.TripleStoreExpert - queryStrRhs:PREFIX owl: <http://www.w3.org/2002/07/owl/>
+PREFIX wd: <http://www.wikidata.org/entity/>
+PREFIX wdt: <http://www.wikidata.org/prop/direct/>
+
+SELECT DISTINCT ?1 WHERE {
+?1 <http://www.wikidata.org/prop/direct/P40> ?10. 
+?10 wdt:P31/wdt:P279* <http://www.wikidata.org/entity/Q84048852>.
+}
+11:09:29 DEBUG ontology.learning.expert.TripleStoreExpert - query executed
+11:09:29 DEBUG ontology.learning.expert.TripleStoreExpert - resultsLhs: [http://example.org/kathrin, http://example.org/anna]
+11:09:29 DEBUG ontology.learning.expert.TripleStoreExpert - resultsRhs: [http://example.org/lukas, http://example.org/anna]
+11:09:29 DEBUG ontology.learning.expert.TripleStoreExpert - ax: SubClassOf(ObjectIntersectionOf(<http://www.wikidata.org/entity/Q5> ObjectSomeValuesFrom(<http://www.wikidata.org/prop/direct/P40> <http://www.wikidata.org/entity/Q84048850>) ObjectSomeValuesFrom(<http://www.wikidata.org/prop/direct/P40> <http://www.wikidata.org/entity/Q84048852>)) <http://www.wikidata.org/entity/Q84048852>)
+11:09:29 DEBUG ontology.learning.expert.TripleStoreExpert - queryStrLhs:PREFIX owl: <http://www.w3.org/2002/07/owl/>
+PREFIX wd: <http://www.wikidata.org/entity/>
+PREFIX wdt: <http://www.wikidata.org/prop/direct/>
+
+SELECT DISTINCT ?1 WHERE {
+?1 wdt:P31/wdt:P279* <http://www.wikidata.org/entity/Q5>.
+?1 <http://www.wikidata.org/prop/direct/P40> ?10. 
+?10 wdt:P31/wdt:P279* <http://www.wikidata.org/entity/Q84048850>.
+?1 <http://www.wikidata.org/prop/direct/P40> ?11. 
+?11 wdt:P31/wdt:P279* <http://www.wikidata.org/entity/Q84048852>.
+}
+11:09:29 DEBUG ontology.learning.expert.TripleStoreExpert - queryStrRhs:PREFIX owl: <http://www.w3.org/2002/07/owl/>
+PREFIX wd: <http://www.wikidata.org/entity/>
+PREFIX wdt: <http://www.wikidata.org/prop/direct/>
+
+SELECT DISTINCT ?1 WHERE {
+?1 wdt:P31/wdt:P279* <http://www.wikidata.org/entity/Q84048852>.
+}
+11:09:29 DEBUG ontology.learning.expert.TripleStoreExpert - query executed
+11:09:29 DEBUG ontology.learning.expert.TripleStoreExpert - resultsLhs: [http://example.org/lukas, http://example.org/anna]
+11:09:29 DEBUG ontology.learning.expert.TripleStoreExpert - resultsRhs: [http://example.org/kathrin, http://example.org/anna, http://example.org/lea]
+11:09:29 DEBUG ontology.learning.expert.TripleStoreExpert - ax: SubClassOf(ObjectIntersectionOf(ObjectSomeValuesFrom(<http://www.wikidata.org/prop/direct/P40> <http://www.wikidata.org/entity/Q84048850>) ObjectSomeValuesFrom(<http://www.wikidata.org/prop/direct/P40> <http://www.wikidata.org/entity/Q84048852>)) <http://www.wikidata.org/entity/Q5>)
+11:09:29 DEBUG ontology.learning.expert.TripleStoreExpert - queryStrLhs:PREFIX owl: <http://www.w3.org/2002/07/owl/>
+PREFIX wd: <http://www.wikidata.org/entity/>
+PREFIX wdt: <http://www.wikidata.org/prop/direct/>
+
+SELECT DISTINCT ?1 WHERE {
+?1 <http://www.wikidata.org/prop/direct/P40> ?10. 
+?10 wdt:P31/wdt:P279* <http://www.wikidata.org/entity/Q84048850>.
+?1 <http://www.wikidata.org/prop/direct/P40> ?11. 
+?11 wdt:P31/wdt:P279* <http://www.wikidata.org/entity/Q84048852>.
+}
+11:09:29 DEBUG ontology.learning.expert.TripleStoreExpert - queryStrRhs:PREFIX owl: <http://www.w3.org/2002/07/owl/>
+PREFIX wd: <http://www.wikidata.org/entity/>
+PREFIX wdt: <http://www.wikidata.org/prop/direct/>
+
+SELECT DISTINCT ?1 WHERE {
+?1 wdt:P31/wdt:P279* <http://www.wikidata.org/entity/Q5>.
+}
+11:09:29 DEBUG ontology.learning.expert.TripleStoreExpert - query executed
+11:09:29 DEBUG ontology.learning.expert.TripleStoreExpert - resultsLhs: [http://example.org/lukas, http://example.org/anna]
+11:09:29 DEBUG ontology.learning.expert.TripleStoreExpert - resultsRhs: [http://example.org/jannik, http://example.org/lukas, http://example.org/matis, http://example.org/kathrin, http://example.org/teo, http://example.org/anna, http://example.org/joni, http://example.org/levin, http://example.org/baris, http://example.org/lea]
+11:09:29 DEBUG PACOntologyLearningSub - Added auxiliary axiom: SubClassOf(ObjectIntersectionOf(ObjectSomeValuesFrom(<http://www.wikidata.org/prop/direct/P40> <http://www.wikidata.org/entity/Q84048850>) ObjectSomeValuesFrom(<http://www.wikidata.org/prop/direct/P40> <http://www.wikidata.org/entity/Q84048852>)) <http://www.wikidata.org/entity/Q5>)
+11:09:29 INFO  PACOntologyLearningSub - Samples at this iteration: 3
+11:09:29 INFO  PACOntologyLearningSub - iteration:1
+11:09:29 INFO  PACOntologyLearningSub - auxiliary axioms:1
+11:09:29 INFO  PACOntologyLearningSub - expert queries:3
+11:09:29 INFO  PACOntologyLearningSub - implications:0
+11:09:29 DEBUG ontology.learning.expert.TripleStoreExpert - ax: SubClassOf(ObjectIntersectionOf(ObjectSomeValuesFrom(<http://www.wikidata.org/prop/direct/P40> <http://www.wikidata.org/entity/Q84048850>) ObjectSomeValuesFrom(<http://www.wikidata.org/prop/direct/P40> <http://www.wikidata.org/entity/Q84048852>)) ObjectSomeValuesFrom(<http://www.wikidata.org/prop/direct/P40> <http://www.wikidata.org/entity/Q5>))
+11:09:29 DEBUG ontology.learning.expert.TripleStoreExpert - queryStrLhs:PREFIX owl: <http://www.w3.org/2002/07/owl/>
+PREFIX wd: <http://www.wikidata.org/entity/>
+PREFIX wdt: <http://www.wikidata.org/prop/direct/>
+
+SELECT DISTINCT ?1 WHERE {
+?1 <http://www.wikidata.org/prop/direct/P40> ?10. 
+?10 wdt:P31/wdt:P279* <http://www.wikidata.org/entity/Q84048850>.
+?1 <http://www.wikidata.org/prop/direct/P40> ?11. 
+?11 wdt:P31/wdt:P279* <http://www.wikidata.org/entity/Q84048852>.
+}
+11:09:29 DEBUG ontology.learning.expert.TripleStoreExpert - queryStrRhs:PREFIX owl: <http://www.w3.org/2002/07/owl/>
+PREFIX wd: <http://www.wikidata.org/entity/>
+PREFIX wdt: <http://www.wikidata.org/prop/direct/>
+
+SELECT DISTINCT ?1 WHERE {
+?1 <http://www.wikidata.org/prop/direct/P40> ?10. 
+?10 wdt:P31/wdt:P279* <http://www.wikidata.org/entity/Q5>.
+}
+11:09:29 DEBUG ontology.learning.expert.TripleStoreExpert - query executed
+11:09:29 DEBUG ontology.learning.expert.TripleStoreExpert - resultsLhs: [http://example.org/lukas, http://example.org/anna]
+11:09:29 DEBUG ontology.learning.expert.TripleStoreExpert - resultsRhs: [http://example.org/lukas, http://example.org/kathrin, http://example.org/anna, http://example.org/baris]
+11:09:29 DEBUG PACOntologyLearningSub - Added auxiliary axiom: SubClassOf(ObjectIntersectionOf(ObjectSomeValuesFrom(<http://www.wikidata.org/prop/direct/P40> <http://www.wikidata.org/entity/Q84048850>) ObjectSomeValuesFrom(<http://www.wikidata.org/prop/direct/P40> <http://www.wikidata.org/entity/Q84048852>)) ObjectSomeValuesFrom(<http://www.wikidata.org/prop/direct/P40> <http://www.wikidata.org/entity/Q5>))
+11:09:29 DEBUG ontology.learning.expert.TripleStoreExpert - ax: SubClassOf(ObjectIntersectionOf(ObjectSomeValuesFrom(<http://www.wikidata.org/prop/direct/P40> <http://www.wikidata.org/entity/Q84048850>) ObjectSomeValuesFrom(<http://www.wikidata.org/prop/direct/P40> <http://www.wikidata.org/entity/Q84048852>)) <http://www.wikidata.org/entity/Q84048850>)
+11:09:29 DEBUG ontology.learning.expert.TripleStoreExpert - queryStrLhs:PREFIX owl: <http://www.w3.org/2002/07/owl/>
+PREFIX wd: <http://www.wikidata.org/entity/>
+PREFIX wdt: <http://www.wikidata.org/prop/direct/>
+
+SELECT DISTINCT ?1 WHERE {
+?1 <http://www.wikidata.org/prop/direct/P40> ?10. 
+?10 wdt:P31/wdt:P279* <http://www.wikidata.org/entity/Q84048850>.
+?1 <http://www.wikidata.org/prop/direct/P40> ?11. 
+?11 wdt:P31/wdt:P279* <http://www.wikidata.org/entity/Q84048852>.
+}
+11:09:29 DEBUG ontology.learning.expert.TripleStoreExpert - queryStrRhs:PREFIX owl: <http://www.w3.org/2002/07/owl/>
+PREFIX wd: <http://www.wikidata.org/entity/>
+PREFIX wdt: <http://www.wikidata.org/prop/direct/>
+
+SELECT DISTINCT ?1 WHERE {
+?1 wdt:P31/wdt:P279* <http://www.wikidata.org/entity/Q84048850>.
+}
+11:09:29 DEBUG ontology.learning.expert.TripleStoreExpert - query executed
+11:09:29 DEBUG ontology.learning.expert.TripleStoreExpert - resultsLhs: [http://example.org/lukas, http://example.org/anna]
+11:09:29 DEBUG ontology.learning.expert.TripleStoreExpert - resultsRhs: [http://example.org/jannik, http://example.org/lukas, http://example.org/matis, http://example.org/teo, http://example.org/joni, http://example.org/levin, http://example.org/baris]
+11:09:29 DEBUG PACOntologyLearningSub - Added non-auxiliary axiom: SubClassOf(ObjectIntersectionOf(ObjectSomeValuesFrom(<http://www.wikidata.org/prop/direct/P40 Q84048850) ObjectSomeValuesFrom(<http://www.wikidata.org/prop/direct/P40 Q84048852)) ObjectIntersectionOf(Q5 ObjectSomeValuesFrom(<http://www.wikidata.org/prop/direct/P40 Q5)))
+11:09:29 DEBUG ontology.learning.expert.TripleStoreExpert - ax: SubClassOf(ObjectIntersectionOf(<http://www.wikidata.org/entity/Q5> ObjectSomeValuesFrom(<http://www.wikidata.org/prop/direct/P40> <http://www.wikidata.org/entity/Q5>) ObjectSomeValuesFrom(<http://www.wikidata.org/prop/direct/P40> <http://www.wikidata.org/entity/Q84048850>) ObjectSomeValuesFrom(<http://www.wikidata.org/prop/direct/P40> <http://www.wikidata.org/entity/Q84048852>)) <http://www.wikidata.org/entity/Q84048850>)
+11:09:29 DEBUG ontology.learning.expert.TripleStoreExpert - queryStrLhs:PREFIX owl: <http://www.w3.org/2002/07/owl/>
+PREFIX wd: <http://www.wikidata.org/entity/>
+PREFIX wdt: <http://www.wikidata.org/prop/direct/>
+
+SELECT DISTINCT ?1 WHERE {
+?1 wdt:P31/wdt:P279* <http://www.wikidata.org/entity/Q5>.
+?1 <http://www.wikidata.org/prop/direct/P40> ?10. 
+?10 wdt:P31/wdt:P279* <http://www.wikidata.org/entity/Q5>.
+?1 <http://www.wikidata.org/prop/direct/P40> ?11. 
+?11 wdt:P31/wdt:P279* <http://www.wikidata.org/entity/Q84048850>.
+?1 <http://www.wikidata.org/prop/direct/P40> ?12. 
+?12 wdt:P31/wdt:P279* <http://www.wikidata.org/entity/Q84048852>.
+}
+11:09:29 DEBUG ontology.learning.expert.TripleStoreExpert - queryStrRhs:PREFIX owl: <http://www.w3.org/2002/07/owl/>
+PREFIX wd: <http://www.wikidata.org/entity/>
+PREFIX wdt: <http://www.wikidata.org/prop/direct/>
+
+SELECT DISTINCT ?1 WHERE {
+?1 wdt:P31/wdt:P279* <http://www.wikidata.org/entity/Q84048850>.
+}
+11:09:29 DEBUG ontology.learning.expert.TripleStoreExpert - query executed
+11:09:29 DEBUG ontology.learning.expert.TripleStoreExpert - resultsLhs: [http://example.org/lukas, http://example.org/anna]
+11:09:29 DEBUG ontology.learning.expert.TripleStoreExpert - resultsRhs: [http://example.org/jannik, http://example.org/lukas, http://example.org/matis, http://example.org/teo, http://example.org/joni, http://example.org/levin, http://example.org/baris]
+11:09:29 DEBUG ontology.learning.expert.TripleStoreExpert - ax: SubClassOf(ObjectIntersectionOf(<http://www.wikidata.org/entity/Q5> <http://www.wikidata.org/entity/Q84048852> ObjectSomeValuesFrom(<http://www.wikidata.org/prop/direct/P40> <http://www.wikidata.org/entity/Q5>) ObjectSomeValuesFrom(<http://www.wikidata.org/prop/direct/P40> <http://www.wikidata.org/entity/Q84048850>) ObjectSomeValuesFrom(<http://www.wikidata.org/prop/direct/P40> <http://www.wikidata.org/entity/Q84048852>)) <http://www.wikidata.org/entity/Q84048850>)
+11:09:29 DEBUG ontology.learning.expert.TripleStoreExpert - queryStrLhs:PREFIX owl: <http://www.w3.org/2002/07/owl/>
+PREFIX wd: <http://www.wikidata.org/entity/>
+PREFIX wdt: <http://www.wikidata.org/prop/direct/>
+
+SELECT DISTINCT ?1 WHERE {
+?1 wdt:P31/wdt:P279* <http://www.wikidata.org/entity/Q5>.
+?1 wdt:P31/wdt:P279* <http://www.wikidata.org/entity/Q84048852>.
+?1 <http://www.wikidata.org/prop/direct/P40> ?10. 
+?10 wdt:P31/wdt:P279* <http://www.wikidata.org/entity/Q5>.
+?1 <http://www.wikidata.org/prop/direct/P40> ?11. 
+?11 wdt:P31/wdt:P279* <http://www.wikidata.org/entity/Q84048850>.
+?1 <http://www.wikidata.org/prop/direct/P40> ?12. 
+?12 wdt:P31/wdt:P279* <http://www.wikidata.org/entity/Q84048852>.
+}
+11:09:29 DEBUG ontology.learning.expert.TripleStoreExpert - queryStrRhs:PREFIX owl: <http://www.w3.org/2002/07/owl/>
+PREFIX wd: <http://www.wikidata.org/entity/>
+PREFIX wdt: <http://www.wikidata.org/prop/direct/>
+
+SELECT DISTINCT ?1 WHERE {
+?1 wdt:P31/wdt:P279* <http://www.wikidata.org/entity/Q84048850>.
+}
+11:09:29 DEBUG ontology.learning.expert.TripleStoreExpert - query executed
+11:09:29 DEBUG ontology.learning.expert.TripleStoreExpert - resultsLhs: [http://example.org/anna]
+11:09:29 DEBUG ontology.learning.expert.TripleStoreExpert - resultsRhs: [http://example.org/jannik, http://example.org/lukas, http://example.org/matis, http://example.org/teo, http://example.org/joni, http://example.org/levin, http://example.org/baris]
+11:09:29 DEBUG ontology.learning.expert.TripleStoreExpert - ax: SubClassOf(ObjectIntersectionOf(<http://www.wikidata.org/entity/Q5> <http://www.wikidata.org/entity/Q84048852> ObjectSomeValuesFrom(<http://www.wikidata.org/prop/direct/P40> <http://www.wikidata.org/entity/Q5>) ObjectSomeValuesFrom(<http://www.wikidata.org/prop/direct/P40> <http://www.wikidata.org/entity/Q84048852>)) ObjectSomeValuesFrom(<http://www.wikidata.org/prop/direct/P40> <http://www.wikidata.org/entity/Q84048850>))
+11:09:29 DEBUG ontology.learning.expert.TripleStoreExpert - queryStrLhs:PREFIX owl: <http://www.w3.org/2002/07/owl/>
+PREFIX wd: <http://www.wikidata.org/entity/>
+PREFIX wdt: <http://www.wikidata.org/prop/direct/>
+
+SELECT DISTINCT ?1 WHERE {
+?1 wdt:P31/wdt:P279* <http://www.wikidata.org/entity/Q5>.
+?1 wdt:P31/wdt:P279* <http://www.wikidata.org/entity/Q84048852>.
+?1 <http://www.wikidata.org/prop/direct/P40> ?10. 
+?10 wdt:P31/wdt:P279* <http://www.wikidata.org/entity/Q5>.
+?1 <http://www.wikidata.org/prop/direct/P40> ?11. 
+?11 wdt:P31/wdt:P279* <http://www.wikidata.org/entity/Q84048852>.
+}
+11:09:29 DEBUG ontology.learning.expert.TripleStoreExpert - queryStrRhs:PREFIX owl: <http://www.w3.org/2002/07/owl/>
+PREFIX wd: <http://www.wikidata.org/entity/>
+PREFIX wdt: <http://www.wikidata.org/prop/direct/>
+
+SELECT DISTINCT ?1 WHERE {
+?1 <http://www.wikidata.org/prop/direct/P40> ?10. 
+?10 wdt:P31/wdt:P279* <http://www.wikidata.org/entity/Q84048850>.
+}
+11:09:29 DEBUG ontology.learning.expert.TripleStoreExpert - query executed
+11:09:29 DEBUG ontology.learning.expert.TripleStoreExpert - resultsLhs: [http://example.org/anna]
+11:09:29 DEBUG ontology.learning.expert.TripleStoreExpert - resultsRhs: [http://example.org/lukas, http://example.org/kathrin, http://example.org/anna, http://example.org/baris]
+11:09:29 DEBUG PACOntologyLearningSub - Added auxiliary axiom: SubClassOf(ObjectIntersectionOf(<http://www.wikidata.org/entity/Q5> <http://www.wikidata.org/entity/Q84048852> ObjectSomeValuesFrom(<http://www.wikidata.org/prop/direct/P40> <http://www.wikidata.org/entity/Q5>) ObjectSomeValuesFrom(<http://www.wikidata.org/prop/direct/P40> <http://www.wikidata.org/entity/Q84048852>)) ObjectSomeValuesFrom(<http://www.wikidata.org/prop/direct/P40> <http://www.wikidata.org/entity/Q84048850>))
+11:09:29 INFO  PACOntologyLearningSub - Samples at this iteration: 6
+11:09:29 INFO  PACOntologyLearningSub - iteration:2
+11:09:29 INFO  PACOntologyLearningSub - auxiliary axioms:3
+11:09:29 INFO  PACOntologyLearningSub - expert queries:8
+11:09:29 INFO  PACOntologyLearningSub - implications:1
+11:09:29 DEBUG ontology.learning.expert.TripleStoreExpert - ax: SubClassOf(ObjectIntersectionOf(ObjectSomeValuesFrom(<http://www.wikidata.org/prop/direct/P40> <http://www.wikidata.org/entity/Q84048852>)) <http://www.wikidata.org/entity/Q5>)
+11:09:29 DEBUG ontology.learning.expert.TripleStoreExpert - queryStrLhs:PREFIX owl: <http://www.w3.org/2002/07/owl/>
+PREFIX wd: <http://www.wikidata.org/entity/>
+PREFIX wdt: <http://www.wikidata.org/prop/direct/>
+
+SELECT DISTINCT ?1 WHERE {
+?1 <http://www.wikidata.org/prop/direct/P40> ?10. 
+?10 wdt:P31/wdt:P279* <http://www.wikidata.org/entity/Q84048852>.
+}
+11:09:29 DEBUG ontology.learning.expert.TripleStoreExpert - queryStrRhs:PREFIX owl: <http://www.w3.org/2002/07/owl/>
+PREFIX wd: <http://www.wikidata.org/entity/>
+PREFIX wdt: <http://www.wikidata.org/prop/direct/>
+
+SELECT DISTINCT ?1 WHERE {
+?1 wdt:P31/wdt:P279* <http://www.wikidata.org/entity/Q5>.
+}
+11:09:29 DEBUG ontology.learning.expert.TripleStoreExpert - query executed
+11:09:29 DEBUG ontology.learning.expert.TripleStoreExpert - resultsLhs: [http://example.org/lukas, http://example.org/anna]
+11:09:29 DEBUG ontology.learning.expert.TripleStoreExpert - resultsRhs: [http://example.org/jannik, http://example.org/lukas, http://example.org/matis, http://example.org/kathrin, http://example.org/teo, http://example.org/anna, http://example.org/joni, http://example.org/levin, http://example.org/baris, http://example.org/lea]
+11:09:29 DEBUG PACOntologyLearningSub - Added auxiliary axiom: SubClassOf(ObjectIntersectionOf(ObjectSomeValuesFrom(<http://www.wikidata.org/prop/direct/P40> <http://www.wikidata.org/entity/Q84048852>)) <http://www.wikidata.org/entity/Q5>)
+11:09:29 DEBUG ontology.learning.expert.TripleStoreExpert - ax: SubClassOf(ObjectIntersectionOf(ObjectSomeValuesFrom(<http://www.wikidata.org/prop/direct/P40> <http://www.wikidata.org/entity/Q84048852>)) ObjectSomeValuesFrom(<http://www.wikidata.org/prop/direct/P40> <http://www.wikidata.org/entity/Q5>))
+11:09:29 DEBUG ontology.learning.expert.TripleStoreExpert - queryStrLhs:PREFIX owl: <http://www.w3.org/2002/07/owl/>
+PREFIX wd: <http://www.wikidata.org/entity/>
+PREFIX wdt: <http://www.wikidata.org/prop/direct/>
+
+SELECT DISTINCT ?1 WHERE {
+?1 <http://www.wikidata.org/prop/direct/P40> ?10. 
+?10 wdt:P31/wdt:P279* <http://www.wikidata.org/entity/Q84048852>.
+}
+11:09:29 DEBUG ontology.learning.expert.TripleStoreExpert - queryStrRhs:PREFIX owl: <http://www.w3.org/2002/07/owl/>
+PREFIX wd: <http://www.wikidata.org/entity/>
+PREFIX wdt: <http://www.wikidata.org/prop/direct/>
+
+SELECT DISTINCT ?1 WHERE {
+?1 <http://www.wikidata.org/prop/direct/P40> ?10. 
+?10 wdt:P31/wdt:P279* <http://www.wikidata.org/entity/Q5>.
+}
+11:09:29 DEBUG ontology.learning.expert.TripleStoreExpert - query executed
+11:09:29 DEBUG ontology.learning.expert.TripleStoreExpert - resultsLhs: [http://example.org/lukas, http://example.org/anna]
+11:09:29 DEBUG ontology.learning.expert.TripleStoreExpert - resultsRhs: [http://example.org/lukas, http://example.org/kathrin, http://example.org/anna, http://example.org/baris]
+11:09:29 DEBUG PACOntologyLearningSub - Added auxiliary axiom: SubClassOf(ObjectIntersectionOf(ObjectSomeValuesFrom(<http://www.wikidata.org/prop/direct/P40> <http://www.wikidata.org/entity/Q84048852>)) ObjectSomeValuesFrom(<http://www.wikidata.org/prop/direct/P40> <http://www.wikidata.org/entity/Q5>))
+11:09:29 DEBUG ontology.learning.expert.TripleStoreExpert - ax: SubClassOf(ObjectIntersectionOf(ObjectSomeValuesFrom(<http://www.wikidata.org/prop/direct/P40> <http://www.wikidata.org/entity/Q84048852>)) ObjectSomeValuesFrom(<http://www.wikidata.org/prop/direct/P40> <http://www.wikidata.org/entity/Q84048850>))
+11:09:29 DEBUG ontology.learning.expert.TripleStoreExpert - queryStrLhs:PREFIX owl: <http://www.w3.org/2002/07/owl/>
+PREFIX wd: <http://www.wikidata.org/entity/>
+PREFIX wdt: <http://www.wikidata.org/prop/direct/>
+
+SELECT DISTINCT ?1 WHERE {
+?1 <http://www.wikidata.org/prop/direct/P40> ?10. 
+?10 wdt:P31/wdt:P279* <http://www.wikidata.org/entity/Q84048852>.
+}
+11:09:29 DEBUG ontology.learning.expert.TripleStoreExpert - queryStrRhs:PREFIX owl: <http://www.w3.org/2002/07/owl/>
+PREFIX wd: <http://www.wikidata.org/entity/>
+PREFIX wdt: <http://www.wikidata.org/prop/direct/>
+
+SELECT DISTINCT ?1 WHERE {
+?1 <http://www.wikidata.org/prop/direct/P40> ?10. 
+?10 wdt:P31/wdt:P279* <http://www.wikidata.org/entity/Q84048850>.
+}
+11:09:29 DEBUG ontology.learning.expert.TripleStoreExpert - query executed
+11:09:29 DEBUG ontology.learning.expert.TripleStoreExpert - resultsLhs: [http://example.org/lukas, http://example.org/anna]
+11:09:29 DEBUG ontology.learning.expert.TripleStoreExpert - resultsRhs: [http://example.org/lukas, http://example.org/kathrin, http://example.org/anna, http://example.org/baris]
+11:09:29 DEBUG PACOntologyLearningSub - Added auxiliary axiom: SubClassOf(ObjectIntersectionOf(ObjectSomeValuesFrom(<http://www.wikidata.org/prop/direct/P40> <http://www.wikidata.org/entity/Q84048852>)) ObjectSomeValuesFrom(<http://www.wikidata.org/prop/direct/P40> <http://www.wikidata.org/entity/Q84048850>))
+11:09:29 DEBUG PACOntologyLearningSub - Added non-auxiliary axiom: SubClassOf(ObjectIntersectionOf(ObjectSomeValuesFrom(<http://www.wikidata.org/prop/direct/P40 Q84048852)) ObjectIntersectionOf(Q5 ObjectSomeValuesFrom(<http://www.wikidata.org/prop/direct/P40 Q5) ObjectSomeValuesFrom(<http://www.wikidata.org/prop/direct/P40 Q84048850)))
+11:09:29 DEBUG ontology.learning.expert.TripleStoreExpert - ax: SubClassOf(ObjectIntersectionOf(<http://www.wikidata.org/entity/Q5> <http://www.wikidata.org/entity/Q84048850> ObjectSomeValuesFrom(<http://www.wikidata.org/prop/direct/P40> <http://www.wikidata.org/entity/Q5>) ObjectSomeValuesFrom(<http://www.wikidata.org/prop/direct/P40> <http://www.wikidata.org/entity/Q84048852>)) <http://www.wikidata.org/entity/Q84048852>)
+11:09:29 DEBUG ontology.learning.expert.TripleStoreExpert - queryStrLhs:PREFIX owl: <http://www.w3.org/2002/07/owl/>
+PREFIX wd: <http://www.wikidata.org/entity/>
+PREFIX wdt: <http://www.wikidata.org/prop/direct/>
+
+SELECT DISTINCT ?1 WHERE {
+?1 wdt:P31/wdt:P279* <http://www.wikidata.org/entity/Q5>.
+?1 wdt:P31/wdt:P279* <http://www.wikidata.org/entity/Q84048850>.
+?1 <http://www.wikidata.org/prop/direct/P40> ?10. 
+?10 wdt:P31/wdt:P279* <http://www.wikidata.org/entity/Q5>.
+?1 <http://www.wikidata.org/prop/direct/P40> ?11. 
+?11 wdt:P31/wdt:P279* <http://www.wikidata.org/entity/Q84048852>.
+}
+11:09:29 DEBUG ontology.learning.expert.TripleStoreExpert - queryStrRhs:PREFIX owl: <http://www.w3.org/2002/07/owl/>
+PREFIX wd: <http://www.wikidata.org/entity/>
+PREFIX wdt: <http://www.wikidata.org/prop/direct/>
+
+SELECT DISTINCT ?1 WHERE {
+?1 wdt:P31/wdt:P279* <http://www.wikidata.org/entity/Q84048852>.
+}
+11:09:29 DEBUG ontology.learning.expert.TripleStoreExpert - query executed
+11:09:29 DEBUG ontology.learning.expert.TripleStoreExpert - resultsLhs: [http://example.org/lukas]
+11:09:29 DEBUG ontology.learning.expert.TripleStoreExpert - resultsRhs: [http://example.org/kathrin, http://example.org/anna, http://example.org/lea]
+11:09:29 DEBUG ontology.learning.expert.TripleStoreExpert - ax: SubClassOf(ObjectIntersectionOf(<http://www.wikidata.org/entity/Q5> <http://www.wikidata.org/entity/Q84048852> ObjectSomeValuesFrom(<http://www.wikidata.org/prop/direct/P40> <http://www.wikidata.org/entity/Q84048850>)) ObjectSomeValuesFrom(<http://www.wikidata.org/prop/direct/P40> <http://www.wikidata.org/entity/Q5>))
+11:09:29 DEBUG ontology.learning.expert.TripleStoreExpert - queryStrLhs:PREFIX owl: <http://www.w3.org/2002/07/owl/>
+PREFIX wd: <http://www.wikidata.org/entity/>
+PREFIX wdt: <http://www.wikidata.org/prop/direct/>
+
+SELECT DISTINCT ?1 WHERE {
+?1 wdt:P31/wdt:P279* <http://www.wikidata.org/entity/Q5>.
+?1 wdt:P31/wdt:P279* <http://www.wikidata.org/entity/Q84048852>.
+?1 <http://www.wikidata.org/prop/direct/P40> ?10. 
+?10 wdt:P31/wdt:P279* <http://www.wikidata.org/entity/Q84048850>.
+}
+11:09:29 DEBUG ontology.learning.expert.TripleStoreExpert - queryStrRhs:PREFIX owl: <http://www.w3.org/2002/07/owl/>
+PREFIX wd: <http://www.wikidata.org/entity/>
+PREFIX wdt: <http://www.wikidata.org/prop/direct/>
+
+SELECT DISTINCT ?1 WHERE {
+?1 <http://www.wikidata.org/prop/direct/P40> ?10. 
+?10 wdt:P31/wdt:P279* <http://www.wikidata.org/entity/Q5>.
+}
+11:09:29 DEBUG ontology.learning.expert.TripleStoreExpert - query executed
+11:09:29 DEBUG ontology.learning.expert.TripleStoreExpert - resultsLhs: [http://example.org/kathrin, http://example.org/anna]
+11:09:29 DEBUG ontology.learning.expert.TripleStoreExpert - resultsRhs: [http://example.org/lukas, http://example.org/kathrin, http://example.org/anna, http://example.org/baris]
+11:09:29 DEBUG PACOntologyLearningSub - Added auxiliary axiom: SubClassOf(ObjectIntersectionOf(<http://www.wikidata.org/entity/Q5> <http://www.wikidata.org/entity/Q84048852> ObjectSomeValuesFrom(<http://www.wikidata.org/prop/direct/P40> <http://www.wikidata.org/entity/Q84048850>)) ObjectSomeValuesFrom(<http://www.wikidata.org/prop/direct/P40> <http://www.wikidata.org/entity/Q5>))
+11:09:29 INFO  PACOntologyLearningSub - Samples at this iteration: 4
+11:09:29 INFO  PACOntologyLearningSub - iteration:3
+11:09:29 INFO  PACOntologyLearningSub - auxiliary axioms:7
+11:09:29 INFO  PACOntologyLearningSub - expert queries:13
+11:09:29 INFO  PACOntologyLearningSub - implications:1
+11:09:29 DEBUG ontology.learning.expert.TripleStoreExpert - ax: SubClassOf(owl:Thing <http://www.wikidata.org/entity/Q5>)
+11:09:29 DEBUG ontology.learning.expert.TripleStoreExpert - queryStrLhs:PREFIX owl: <http://www.w3.org/2002/07/owl/>
+PREFIX wd: <http://www.wikidata.org/entity/>
+PREFIX wdt: <http://www.wikidata.org/prop/direct/>
+
+SELECT DISTINCT ?1 WHERE {
+?1 ?p ?o.
+}
+11:09:29 DEBUG ontology.learning.expert.TripleStoreExpert - queryStrRhs:PREFIX owl: <http://www.w3.org/2002/07/owl/>
+PREFIX wd: <http://www.wikidata.org/entity/>
+PREFIX wdt: <http://www.wikidata.org/prop/direct/>
+
+SELECT DISTINCT ?1 WHERE {
+?1 wdt:P31/wdt:P279* <http://www.wikidata.org/entity/Q5>.
+}
+11:09:29 DEBUG ontology.learning.expert.TripleStoreExpert - query executed
+11:09:29 DEBUG ontology.learning.expert.TripleStoreExpert - resultsLhs: [http://example.org/jannik, http://example.org/lukas, http://example.org/matis, http://example.org/kathrin, http://example.org/teo, http://example.org/anna, http://example.org/joni, http://example.org/levin, http://example.org/baris, http://example.org/lea]
+11:09:29 DEBUG ontology.learning.expert.TripleStoreExpert - resultsRhs: [http://example.org/jannik, http://example.org/lukas, http://example.org/matis, http://example.org/kathrin, http://example.org/teo, http://example.org/anna, http://example.org/joni, http://example.org/levin, http://example.org/baris, http://example.org/lea]
+11:09:29 DEBUG PACOntologyLearningSub - Added auxiliary axiom: SubClassOf(owl:Thing <http://www.wikidata.org/entity/Q5>)
+11:09:29 DEBUG ontology.learning.expert.TripleStoreExpert - ax: SubClassOf(owl:Thing ObjectSomeValuesFrom(<http://www.wikidata.org/prop/direct/P40> <http://www.wikidata.org/entity/Q5>))
+11:09:29 DEBUG ontology.learning.expert.TripleStoreExpert - queryStrLhs:PREFIX owl: <http://www.w3.org/2002/07/owl/>
+PREFIX wd: <http://www.wikidata.org/entity/>
+PREFIX wdt: <http://www.wikidata.org/prop/direct/>
+
+SELECT DISTINCT ?1 WHERE {
+?1 ?p ?o.
+}
+11:09:29 DEBUG ontology.learning.expert.TripleStoreExpert - queryStrRhs:PREFIX owl: <http://www.w3.org/2002/07/owl/>
+PREFIX wd: <http://www.wikidata.org/entity/>
+PREFIX wdt: <http://www.wikidata.org/prop/direct/>
+
+SELECT DISTINCT ?1 WHERE {
+?1 <http://www.wikidata.org/prop/direct/P40> ?10. 
+?10 wdt:P31/wdt:P279* <http://www.wikidata.org/entity/Q5>.
+}
+11:09:29 DEBUG ontology.learning.expert.TripleStoreExpert - query executed
+11:09:29 DEBUG ontology.learning.expert.TripleStoreExpert - resultsLhs: [http://example.org/jannik, http://example.org/lukas, http://example.org/matis, http://example.org/kathrin, http://example.org/teo, http://example.org/anna, http://example.org/joni, http://example.org/levin, http://example.org/baris, http://example.org/lea]
+11:09:29 DEBUG ontology.learning.expert.TripleStoreExpert - resultsRhs: [http://example.org/lukas, http://example.org/kathrin, http://example.org/anna, http://example.org/baris]
+11:09:29 DEBUG ontology.learning.expert.TripleStoreExpert - ax: SubClassOf(owl:Thing ObjectSomeValuesFrom(<http://www.wikidata.org/prop/direct/P40> <http://www.wikidata.org/entity/Q84048850>))
+11:09:29 DEBUG ontology.learning.expert.TripleStoreExpert - queryStrLhs:PREFIX owl: <http://www.w3.org/2002/07/owl/>
+PREFIX wd: <http://www.wikidata.org/entity/>
+PREFIX wdt: <http://www.wikidata.org/prop/direct/>
+
+SELECT DISTINCT ?1 WHERE {
+?1 ?p ?o.
+}
+11:09:29 DEBUG ontology.learning.expert.TripleStoreExpert - queryStrRhs:PREFIX owl: <http://www.w3.org/2002/07/owl/>
+PREFIX wd: <http://www.wikidata.org/entity/>
+PREFIX wdt: <http://www.wikidata.org/prop/direct/>
+
+SELECT DISTINCT ?1 WHERE {
+?1 <http://www.wikidata.org/prop/direct/P40> ?10. 
+?10 wdt:P31/wdt:P279* <http://www.wikidata.org/entity/Q84048850>.
+}
+11:09:29 DEBUG ontology.learning.expert.TripleStoreExpert - query executed
+11:09:29 DEBUG ontology.learning.expert.TripleStoreExpert - resultsLhs: [http://example.org/jannik, http://example.org/lukas, http://example.org/matis, http://example.org/kathrin, http://example.org/teo, http://example.org/anna, http://example.org/joni, http://example.org/levin, http://example.org/baris, http://example.org/lea]
+11:09:29 DEBUG ontology.learning.expert.TripleStoreExpert - resultsRhs: [http://example.org/lukas, http://example.org/kathrin, http://example.org/anna, http://example.org/baris]
+11:09:29 DEBUG PACOntologyLearningSub - Added non-auxiliary axiom: SubClassOf(owl:Thing ObjectIntersectionOf(Q5))
+11:09:29 DEBUG ontology.learning.expert.TripleStoreExpert - ax: SubClassOf(ObjectIntersectionOf(<http://www.wikidata.org/entity/Q84048850> <http://www.wikidata.org/entity/Q84048852> ObjectSomeValuesFrom(<http://www.wikidata.org/prop/direct/P40> <http://www.wikidata.org/entity/Q5>) ObjectSomeValuesFrom(<http://www.wikidata.org/prop/direct/P40> <http://www.wikidata.org/entity/Q84048850>)) ObjectSomeValuesFrom(<http://www.wikidata.org/prop/direct/P40> <http://www.wikidata.org/entity/Q84048852>))
+11:09:29 DEBUG ontology.learning.expert.TripleStoreExpert - queryStrLhs:PREFIX owl: <http://www.w3.org/2002/07/owl/>
+PREFIX wd: <http://www.wikidata.org/entity/>
+PREFIX wdt: <http://www.wikidata.org/prop/direct/>
+
+SELECT DISTINCT ?1 WHERE {
+?1 wdt:P31/wdt:P279* <http://www.wikidata.org/entity/Q84048850>.
+?1 wdt:P31/wdt:P279* <http://www.wikidata.org/entity/Q84048852>.
+?1 <http://www.wikidata.org/prop/direct/P40> ?10. 
+?10 wdt:P31/wdt:P279* <http://www.wikidata.org/entity/Q5>.
+?1 <http://www.wikidata.org/prop/direct/P40> ?11. 
+?11 wdt:P31/wdt:P279* <http://www.wikidata.org/entity/Q84048850>.
+}
+11:09:29 DEBUG ontology.learning.expert.TripleStoreExpert - queryStrRhs:PREFIX owl: <http://www.w3.org/2002/07/owl/>
+PREFIX wd: <http://www.wikidata.org/entity/>
+PREFIX wdt: <http://www.wikidata.org/prop/direct/>
+
+SELECT DISTINCT ?1 WHERE {
+?1 <http://www.wikidata.org/prop/direct/P40> ?10. 
+?10 wdt:P31/wdt:P279* <http://www.wikidata.org/entity/Q84048852>.
+}
+11:09:29 DEBUG ontology.learning.expert.TripleStoreExpert - query executed
+11:09:29 DEBUG ontology.learning.expert.TripleStoreExpert - resultsLhs: []
+11:09:29 DEBUG ontology.learning.expert.TripleStoreExpert - resultsRhs: [http://example.org/lukas, http://example.org/anna]
+11:09:29 DEBUG PACOntologyLearningSub - Added auxiliary axiom: SubClassOf(ObjectIntersectionOf(<http://www.wikidata.org/entity/Q84048850> <http://www.wikidata.org/entity/Q84048852> ObjectSomeValuesFrom(<http://www.wikidata.org/prop/direct/P40> <http://www.wikidata.org/entity/Q5>) ObjectSomeValuesFrom(<http://www.wikidata.org/prop/direct/P40> <http://www.wikidata.org/entity/Q84048850>)) ObjectSomeValuesFrom(<http://www.wikidata.org/prop/direct/P40> <http://www.wikidata.org/entity/Q84048852>))
+11:09:29 INFO  PACOntologyLearningSub - Samples at this iteration: 1
+11:09:29 INFO  PACOntologyLearningSub - iteration:4
+11:09:29 INFO  PACOntologyLearningSub - auxiliary axioms:9
+11:09:29 INFO  PACOntologyLearningSub - expert queries:17
+11:09:29 INFO  PACOntologyLearningSub - implications:1
+11:09:29 DEBUG PACOntologyLearningSub - Added non-auxiliary axiom: SubClassOf(ObjectIntersectionOf(Q5 Q84048850 Q84048852 ObjectSomeValuesFrom(<http://www.wikidata.org/prop/direct/P40 Q5) ObjectSomeValuesFrom(<http://www.wikidata.org/prop/direct/P40 Q84048850)) ObjectIntersectionOf(ObjectSomeValuesFrom(<http://www.wikidata.org/prop/direct/P40 Q84048852)))
+11:09:29 DEBUG ontology.learning.expert.TripleStoreExpert - ax: SubClassOf(ObjectIntersectionOf(<http://www.wikidata.org/entity/Q5> <http://www.wikidata.org/entity/Q84048852> ObjectSomeValuesFrom(<http://www.wikidata.org/prop/direct/P40> <http://www.wikidata.org/entity/Q5>)) ObjectSomeValuesFrom(<http://www.wikidata.org/prop/direct/P40> <http://www.wikidata.org/entity/Q84048850>))
+11:09:29 DEBUG ontology.learning.expert.TripleStoreExpert - queryStrLhs:PREFIX owl: <http://www.w3.org/2002/07/owl/>
+PREFIX wd: <http://www.wikidata.org/entity/>
+PREFIX wdt: <http://www.wikidata.org/prop/direct/>
+
+SELECT DISTINCT ?1 WHERE {
+?1 wdt:P31/wdt:P279* <http://www.wikidata.org/entity/Q5>.
+?1 wdt:P31/wdt:P279* <http://www.wikidata.org/entity/Q84048852>.
+?1 <http://www.wikidata.org/prop/direct/P40> ?10. 
+?10 wdt:P31/wdt:P279* <http://www.wikidata.org/entity/Q5>.
+}
+11:09:29 DEBUG ontology.learning.expert.TripleStoreExpert - queryStrRhs:PREFIX owl: <http://www.w3.org/2002/07/owl/>
+PREFIX wd: <http://www.wikidata.org/entity/>
+PREFIX wdt: <http://www.wikidata.org/prop/direct/>
+
+SELECT DISTINCT ?1 WHERE {
+?1 <http://www.wikidata.org/prop/direct/P40> ?10. 
+?10 wdt:P31/wdt:P279* <http://www.wikidata.org/entity/Q84048850>.
+}
+11:09:29 DEBUG ontology.learning.expert.TripleStoreExpert - query executed
+11:09:29 DEBUG ontology.learning.expert.TripleStoreExpert - resultsLhs: [http://example.org/kathrin, http://example.org/anna]
+11:09:29 DEBUG ontology.learning.expert.TripleStoreExpert - resultsRhs: [http://example.org/lukas, http://example.org/kathrin, http://example.org/anna, http://example.org/baris]
+11:09:29 DEBUG PACOntologyLearningSub - Added auxiliary axiom: SubClassOf(ObjectIntersectionOf(<http://www.wikidata.org/entity/Q5> <http://www.wikidata.org/entity/Q84048852> ObjectSomeValuesFrom(<http://www.wikidata.org/prop/direct/P40> <http://www.wikidata.org/entity/Q5>)) ObjectSomeValuesFrom(<http://www.wikidata.org/prop/direct/P40> <http://www.wikidata.org/entity/Q84048850>))
+11:09:29 INFO  PACOntologyLearningSub - Samples at this iteration: 1
+11:09:29 INFO  PACOntologyLearningSub - iteration:5
+11:09:29 INFO  PACOntologyLearningSub - auxiliary axioms:10
+11:09:29 INFO  PACOntologyLearningSub - expert queries:18
+11:09:29 INFO  PACOntologyLearningSub - implications:2
+11:09:29 DEBUG PACOntologyLearningSub - Added non-auxiliary axiom: SubClassOf(ObjectIntersectionOf(Q5 Q84048852 ObjectSomeValuesFrom(<http://www.wikidata.org/prop/direct/P40 Q5)) ObjectIntersectionOf(ObjectSomeValuesFrom(<http://www.wikidata.org/prop/direct/P40 Q84048850)))
+11:09:29 INFO  PACOntologyLearningSub - Samples at this iteration: 4
+11:09:29 INFO  PACOntologyLearningSub - iteration:6
+11:09:29 INFO  PACOntologyLearningSub - auxiliary axioms:10
+11:09:29 INFO  PACOntologyLearningSub - expert queries:18
+11:09:29 INFO  PACOntologyLearningSub - implications:2
+11:09:29 DEBUG ontology.learning.expert.TripleStoreExpert - ax: SubClassOf(ObjectIntersectionOf(<http://www.wikidata.org/entity/Q5>) ObjectSomeValuesFrom(<http://www.wikidata.org/prop/direct/P40> <http://www.wikidata.org/entity/Q5>))
+11:09:29 DEBUG ontology.learning.expert.TripleStoreExpert - queryStrLhs:PREFIX owl: <http://www.w3.org/2002/07/owl/>
+PREFIX wd: <http://www.wikidata.org/entity/>
+PREFIX wdt: <http://www.wikidata.org/prop/direct/>
+
+SELECT DISTINCT ?1 WHERE {
+?1 wdt:P31/wdt:P279* <http://www.wikidata.org/entity/Q5>.
+}
+11:09:29 DEBUG ontology.learning.expert.TripleStoreExpert - queryStrRhs:PREFIX owl: <http://www.w3.org/2002/07/owl/>
+PREFIX wd: <http://www.wikidata.org/entity/>
+PREFIX wdt: <http://www.wikidata.org/prop/direct/>
+
+SELECT DISTINCT ?1 WHERE {
+?1 <http://www.wikidata.org/prop/direct/P40> ?10. 
+?10 wdt:P31/wdt:P279* <http://www.wikidata.org/entity/Q5>.
+}
+11:09:29 DEBUG ontology.learning.expert.TripleStoreExpert - query executed
+11:09:29 DEBUG ontology.learning.expert.TripleStoreExpert - resultsLhs: [http://example.org/jannik, http://example.org/lukas, http://example.org/matis, http://example.org/kathrin, http://example.org/teo, http://example.org/anna, http://example.org/joni, http://example.org/levin, http://example.org/baris, http://example.org/lea]
+11:09:29 DEBUG ontology.learning.expert.TripleStoreExpert - resultsRhs: [http://example.org/lukas, http://example.org/kathrin, http://example.org/anna, http://example.org/baris]
+11:09:29 DEBUG ontology.learning.expert.TripleStoreExpert - ax: SubClassOf(ObjectIntersectionOf(<http://www.wikidata.org/entity/Q5>) ObjectSomeValuesFrom(<http://www.wikidata.org/prop/direct/P40> <http://www.wikidata.org/entity/Q84048850>))
+11:09:29 DEBUG ontology.learning.expert.TripleStoreExpert - queryStrLhs:PREFIX owl: <http://www.w3.org/2002/07/owl/>
+PREFIX wd: <http://www.wikidata.org/entity/>
+PREFIX wdt: <http://www.wikidata.org/prop/direct/>
+
+SELECT DISTINCT ?1 WHERE {
+?1 wdt:P31/wdt:P279* <http://www.wikidata.org/entity/Q5>.
+}
+11:09:29 DEBUG ontology.learning.expert.TripleStoreExpert - queryStrRhs:PREFIX owl: <http://www.w3.org/2002/07/owl/>
+PREFIX wd: <http://www.wikidata.org/entity/>
+PREFIX wdt: <http://www.wikidata.org/prop/direct/>
+
+SELECT DISTINCT ?1 WHERE {
+?1 <http://www.wikidata.org/prop/direct/P40> ?10. 
+?10 wdt:P31/wdt:P279* <http://www.wikidata.org/entity/Q84048850>.
+}
+11:09:29 DEBUG ontology.learning.expert.TripleStoreExpert - query executed
+11:09:29 DEBUG ontology.learning.expert.TripleStoreExpert - resultsLhs: [http://example.org/jannik, http://example.org/lukas, http://example.org/matis, http://example.org/kathrin, http://example.org/teo, http://example.org/anna, http://example.org/joni, http://example.org/levin, http://example.org/baris, http://example.org/lea]
+11:09:29 DEBUG ontology.learning.expert.TripleStoreExpert - resultsRhs: [http://example.org/lukas, http://example.org/kathrin, http://example.org/anna, http://example.org/baris]
+11:09:29 DEBUG ontology.learning.expert.TripleStoreExpert - ax: SubClassOf(ObjectIntersectionOf(<http://www.wikidata.org/entity/Q5> <http://www.wikidata.org/entity/Q84048850> ObjectSomeValuesFrom(<http://www.wikidata.org/prop/direct/P40> <http://www.wikidata.org/entity/Q84048850>) ObjectSomeValuesFrom(<http://www.wikidata.org/prop/direct/P40> <http://www.wikidata.org/entity/Q84048852>)) <http://www.wikidata.org/entity/Q84048852>)
+11:09:29 DEBUG ontology.learning.expert.TripleStoreExpert - queryStrLhs:PREFIX owl: <http://www.w3.org/2002/07/owl/>
+PREFIX wd: <http://www.wikidata.org/entity/>
+PREFIX wdt: <http://www.wikidata.org/prop/direct/>
+
+SELECT DISTINCT ?1 WHERE {
+?1 wdt:P31/wdt:P279* <http://www.wikidata.org/entity/Q5>.
+?1 wdt:P31/wdt:P279* <http://www.wikidata.org/entity/Q84048850>.
+?1 <http://www.wikidata.org/prop/direct/P40> ?10. 
+?10 wdt:P31/wdt:P279* <http://www.wikidata.org/entity/Q84048850>.
+?1 <http://www.wikidata.org/prop/direct/P40> ?11. 
+?11 wdt:P31/wdt:P279* <http://www.wikidata.org/entity/Q84048852>.
+}
+11:09:29 DEBUG ontology.learning.expert.TripleStoreExpert - queryStrRhs:PREFIX owl: <http://www.w3.org/2002/07/owl/>
+PREFIX wd: <http://www.wikidata.org/entity/>
+PREFIX wdt: <http://www.wikidata.org/prop/direct/>
+
+SELECT DISTINCT ?1 WHERE {
+?1 wdt:P31/wdt:P279* <http://www.wikidata.org/entity/Q84048852>.
+}
+11:09:29 DEBUG ontology.learning.expert.TripleStoreExpert - query executed
+11:09:29 DEBUG ontology.learning.expert.TripleStoreExpert - resultsLhs: [http://example.org/lukas]
+11:09:29 DEBUG ontology.learning.expert.TripleStoreExpert - resultsRhs: [http://example.org/kathrin, http://example.org/anna, http://example.org/lea]
+11:09:29 DEBUG PACOntologyLearningSub - Added non-auxiliary axiom: SubClassOf(ObjectIntersectionOf(Q5 Q84048850 ObjectSomeValuesFrom(<http://www.wikidata.org/prop/direct/P40 Q84048850) ObjectSomeValuesFrom(<http://www.wikidata.org/prop/direct/P40 Q84048852)) ObjectIntersectionOf(ObjectSomeValuesFrom(<http://www.wikidata.org/prop/direct/P40 Q5)))
+11:09:29 INFO  PACOntologyLearningSub - Samples at this iteration: 3
+11:09:29 INFO  PACOntologyLearningSub - iteration:7
+11:09:29 INFO  PACOntologyLearningSub - auxiliary axioms:10
+11:09:29 INFO  PACOntologyLearningSub - expert queries:21
+11:09:29 INFO  PACOntologyLearningSub - implications:3
+11:09:29 DEBUG ontology.learning.expert.TripleStoreExpert - ax: SubClassOf(ObjectIntersectionOf(<http://www.wikidata.org/entity/Q5> <http://www.wikidata.org/entity/Q84048850> ObjectSomeValuesFrom(<http://www.wikidata.org/prop/direct/P40> <http://www.wikidata.org/entity/Q84048850>)) ObjectSomeValuesFrom(<http://www.wikidata.org/prop/direct/P40> <http://www.wikidata.org/entity/Q84048852>))
+11:09:29 DEBUG ontology.learning.expert.TripleStoreExpert - queryStrLhs:PREFIX owl: <http://www.w3.org/2002/07/owl/>
+PREFIX wd: <http://www.wikidata.org/entity/>
+PREFIX wdt: <http://www.wikidata.org/prop/direct/>
+
+SELECT DISTINCT ?1 WHERE {
+?1 wdt:P31/wdt:P279* <http://www.wikidata.org/entity/Q5>.
+?1 wdt:P31/wdt:P279* <http://www.wikidata.org/entity/Q84048850>.
+?1 <http://www.wikidata.org/prop/direct/P40> ?10. 
+?10 wdt:P31/wdt:P279* <http://www.wikidata.org/entity/Q84048850>.
+}
+11:09:29 DEBUG ontology.learning.expert.TripleStoreExpert - queryStrRhs:PREFIX owl: <http://www.w3.org/2002/07/owl/>
+PREFIX wd: <http://www.wikidata.org/entity/>
+PREFIX wdt: <http://www.wikidata.org/prop/direct/>
+
+SELECT DISTINCT ?1 WHERE {
+?1 <http://www.wikidata.org/prop/direct/P40> ?10. 
+?10 wdt:P31/wdt:P279* <http://www.wikidata.org/entity/Q84048852>.
+}
+11:09:29 DEBUG ontology.learning.expert.TripleStoreExpert - query executed
+11:09:29 DEBUG ontology.learning.expert.TripleStoreExpert - resultsLhs: [http://example.org/lukas, http://example.org/baris]
+11:09:29 DEBUG ontology.learning.expert.TripleStoreExpert - resultsRhs: [http://example.org/lukas, http://example.org/anna]
+11:09:29 DEBUG PACOntologyLearningSub - Added non-auxiliary axiom: SubClassOf(ObjectIntersectionOf(Q5 Q84048850 ObjectSomeValuesFrom(<http://www.wikidata.org/prop/direct/P40 Q84048850)) ObjectIntersectionOf(ObjectSomeValuesFrom(<http://www.wikidata.org/prop/direct/P40 Q5)))
+11:09:29 DEBUG ontology.learning.expert.TripleStoreExpert - ax: SubClassOf(ObjectIntersectionOf(<http://www.wikidata.org/entity/Q84048850> <http://www.wikidata.org/entity/Q84048852>) ObjectSomeValuesFrom(<http://www.wikidata.org/prop/direct/P40> <http://www.wikidata.org/entity/Q84048850>))
+11:09:29 DEBUG ontology.learning.expert.TripleStoreExpert - queryStrLhs:PREFIX owl: <http://www.w3.org/2002/07/owl/>
+PREFIX wd: <http://www.wikidata.org/entity/>
+PREFIX wdt: <http://www.wikidata.org/prop/direct/>
+
+SELECT DISTINCT ?1 WHERE {
+?1 wdt:P31/wdt:P279* <http://www.wikidata.org/entity/Q84048850>.
+?1 wdt:P31/wdt:P279* <http://www.wikidata.org/entity/Q84048852>.
+}
+11:09:29 DEBUG ontology.learning.expert.TripleStoreExpert - queryStrRhs:PREFIX owl: <http://www.w3.org/2002/07/owl/>
+PREFIX wd: <http://www.wikidata.org/entity/>
+PREFIX wdt: <http://www.wikidata.org/prop/direct/>
+
+SELECT DISTINCT ?1 WHERE {
+?1 <http://www.wikidata.org/prop/direct/P40> ?10. 
+?10 wdt:P31/wdt:P279* <http://www.wikidata.org/entity/Q84048850>.
+}
+11:09:29 DEBUG ontology.learning.expert.TripleStoreExpert - query executed
+11:09:29 DEBUG ontology.learning.expert.TripleStoreExpert - resultsLhs: []
+11:09:29 DEBUG ontology.learning.expert.TripleStoreExpert - resultsRhs: [http://example.org/lukas, http://example.org/kathrin, http://example.org/anna, http://example.org/baris]
+11:09:29 DEBUG PACOntologyLearningSub - Added auxiliary axiom: SubClassOf(ObjectIntersectionOf(<http://www.wikidata.org/entity/Q84048850> <http://www.wikidata.org/entity/Q84048852>) ObjectSomeValuesFrom(<http://www.wikidata.org/prop/direct/P40> <http://www.wikidata.org/entity/Q84048850>))
+11:09:29 INFO  PACOntologyLearningSub - Samples at this iteration: 2
+11:09:29 INFO  PACOntologyLearningSub - iteration:8
+11:09:29 INFO  PACOntologyLearningSub - auxiliary axioms:11
+11:09:29 INFO  PACOntologyLearningSub - expert queries:23
+11:09:29 INFO  PACOntologyLearningSub - implications:3
+11:09:29 DEBUG ontology.learning.expert.TripleStoreExpert - ax: SubClassOf(ObjectIntersectionOf(<http://www.wikidata.org/entity/Q5> <http://www.wikidata.org/entity/Q84048852>) ObjectSomeValuesFrom(<http://www.wikidata.org/prop/direct/P40> <http://www.wikidata.org/entity/Q5>))
+11:09:29 DEBUG ontology.learning.expert.TripleStoreExpert - queryStrLhs:PREFIX owl: <http://www.w3.org/2002/07/owl/>
+PREFIX wd: <http://www.wikidata.org/entity/>
+PREFIX wdt: <http://www.wikidata.org/prop/direct/>
+
+SELECT DISTINCT ?1 WHERE {
+?1 wdt:P31/wdt:P279* <http://www.wikidata.org/entity/Q5>.
+?1 wdt:P31/wdt:P279* <http://www.wikidata.org/entity/Q84048852>.
+}
+11:09:29 DEBUG ontology.learning.expert.TripleStoreExpert - queryStrRhs:PREFIX owl: <http://www.w3.org/2002/07/owl/>
+PREFIX wd: <http://www.wikidata.org/entity/>
+PREFIX wdt: <http://www.wikidata.org/prop/direct/>
+
+SELECT DISTINCT ?1 WHERE {
+?1 <http://www.wikidata.org/prop/direct/P40> ?10. 
+?10 wdt:P31/wdt:P279* <http://www.wikidata.org/entity/Q5>.
+}
+11:09:29 DEBUG ontology.learning.expert.TripleStoreExpert - query executed
+11:09:29 DEBUG ontology.learning.expert.TripleStoreExpert - resultsLhs: [http://example.org/kathrin, http://example.org/anna, http://example.org/lea]
+11:09:29 DEBUG ontology.learning.expert.TripleStoreExpert - resultsRhs: [http://example.org/lukas, http://example.org/kathrin, http://example.org/anna, http://example.org/baris]
+11:09:29 DEBUG ontology.learning.expert.TripleStoreExpert - ax: SubClassOf(ObjectIntersectionOf(<http://www.wikidata.org/entity/Q5> <http://www.wikidata.org/entity/Q84048852>) ObjectSomeValuesFrom(<http://www.wikidata.org/prop/direct/P40> <http://www.wikidata.org/entity/Q84048850>))
+11:09:29 DEBUG ontology.learning.expert.TripleStoreExpert - queryStrLhs:PREFIX owl: <http://www.w3.org/2002/07/owl/>
+PREFIX wd: <http://www.wikidata.org/entity/>
+PREFIX wdt: <http://www.wikidata.org/prop/direct/>
+
+SELECT DISTINCT ?1 WHERE {
+?1 wdt:P31/wdt:P279* <http://www.wikidata.org/entity/Q5>.
+?1 wdt:P31/wdt:P279* <http://www.wikidata.org/entity/Q84048852>.
+}
+11:09:29 DEBUG ontology.learning.expert.TripleStoreExpert - queryStrRhs:PREFIX owl: <http://www.w3.org/2002/07/owl/>
+PREFIX wd: <http://www.wikidata.org/entity/>
+PREFIX wdt: <http://www.wikidata.org/prop/direct/>
+
+SELECT DISTINCT ?1 WHERE {
+?1 <http://www.wikidata.org/prop/direct/P40> ?10. 
+?10 wdt:P31/wdt:P279* <http://www.wikidata.org/entity/Q84048850>.
+}
+11:09:29 DEBUG ontology.learning.expert.TripleStoreExpert - query executed
+11:09:29 DEBUG ontology.learning.expert.TripleStoreExpert - resultsLhs: [http://example.org/kathrin, http://example.org/anna, http://example.org/lea]
+11:09:29 DEBUG ontology.learning.expert.TripleStoreExpert - resultsRhs: [http://example.org/lukas, http://example.org/kathrin, http://example.org/anna, http://example.org/baris]
+11:09:29 DEBUG ontology.learning.expert.TripleStoreExpert - ax: SubClassOf(ObjectIntersectionOf(<http://www.wikidata.org/entity/Q5> <http://www.wikidata.org/entity/Q84048850>) ObjectSomeValuesFrom(<http://www.wikidata.org/prop/direct/P40> <http://www.wikidata.org/entity/Q5>))
+11:09:29 DEBUG ontology.learning.expert.TripleStoreExpert - queryStrLhs:PREFIX owl: <http://www.w3.org/2002/07/owl/>
+PREFIX wd: <http://www.wikidata.org/entity/>
+PREFIX wdt: <http://www.wikidata.org/prop/direct/>
+
+SELECT DISTINCT ?1 WHERE {
+?1 wdt:P31/wdt:P279* <http://www.wikidata.org/entity/Q5>.
+?1 wdt:P31/wdt:P279* <http://www.wikidata.org/entity/Q84048850>.
+}
+11:09:29 DEBUG ontology.learning.expert.TripleStoreExpert - queryStrRhs:PREFIX owl: <http://www.w3.org/2002/07/owl/>
+PREFIX wd: <http://www.wikidata.org/entity/>
+PREFIX wdt: <http://www.wikidata.org/prop/direct/>
+
+SELECT DISTINCT ?1 WHERE {
+?1 <http://www.wikidata.org/prop/direct/P40> ?10. 
+?10 wdt:P31/wdt:P279* <http://www.wikidata.org/entity/Q5>.
+}
+11:09:29 DEBUG ontology.learning.expert.TripleStoreExpert - query executed
+11:09:29 DEBUG ontology.learning.expert.TripleStoreExpert - resultsLhs: [http://example.org/jannik, http://example.org/lukas, http://example.org/matis, http://example.org/teo, http://example.org/joni, http://example.org/levin, http://example.org/baris]
+11:09:29 DEBUG ontology.learning.expert.TripleStoreExpert - resultsRhs: [http://example.org/lukas, http://example.org/kathrin, http://example.org/anna, http://example.org/baris]
+11:09:29 DEBUG ontology.learning.expert.TripleStoreExpert - ax: SubClassOf(ObjectIntersectionOf(<http://www.wikidata.org/entity/Q5> <http://www.wikidata.org/entity/Q84048850>) ObjectSomeValuesFrom(<http://www.wikidata.org/prop/direct/P40> <http://www.wikidata.org/entity/Q84048850>))
+11:09:29 DEBUG ontology.learning.expert.TripleStoreExpert - queryStrLhs:PREFIX owl: <http://www.w3.org/2002/07/owl/>
+PREFIX wd: <http://www.wikidata.org/entity/>
+PREFIX wdt: <http://www.wikidata.org/prop/direct/>
+
+SELECT DISTINCT ?1 WHERE {
+?1 wdt:P31/wdt:P279* <http://www.wikidata.org/entity/Q5>.
+?1 wdt:P31/wdt:P279* <http://www.wikidata.org/entity/Q84048850>.
+}
+11:09:29 DEBUG ontology.learning.expert.TripleStoreExpert - queryStrRhs:PREFIX owl: <http://www.w3.org/2002/07/owl/>
+PREFIX wd: <http://www.wikidata.org/entity/>
+PREFIX wdt: <http://www.wikidata.org/prop/direct/>
+
+SELECT DISTINCT ?1 WHERE {
+?1 <http://www.wikidata.org/prop/direct/P40> ?10. 
+?10 wdt:P31/wdt:P279* <http://www.wikidata.org/entity/Q84048850>.
+}
+11:09:29 DEBUG ontology.learning.expert.TripleStoreExpert - query executed
+11:09:29 DEBUG ontology.learning.expert.TripleStoreExpert - resultsLhs: [http://example.org/jannik, http://example.org/lukas, http://example.org/matis, http://example.org/teo, http://example.org/joni, http://example.org/levin, http://example.org/baris]
+11:09:29 DEBUG ontology.learning.expert.TripleStoreExpert - resultsRhs: [http://example.org/lukas, http://example.org/kathrin, http://example.org/anna, http://example.org/baris]
+11:09:29 DEBUG PACOntologyLearningSub - Added non-auxiliary axiom: SubClassOf(ObjectIntersectionOf(Q5 Q84048850 Q84048852) ObjectIntersectionOf(ObjectSomeValuesFrom(<http://www.wikidata.org/prop/direct/P40 Q5) ObjectSomeValuesFrom(<http://www.wikidata.org/prop/direct/P40 Q84048850) ObjectSomeValuesFrom(<http://www.wikidata.org/prop/direct/P40 Q84048852)))
+11:09:29 INFO  PACOntologyLearningSub - Samples at this iteration: 6
+11:09:29 INFO  PACOntologyLearningSub - iteration:9
+11:09:29 INFO  PACOntologyLearningSub - auxiliary axioms:11
+11:09:29 INFO  PACOntologyLearningSub - expert queries:27
+11:09:29 INFO  PACOntologyLearningSub - implications:4
+11:09:29 DEBUG PACOntologyLearningSub - Added non-auxiliary axiom: SubClassOf(ObjectIntersectionOf(Q5 ObjectSomeValuesFrom(<http://www.wikidata.org/prop/direct/P40 Q84048850)) ObjectIntersectionOf(ObjectSomeValuesFrom(<http://www.wikidata.org/prop/direct/P40 Q5)))
+11:09:29 INFO  PACOntologyLearningSub - Samples at this iteration: 2
+11:09:29 INFO  PACOntologyLearningSub - iteration:10
+11:09:29 INFO  PACOntologyLearningSub - auxiliary axioms:11
+11:09:29 INFO  PACOntologyLearningSub - expert queries:27
+11:09:29 INFO  PACOntologyLearningSub - implications:4
+11:09:29 DEBUG PACOntologyLearningSub - Added non-auxiliary axiom: SubClassOf(ObjectIntersectionOf(Q5 ObjectSomeValuesFrom(<http://www.wikidata.org/prop/direct/P40 Q84048852)) ObjectIntersectionOf(ObjectSomeValuesFrom(<http://www.wikidata.org/prop/direct/P40 Q5) ObjectSomeValuesFrom(<http://www.wikidata.org/prop/direct/P40 Q84048850)))
+11:09:29 DEBUG ontology.learning.expert.TripleStoreExpert - ax: SubClassOf(ObjectIntersectionOf(<http://www.wikidata.org/entity/Q5> <http://www.wikidata.org/entity/Q84048852> ObjectSomeValuesFrom(<http://www.wikidata.org/prop/direct/P40> <http://www.wikidata.org/entity/Q84048850>)) ObjectSomeValuesFrom(<http://www.wikidata.org/prop/direct/P40> <http://www.wikidata.org/entity/Q84048852>))
+11:09:29 DEBUG ontology.learning.expert.TripleStoreExpert - queryStrLhs:PREFIX owl: <http://www.w3.org/2002/07/owl/>
+PREFIX wd: <http://www.wikidata.org/entity/>
+PREFIX wdt: <http://www.wikidata.org/prop/direct/>
+
+SELECT DISTINCT ?1 WHERE {
+?1 wdt:P31/wdt:P279* <http://www.wikidata.org/entity/Q5>.
+?1 wdt:P31/wdt:P279* <http://www.wikidata.org/entity/Q84048852>.
+?1 <http://www.wikidata.org/prop/direct/P40> ?10. 
+?10 wdt:P31/wdt:P279* <http://www.wikidata.org/entity/Q84048850>.
+}
+11:09:29 DEBUG ontology.learning.expert.TripleStoreExpert - queryStrRhs:PREFIX owl: <http://www.w3.org/2002/07/owl/>
+PREFIX wd: <http://www.wikidata.org/entity/>
+PREFIX wdt: <http://www.wikidata.org/prop/direct/>
+
+SELECT DISTINCT ?1 WHERE {
+?1 <http://www.wikidata.org/prop/direct/P40> ?10. 
+?10 wdt:P31/wdt:P279* <http://www.wikidata.org/entity/Q84048852>.
+}
+11:09:29 DEBUG ontology.learning.expert.TripleStoreExpert - query executed
+11:09:29 DEBUG ontology.learning.expert.TripleStoreExpert - resultsLhs: [http://example.org/kathrin, http://example.org/anna]
+11:09:29 DEBUG ontology.learning.expert.TripleStoreExpert - resultsRhs: [http://example.org/lukas, http://example.org/anna]
+11:09:29 DEBUG ontology.learning.expert.TripleStoreExpert - ax: SubClassOf(ObjectIntersectionOf(ObjectSomeValuesFrom(<http://www.wikidata.org/prop/direct/P40> <http://www.wikidata.org/entity/Q5>) ObjectSomeValuesFrom(<http://www.wikidata.org/prop/direct/P40> <http://www.wikidata.org/entity/Q84048850>) ObjectSomeValuesFrom(<http://www.wikidata.org/prop/direct/P40> <http://www.wikidata.org/entity/Q84048852>)) <http://www.wikidata.org/entity/Q84048852>)
+11:09:29 DEBUG ontology.learning.expert.TripleStoreExpert - queryStrLhs:PREFIX owl: <http://www.w3.org/2002/07/owl/>
+PREFIX wd: <http://www.wikidata.org/entity/>
+PREFIX wdt: <http://www.wikidata.org/prop/direct/>
+
+SELECT DISTINCT ?1 WHERE {
+?1 <http://www.wikidata.org/prop/direct/P40> ?10. 
+?10 wdt:P31/wdt:P279* <http://www.wikidata.org/entity/Q5>.
+?1 <http://www.wikidata.org/prop/direct/P40> ?11. 
+?11 wdt:P31/wdt:P279* <http://www.wikidata.org/entity/Q84048850>.
+?1 <http://www.wikidata.org/prop/direct/P40> ?12. 
+?12 wdt:P31/wdt:P279* <http://www.wikidata.org/entity/Q84048852>.
+}
+11:09:29 DEBUG ontology.learning.expert.TripleStoreExpert - queryStrRhs:PREFIX owl: <http://www.w3.org/2002/07/owl/>
+PREFIX wd: <http://www.wikidata.org/entity/>
+PREFIX wdt: <http://www.wikidata.org/prop/direct/>
+
+SELECT DISTINCT ?1 WHERE {
+?1 wdt:P31/wdt:P279* <http://www.wikidata.org/entity/Q84048852>.
+}
+11:09:29 DEBUG ontology.learning.expert.TripleStoreExpert - query executed
+11:09:29 DEBUG ontology.learning.expert.TripleStoreExpert - resultsLhs: [http://example.org/lukas, http://example.org/anna]
+11:09:29 DEBUG ontology.learning.expert.TripleStoreExpert - resultsRhs: [http://example.org/kathrin, http://example.org/anna, http://example.org/lea]
+11:09:29 DEBUG ontology.learning.expert.TripleStoreExpert - ax: SubClassOf(ObjectIntersectionOf(<http://www.wikidata.org/entity/Q5> ObjectSomeValuesFrom(<http://www.wikidata.org/prop/direct/P40> <http://www.wikidata.org/entity/Q5>)) ObjectSomeValuesFrom(<http://www.wikidata.org/prop/direct/P40> <http://www.wikidata.org/entity/Q84048850>))
+11:09:29 DEBUG ontology.learning.expert.TripleStoreExpert - queryStrLhs:PREFIX owl: <http://www.w3.org/2002/07/owl/>
+PREFIX wd: <http://www.wikidata.org/entity/>
+PREFIX wdt: <http://www.wikidata.org/prop/direct/>
+
+SELECT DISTINCT ?1 WHERE {
+?1 wdt:P31/wdt:P279* <http://www.wikidata.org/entity/Q5>.
+?1 <http://www.wikidata.org/prop/direct/P40> ?10. 
+?10 wdt:P31/wdt:P279* <http://www.wikidata.org/entity/Q5>.
+}
+11:09:29 DEBUG ontology.learning.expert.TripleStoreExpert - queryStrRhs:PREFIX owl: <http://www.w3.org/2002/07/owl/>
+PREFIX wd: <http://www.wikidata.org/entity/>
+PREFIX wdt: <http://www.wikidata.org/prop/direct/>
+
+SELECT DISTINCT ?1 WHERE {
+?1 <http://www.wikidata.org/prop/direct/P40> ?10. 
+?10 wdt:P31/wdt:P279* <http://www.wikidata.org/entity/Q84048850>.
+}
+11:09:29 DEBUG ontology.learning.expert.TripleStoreExpert - query executed
+11:09:29 DEBUG ontology.learning.expert.TripleStoreExpert - resultsLhs: [http://example.org/lukas, http://example.org/kathrin, http://example.org/anna, http://example.org/baris]
+11:09:29 DEBUG ontology.learning.expert.TripleStoreExpert - resultsRhs: [http://example.org/lukas, http://example.org/kathrin, http://example.org/anna, http://example.org/baris]
+11:09:29 DEBUG PACOntologyLearningSub - Added auxiliary axiom: SubClassOf(ObjectIntersectionOf(<http://www.wikidata.org/entity/Q5> ObjectSomeValuesFrom(<http://www.wikidata.org/prop/direct/P40> <http://www.wikidata.org/entity/Q5>)) ObjectSomeValuesFrom(<http://www.wikidata.org/prop/direct/P40> <http://www.wikidata.org/entity/Q84048850>))
+11:09:29 INFO  PACOntologyLearningSub - Samples at this iteration: 25
+11:09:29 INFO  PACOntologyLearningSub - iteration:11
+11:09:29 INFO  PACOntologyLearningSub - auxiliary axioms:12
+11:09:29 INFO  PACOntologyLearningSub - expert queries:30
+11:09:29 INFO  PACOntologyLearningSub - implications:5
+11:09:29 DEBUG PACOntologyLearningSub - Added non-auxiliary axiom: SubClassOf(ObjectIntersectionOf(Q5 ObjectSomeValuesFrom(<http://www.wikidata.org/prop/direct/P40 Q5)) ObjectIntersectionOf(ObjectSomeValuesFrom(<http://www.wikidata.org/prop/direct/P40 Q84048850)))
+11:09:29 DEBUG ontology.learning.expert.TripleStoreExpert - ax: SubClassOf(ObjectIntersectionOf(<http://www.wikidata.org/entity/Q84048850> ObjectSomeValuesFrom(<http://www.wikidata.org/prop/direct/P40> <http://www.wikidata.org/entity/Q5>) ObjectSomeValuesFrom(<http://www.wikidata.org/prop/direct/P40> <http://www.wikidata.org/entity/Q84048850>) ObjectSomeValuesFrom(<http://www.wikidata.org/prop/direct/P40> <http://www.wikidata.org/entity/Q84048852>)) <http://www.wikidata.org/entity/Q84048852>)
+11:09:29 DEBUG ontology.learning.expert.TripleStoreExpert - queryStrLhs:PREFIX owl: <http://www.w3.org/2002/07/owl/>
+PREFIX wd: <http://www.wikidata.org/entity/>
+PREFIX wdt: <http://www.wikidata.org/prop/direct/>
+
+SELECT DISTINCT ?1 WHERE {
+?1 wdt:P31/wdt:P279* <http://www.wikidata.org/entity/Q84048850>.
+?1 <http://www.wikidata.org/prop/direct/P40> ?10. 
+?10 wdt:P31/wdt:P279* <http://www.wikidata.org/entity/Q5>.
+?1 <http://www.wikidata.org/prop/direct/P40> ?11. 
+?11 wdt:P31/wdt:P279* <http://www.wikidata.org/entity/Q84048850>.
+?1 <http://www.wikidata.org/prop/direct/P40> ?12. 
+?12 wdt:P31/wdt:P279* <http://www.wikidata.org/entity/Q84048852>.
+}
+11:09:29 DEBUG ontology.learning.expert.TripleStoreExpert - queryStrRhs:PREFIX owl: <http://www.w3.org/2002/07/owl/>
+PREFIX wd: <http://www.wikidata.org/entity/>
+PREFIX wdt: <http://www.wikidata.org/prop/direct/>
+
+SELECT DISTINCT ?1 WHERE {
+?1 wdt:P31/wdt:P279* <http://www.wikidata.org/entity/Q84048852>.
+}
+11:09:29 DEBUG ontology.learning.expert.TripleStoreExpert - query executed
+11:09:29 DEBUG ontology.learning.expert.TripleStoreExpert - resultsLhs: [http://example.org/lukas]
+11:09:29 DEBUG ontology.learning.expert.TripleStoreExpert - resultsRhs: [http://example.org/kathrin, http://example.org/anna, http://example.org/lea]
+11:09:29 DEBUG ontology.learning.expert.TripleStoreExpert - ax: SubClassOf(ObjectIntersectionOf(<http://www.wikidata.org/entity/Q5> ObjectSomeValuesFrom(<http://www.wikidata.org/prop/direct/P40> <http://www.wikidata.org/entity/Q5>) ObjectSomeValuesFrom(<http://www.wikidata.org/prop/direct/P40> <http://www.wikidata.org/entity/Q84048850>) ObjectSomeValuesFrom(<http://www.wikidata.org/prop/direct/P40> <http://www.wikidata.org/entity/Q84048852>)) <http://www.wikidata.org/entity/Q84048852>)
+11:09:29 DEBUG ontology.learning.expert.TripleStoreExpert - queryStrLhs:PREFIX owl: <http://www.w3.org/2002/07/owl/>
+PREFIX wd: <http://www.wikidata.org/entity/>
+PREFIX wdt: <http://www.wikidata.org/prop/direct/>
+
+SELECT DISTINCT ?1 WHERE {
+?1 wdt:P31/wdt:P279* <http://www.wikidata.org/entity/Q5>.
+?1 <http://www.wikidata.org/prop/direct/P40> ?10. 
+?10 wdt:P31/wdt:P279* <http://www.wikidata.org/entity/Q5>.
+?1 <http://www.wikidata.org/prop/direct/P40> ?11. 
+?11 wdt:P31/wdt:P279* <http://www.wikidata.org/entity/Q84048850>.
+?1 <http://www.wikidata.org/prop/direct/P40> ?12. 
+?12 wdt:P31/wdt:P279* <http://www.wikidata.org/entity/Q84048852>.
+}
+11:09:29 DEBUG ontology.learning.expert.TripleStoreExpert - queryStrRhs:PREFIX owl: <http://www.w3.org/2002/07/owl/>
+PREFIX wd: <http://www.wikidata.org/entity/>
+PREFIX wdt: <http://www.wikidata.org/prop/direct/>
+
+SELECT DISTINCT ?1 WHERE {
+?1 wdt:P31/wdt:P279* <http://www.wikidata.org/entity/Q84048852>.
+}
+11:09:29 DEBUG ontology.learning.expert.TripleStoreExpert - query executed
+11:09:29 DEBUG ontology.learning.expert.TripleStoreExpert - resultsLhs: [http://example.org/lukas, http://example.org/anna]
+11:09:29 DEBUG ontology.learning.expert.TripleStoreExpert - resultsRhs: [http://example.org/kathrin, http://example.org/anna, http://example.org/lea]
+11:09:29 DEBUG ontology.learning.expert.TripleStoreExpert - ax: SubClassOf(ObjectIntersectionOf(<http://www.wikidata.org/entity/Q84048850> ObjectSomeValuesFrom(<http://www.wikidata.org/prop/direct/P40> <http://www.wikidata.org/entity/Q5>) ObjectSomeValuesFrom(<http://www.wikidata.org/prop/direct/P40> <http://www.wikidata.org/entity/Q84048850>)) ObjectSomeValuesFrom(<http://www.wikidata.org/prop/direct/P40> <http://www.wikidata.org/entity/Q84048852>))
+11:09:29 DEBUG ontology.learning.expert.TripleStoreExpert - queryStrLhs:PREFIX owl: <http://www.w3.org/2002/07/owl/>
+PREFIX wd: <http://www.wikidata.org/entity/>
+PREFIX wdt: <http://www.wikidata.org/prop/direct/>
+
+SELECT DISTINCT ?1 WHERE {
+?1 wdt:P31/wdt:P279* <http://www.wikidata.org/entity/Q84048850>.
+?1 <http://www.wikidata.org/prop/direct/P40> ?10. 
+?10 wdt:P31/wdt:P279* <http://www.wikidata.org/entity/Q5>.
+?1 <http://www.wikidata.org/prop/direct/P40> ?11. 
+?11 wdt:P31/wdt:P279* <http://www.wikidata.org/entity/Q84048850>.
+}
+11:09:29 DEBUG ontology.learning.expert.TripleStoreExpert - queryStrRhs:PREFIX owl: <http://www.w3.org/2002/07/owl/>
+PREFIX wd: <http://www.wikidata.org/entity/>
+PREFIX wdt: <http://www.wikidata.org/prop/direct/>
+
+SELECT DISTINCT ?1 WHERE {
+?1 <http://www.wikidata.org/prop/direct/P40> ?10. 
+?10 wdt:P31/wdt:P279* <http://www.wikidata.org/entity/Q84048852>.
+}
+11:09:29 DEBUG ontology.learning.expert.TripleStoreExpert - query executed
+11:09:29 DEBUG ontology.learning.expert.TripleStoreExpert - resultsLhs: [http://example.org/lukas, http://example.org/baris]
+11:09:29 DEBUG ontology.learning.expert.TripleStoreExpert - resultsRhs: [http://example.org/lukas, http://example.org/anna]
+11:09:29 DEBUG ontology.learning.expert.TripleStoreExpert - ax: SubClassOf(ObjectIntersectionOf(<http://www.wikidata.org/entity/Q5> <http://www.wikidata.org/entity/Q84048850> ObjectSomeValuesFrom(<http://www.wikidata.org/prop/direct/P40> <http://www.wikidata.org/entity/Q5>) ObjectSomeValuesFrom(<http://www.wikidata.org/prop/direct/P40> <http://www.wikidata.org/entity/Q84048850>)) ObjectSomeValuesFrom(<http://www.wikidata.org/prop/direct/P40> <http://www.wikidata.org/entity/Q84048852>))
+11:09:29 DEBUG ontology.learning.expert.TripleStoreExpert - queryStrLhs:PREFIX owl: <http://www.w3.org/2002/07/owl/>
+PREFIX wd: <http://www.wikidata.org/entity/>
+PREFIX wdt: <http://www.wikidata.org/prop/direct/>
+
+SELECT DISTINCT ?1 WHERE {
+?1 wdt:P31/wdt:P279* <http://www.wikidata.org/entity/Q5>.
+?1 wdt:P31/wdt:P279* <http://www.wikidata.org/entity/Q84048850>.
+?1 <http://www.wikidata.org/prop/direct/P40> ?10. 
+?10 wdt:P31/wdt:P279* <http://www.wikidata.org/entity/Q5>.
+?1 <http://www.wikidata.org/prop/direct/P40> ?11. 
+?11 wdt:P31/wdt:P279* <http://www.wikidata.org/entity/Q84048850>.
+}
+11:09:29 DEBUG ontology.learning.expert.TripleStoreExpert - queryStrRhs:PREFIX owl: <http://www.w3.org/2002/07/owl/>
+PREFIX wd: <http://www.wikidata.org/entity/>
+PREFIX wdt: <http://www.wikidata.org/prop/direct/>
+
+SELECT DISTINCT ?1 WHERE {
+?1 <http://www.wikidata.org/prop/direct/P40> ?10. 
+?10 wdt:P31/wdt:P279* <http://www.wikidata.org/entity/Q84048852>.
+}
+11:09:29 DEBUG ontology.learning.expert.TripleStoreExpert - query executed
+11:09:29 DEBUG ontology.learning.expert.TripleStoreExpert - resultsLhs: [http://example.org/lukas, http://example.org/baris]
+11:09:29 DEBUG ontology.learning.expert.TripleStoreExpert - resultsRhs: [http://example.org/lukas, http://example.org/anna]
+11:09:29 DEBUG ontology.learning.expert.TripleStoreExpert - ax: SubClassOf(ObjectIntersectionOf(<http://www.wikidata.org/entity/Q84048852> ObjectSomeValuesFrom(<http://www.wikidata.org/prop/direct/P40> <http://www.wikidata.org/entity/Q5>) ObjectSomeValuesFrom(<http://www.wikidata.org/prop/direct/P40> <http://www.wikidata.org/entity/Q84048850>)) ObjectSomeValuesFrom(<http://www.wikidata.org/prop/direct/P40> <http://www.wikidata.org/entity/Q84048852>))
+11:09:29 DEBUG ontology.learning.expert.TripleStoreExpert - queryStrLhs:PREFIX owl: <http://www.w3.org/2002/07/owl/>
+PREFIX wd: <http://www.wikidata.org/entity/>
+PREFIX wdt: <http://www.wikidata.org/prop/direct/>
+
+SELECT DISTINCT ?1 WHERE {
+?1 wdt:P31/wdt:P279* <http://www.wikidata.org/entity/Q84048852>.
+?1 <http://www.wikidata.org/prop/direct/P40> ?10. 
+?10 wdt:P31/wdt:P279* <http://www.wikidata.org/entity/Q5>.
+?1 <http://www.wikidata.org/prop/direct/P40> ?11. 
+?11 wdt:P31/wdt:P279* <http://www.wikidata.org/entity/Q84048850>.
+}
+11:09:29 DEBUG ontology.learning.expert.TripleStoreExpert - queryStrRhs:PREFIX owl: <http://www.w3.org/2002/07/owl/>
+PREFIX wd: <http://www.wikidata.org/entity/>
+PREFIX wdt: <http://www.wikidata.org/prop/direct/>
+
+SELECT DISTINCT ?1 WHERE {
+?1 <http://www.wikidata.org/prop/direct/P40> ?10. 
+?10 wdt:P31/wdt:P279* <http://www.wikidata.org/entity/Q84048852>.
+}
+11:09:29 DEBUG ontology.learning.expert.TripleStoreExpert - query executed
+11:09:29 DEBUG ontology.learning.expert.TripleStoreExpert - resultsLhs: [http://example.org/kathrin, http://example.org/anna]
+11:09:29 DEBUG ontology.learning.expert.TripleStoreExpert - resultsRhs: [http://example.org/lukas, http://example.org/anna]
+11:09:29 INFO  PACOntologyLearningSub - Generated 70 samples
+11:09:29 DEBUG PACOntologyLearningSub - Added axiom: SubClassOf(owl:Thing ObjectIntersectionOf(<http://www.wikidata.org/entity/Q5>))
+11:09:29 DEBUG PACOntologyLearningSub - Added axiom: SubClassOf(ObjectIntersectionOf(<http://www.wikidata.org/entity/Q5> ObjectSomeValuesFrom(<http://www.wikidata.org/prop/direct/P40> <http://www.wikidata.org/entity/Q5>)) ObjectIntersectionOf(ObjectSomeValuesFrom(<http://www.wikidata.org/prop/direct/P40> <http://www.wikidata.org/entity/Q84048850>)))
+11:09:29 DEBUG PACOntologyLearningSub - Added axiom: SubClassOf(ObjectIntersectionOf(<http://www.wikidata.org/entity/Q5> ObjectSomeValuesFrom(<http://www.wikidata.org/prop/direct/P40> <http://www.wikidata.org/entity/Q84048850>)) ObjectIntersectionOf(ObjectSomeValuesFrom(<http://www.wikidata.org/prop/direct/P40> <http://www.wikidata.org/entity/Q5>)))
+11:09:29 DEBUG PACOntologyLearningSub - Added axiom: SubClassOf(ObjectIntersectionOf(<http://www.wikidata.org/entity/Q5> <http://www.wikidata.org/entity/Q84048850> <http://www.wikidata.org/entity/Q84048852>) ObjectIntersectionOf(ObjectSomeValuesFrom(<http://www.wikidata.org/prop/direct/P40> <http://www.wikidata.org/entity/Q5>) ObjectSomeValuesFrom(<http://www.wikidata.org/prop/direct/P40> <http://www.wikidata.org/entity/Q84048850>) ObjectSomeValuesFrom(<http://www.wikidata.org/prop/direct/P40> <http://www.wikidata.org/entity/Q84048852>)))
+11:09:29 DEBUG PACOntologyLearningSub - Added axiom: SubClassOf(ObjectIntersectionOf(<http://www.wikidata.org/entity/Q5> ObjectSomeValuesFrom(<http://www.wikidata.org/prop/direct/P40> <http://www.wikidata.org/entity/Q84048852>)) ObjectIntersectionOf(ObjectSomeValuesFrom(<http://www.wikidata.org/prop/direct/P40> <http://www.wikidata.org/entity/Q5>) ObjectSomeValuesFrom(<http://www.wikidata.org/prop/direct/P40> <http://www.wikidata.org/entity/Q84048850>)))
+11:09:29 INFO  PACOntologyLearningSub - Total iterations: 11
+11:09:29 INFO  PACOntologyLearningSub - Expert queries: 35
+11:09:29 INFO  PACOntologyLearningSub - Samples generated: 127
+11:09:29 INFO  PACOntologyLearningSub - Auxiliary axioms added: 12

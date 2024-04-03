@@ -1,0 +1,1434 @@
+13:17:14 DEBUG PACOntologyLearningSub - Successfully loaded ontology
+13:17:14 DEBUG ontology.learning.expert.TripleStoreExpert - query starting
+13:17:14 TRACE ontology.learning.expert.TripleStoreExpert - ax: SubClassOf(ObjectIntersectionOf(<http://www.wikidata.org/entity/Q5> <http://www.wikidata.org/entity/Q84048852>) <http://www.wikidata.org/entity/Q84048850>)
+13:17:14 TRACE ontology.learning.expert.TripleStoreExpert - queryStrLhs:
+PREFIX owl: <http://www.w3.org/2002/07/owl/>
+PREFIX wd: <http://www.wikidata.org/entity/>
+PREFIX wdt: <http://www.wikidata.org/prop/direct/>
+
+SELECT DISTINCT ?1 WHERE {
+?1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.wikidata.org/entity/Q5>.
+?1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.wikidata.org/entity/Q84048852>.
+}
+13:17:14 TRACE ontology.learning.expert.TripleStoreExpert - queryStrRhs:
+PREFIX owl: <http://www.w3.org/2002/07/owl/>
+PREFIX wd: <http://www.wikidata.org/entity/>
+PREFIX wdt: <http://www.wikidata.org/prop/direct/>
+
+SELECT DISTINCT ?1 WHERE {
+?1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.wikidata.org/entity/Q84048850>.
+}
+13:17:14 TRACE ontology.learning.expert.TripleStoreExpert - ASK Query:
+PREFIX owl: <http://www.w3.org/2002/07/owl/>
+PREFIX wd: <http://www.wikidata.org/entity/>
+PREFIX wdt: <http://www.wikidata.org/prop/direct/>
+
+ASK {
+?1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.wikidata.org/entity/Q5>.
+?1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.wikidata.org/entity/Q84048852>.
+FILTER NOT EXISTS {
+?1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.wikidata.org/entity/Q84048850>.
+}
+}
+
+13:17:15 DEBUG ontology.learning.expert.TripleStoreExpert - query executed
+13:17:15 DEBUG ontology.learning.expert.TripleStoreExpert - resultsLhs:[http://example.org/anna, http://example.org/lea, http://example.org/kathrin]
+13:17:15 DEBUG ontology.learning.expert.TripleStoreExpert - resultsRhs:[http://example.org/lukas, http://example.org/matis, http://example.org/baris, http://example.org/joni, http://example.org/jannik, http://example.org/levin, http://example.org/teo]
+13:17:15 ERROR ontology.learning.expert.TripleStoreExpert - ASK and SELECT not equivalent!
+13:17:15 INFO  PACOntologyLearningSub - Samples at this iteration: 2
+13:17:15 INFO  PACOntologyLearningSub - iteration:1
+13:17:15 INFO  PACOntologyLearningSub - auxiliary axioms:0
+13:17:15 INFO  PACOntologyLearningSub - expert queries:1
+13:17:15 INFO  PACOntologyLearningSub - implications:0
+13:17:15 DEBUG ontology.learning.expert.TripleStoreExpert - query starting
+13:17:15 TRACE ontology.learning.expert.TripleStoreExpert - ax: SubClassOf(ObjectIntersectionOf(<http://www.wikidata.org/entity/Q5> <http://www.wikidata.org/entity/Q84048850> <http://www.wikidata.org/entity/Q84048852> ObjectSomeValuesFrom(<http://www.wikidata.org/prop/direct/P40> <http://www.wikidata.org/entity/Q84048852>)) owl:Nothing)
+13:17:15 TRACE ontology.learning.expert.TripleStoreExpert - queryStrLhs:
+PREFIX owl: <http://www.w3.org/2002/07/owl/>
+PREFIX wd: <http://www.wikidata.org/entity/>
+PREFIX wdt: <http://www.wikidata.org/prop/direct/>
+
+SELECT DISTINCT ?1 WHERE {
+?1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.wikidata.org/entity/Q5>.
+?1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.wikidata.org/entity/Q84048850>.
+?1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.wikidata.org/entity/Q84048852>.
+?1 <http://www.wikidata.org/prop/direct/P40> ?10. 
+?10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.wikidata.org/entity/Q84048852>.
+}
+13:17:15 TRACE ontology.learning.expert.TripleStoreExpert - queryStrRhs:
+PREFIX owl: <http://www.w3.org/2002/07/owl/>
+PREFIX wd: <http://www.wikidata.org/entity/>
+PREFIX wdt: <http://www.wikidata.org/prop/direct/>
+
+SELECT DISTINCT ?1 WHERE {
+?1 wdt:NONEXISTING_PROPERTY wd:NONEXISTING_OBJECT.
+}
+13:17:15 TRACE ontology.learning.expert.TripleStoreExpert - ASK Query:
+PREFIX owl: <http://www.w3.org/2002/07/owl/>
+PREFIX wd: <http://www.wikidata.org/entity/>
+PREFIX wdt: <http://www.wikidata.org/prop/direct/>
+
+ASK {
+?1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.wikidata.org/entity/Q5>.
+?1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.wikidata.org/entity/Q84048850>.
+?1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.wikidata.org/entity/Q84048852>.
+?1 <http://www.wikidata.org/prop/direct/P40> ?10. 
+?10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.wikidata.org/entity/Q84048852>.
+FILTER NOT EXISTS {
+?1 wdt:NONEXISTING_PROPERTY wd:NONEXISTING_OBJECT.
+}
+}
+
+13:17:15 DEBUG ontology.learning.expert.TripleStoreExpert - query executed
+13:17:15 DEBUG ontology.learning.expert.TripleStoreExpert - resultsLhs:[]
+13:17:15 DEBUG ontology.learning.expert.TripleStoreExpert - resultsRhs:[]
+13:17:15 ERROR ontology.learning.expert.TripleStoreExpert - ASK and SELECT not equivalent!
+13:17:15 DEBUG PACOntologyLearningSub - Added auxiliary axiom: SubClassOf(ObjectIntersectionOf(<http://www.wikidata.org/entity/Q5> <http://www.wikidata.org/entity/Q84048850> <http://www.wikidata.org/entity/Q84048852> ObjectSomeValuesFrom(<http://www.wikidata.org/prop/direct/P40> <http://www.wikidata.org/entity/Q84048852>)) owl:Nothing)
+13:17:15 DEBUG PACOntologyLearningSub - Added non-auxiliary axiom: SubClassOf(ObjectIntersectionOf(Q5 Q84048850 Q84048852 ObjectSomeValuesFrom(<http://www.wikidata.org/prop/direct/P40 Q84048852)) ObjectIntersectionOf(owl:Nothing))
+13:17:15 INFO  PACOntologyLearningSub - Samples at this iteration: 1
+13:17:15 INFO  PACOntologyLearningSub - iteration:2
+13:17:15 INFO  PACOntologyLearningSub - auxiliary axioms:1
+13:17:15 INFO  PACOntologyLearningSub - expert queries:2
+13:17:15 INFO  PACOntologyLearningSub - implications:1
+13:17:15 DEBUG PACOntologyLearningSub - Added non-auxiliary axiom: SubClassOf(ObjectIntersectionOf(Q84048850 Q84048852 ObjectSomeValuesFrom(<http://www.wikidata.org/prop/direct/P40 Q84048852)) ObjectIntersectionOf(owl:Nothing))
+13:17:15 DEBUG ontology.learning.expert.TripleStoreExpert - query starting
+13:17:15 TRACE ontology.learning.expert.TripleStoreExpert - ax: SubClassOf(ObjectIntersectionOf(<http://www.wikidata.org/entity/Q5> <http://www.wikidata.org/entity/Q84048850> <http://www.wikidata.org/entity/Q84048852>) ObjectSomeValuesFrom(<http://www.wikidata.org/prop/direct/P40> <http://www.wikidata.org/entity/Q84048852>))
+13:17:15 TRACE ontology.learning.expert.TripleStoreExpert - queryStrLhs:
+PREFIX owl: <http://www.w3.org/2002/07/owl/>
+PREFIX wd: <http://www.wikidata.org/entity/>
+PREFIX wdt: <http://www.wikidata.org/prop/direct/>
+
+SELECT DISTINCT ?1 WHERE {
+?1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.wikidata.org/entity/Q5>.
+?1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.wikidata.org/entity/Q84048850>.
+?1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.wikidata.org/entity/Q84048852>.
+}
+13:17:15 TRACE ontology.learning.expert.TripleStoreExpert - queryStrRhs:
+PREFIX owl: <http://www.w3.org/2002/07/owl/>
+PREFIX wd: <http://www.wikidata.org/entity/>
+PREFIX wdt: <http://www.wikidata.org/prop/direct/>
+
+SELECT DISTINCT ?1 WHERE {
+?1 <http://www.wikidata.org/prop/direct/P40> ?10. 
+?10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.wikidata.org/entity/Q84048852>.
+}
+13:17:15 TRACE ontology.learning.expert.TripleStoreExpert - ASK Query:
+PREFIX owl: <http://www.w3.org/2002/07/owl/>
+PREFIX wd: <http://www.wikidata.org/entity/>
+PREFIX wdt: <http://www.wikidata.org/prop/direct/>
+
+ASK {
+?1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.wikidata.org/entity/Q5>.
+?1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.wikidata.org/entity/Q84048850>.
+?1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.wikidata.org/entity/Q84048852>.
+FILTER NOT EXISTS {
+?1 <http://www.wikidata.org/prop/direct/P40> ?109. 
+?109 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.wikidata.org/entity/Q84048852>.
+}
+}
+
+13:17:15 DEBUG ontology.learning.expert.TripleStoreExpert - query executed
+13:17:15 DEBUG ontology.learning.expert.TripleStoreExpert - resultsLhs:[]
+13:17:15 DEBUG ontology.learning.expert.TripleStoreExpert - resultsRhs:[http://example.org/anna, http://example.org/lukas]
+13:17:15 ERROR ontology.learning.expert.TripleStoreExpert - ASK and SELECT not equivalent!
+13:17:15 DEBUG PACOntologyLearningSub - Added auxiliary axiom: SubClassOf(ObjectIntersectionOf(<http://www.wikidata.org/entity/Q5> <http://www.wikidata.org/entity/Q84048850> <http://www.wikidata.org/entity/Q84048852>) ObjectSomeValuesFrom(<http://www.wikidata.org/prop/direct/P40> <http://www.wikidata.org/entity/Q84048852>))
+13:17:15 INFO  PACOntologyLearningSub - Samples at this iteration: 1
+13:17:15 INFO  PACOntologyLearningSub - iteration:3
+13:17:15 INFO  PACOntologyLearningSub - auxiliary axioms:2
+13:17:15 INFO  PACOntologyLearningSub - expert queries:3
+13:17:15 INFO  PACOntologyLearningSub - implications:1
+13:17:15 DEBUG PACOntologyLearningSub - Added non-auxiliary axiom: SubClassOf(ObjectIntersectionOf(Q84048850 Q84048852) ObjectIntersectionOf(owl:Nothing))
+13:17:15 DEBUG ontology.learning.expert.TripleStoreExpert - query starting
+13:17:15 TRACE ontology.learning.expert.TripleStoreExpert - ax: SubClassOf(ObjectIntersectionOf(<http://www.wikidata.org/entity/Q84048852> ObjectSomeValuesFrom(<http://www.wikidata.org/prop/direct/P40> <http://www.wikidata.org/entity/Q84048852>)) <http://www.wikidata.org/entity/Q84048850>)
+13:17:15 TRACE ontology.learning.expert.TripleStoreExpert - queryStrLhs:
+PREFIX owl: <http://www.w3.org/2002/07/owl/>
+PREFIX wd: <http://www.wikidata.org/entity/>
+PREFIX wdt: <http://www.wikidata.org/prop/direct/>
+
+SELECT DISTINCT ?1 WHERE {
+?1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.wikidata.org/entity/Q84048852>.
+?1 <http://www.wikidata.org/prop/direct/P40> ?10. 
+?10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.wikidata.org/entity/Q84048852>.
+}
+13:17:15 TRACE ontology.learning.expert.TripleStoreExpert - queryStrRhs:
+PREFIX owl: <http://www.w3.org/2002/07/owl/>
+PREFIX wd: <http://www.wikidata.org/entity/>
+PREFIX wdt: <http://www.wikidata.org/prop/direct/>
+
+SELECT DISTINCT ?1 WHERE {
+?1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.wikidata.org/entity/Q84048850>.
+}
+13:17:15 TRACE ontology.learning.expert.TripleStoreExpert - ASK Query:
+PREFIX owl: <http://www.w3.org/2002/07/owl/>
+PREFIX wd: <http://www.wikidata.org/entity/>
+PREFIX wdt: <http://www.wikidata.org/prop/direct/>
+
+ASK {
+?1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.wikidata.org/entity/Q84048852>.
+?1 <http://www.wikidata.org/prop/direct/P40> ?10. 
+?10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.wikidata.org/entity/Q84048852>.
+FILTER NOT EXISTS {
+?1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.wikidata.org/entity/Q84048850>.
+}
+}
+
+13:17:15 DEBUG ontology.learning.expert.TripleStoreExpert - query executed
+13:17:15 DEBUG ontology.learning.expert.TripleStoreExpert - resultsLhs:[http://example.org/anna]
+13:17:15 DEBUG ontology.learning.expert.TripleStoreExpert - resultsRhs:[http://example.org/lukas, http://example.org/matis, http://example.org/baris, http://example.org/joni, http://example.org/jannik, http://example.org/levin, http://example.org/teo]
+13:17:15 ERROR ontology.learning.expert.TripleStoreExpert - ASK and SELECT not equivalent!
+13:17:15 INFO  PACOntologyLearningSub - Samples at this iteration: 2
+13:17:15 INFO  PACOntologyLearningSub - iteration:4
+13:17:15 INFO  PACOntologyLearningSub - auxiliary axioms:2
+13:17:15 INFO  PACOntologyLearningSub - expert queries:4
+13:17:15 INFO  PACOntologyLearningSub - implications:1
+13:17:15 DEBUG ontology.learning.expert.TripleStoreExpert - query starting
+13:17:15 TRACE ontology.learning.expert.TripleStoreExpert - ax: SubClassOf(ObjectIntersectionOf(<http://www.wikidata.org/entity/Q84048852>) owl:Nothing)
+13:17:15 TRACE ontology.learning.expert.TripleStoreExpert - queryStrLhs:
+PREFIX owl: <http://www.w3.org/2002/07/owl/>
+PREFIX wd: <http://www.wikidata.org/entity/>
+PREFIX wdt: <http://www.wikidata.org/prop/direct/>
+
+SELECT DISTINCT ?1 WHERE {
+?1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.wikidata.org/entity/Q84048852>.
+}
+13:17:15 TRACE ontology.learning.expert.TripleStoreExpert - queryStrRhs:
+PREFIX owl: <http://www.w3.org/2002/07/owl/>
+PREFIX wd: <http://www.wikidata.org/entity/>
+PREFIX wdt: <http://www.wikidata.org/prop/direct/>
+
+SELECT DISTINCT ?1 WHERE {
+?1 wdt:NONEXISTING_PROPERTY wd:NONEXISTING_OBJECT.
+}
+13:17:15 TRACE ontology.learning.expert.TripleStoreExpert - ASK Query:
+PREFIX owl: <http://www.w3.org/2002/07/owl/>
+PREFIX wd: <http://www.wikidata.org/entity/>
+PREFIX wdt: <http://www.wikidata.org/prop/direct/>
+
+ASK {
+?1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.wikidata.org/entity/Q84048852>.
+FILTER NOT EXISTS {
+?1 wdt:NONEXISTING_PROPERTY wd:NONEXISTING_OBJECT.
+}
+}
+
+13:17:15 DEBUG ontology.learning.expert.TripleStoreExpert - query executed
+13:17:15 DEBUG ontology.learning.expert.TripleStoreExpert - resultsLhs:[http://example.org/anna, http://example.org/lea, http://example.org/kathrin]
+13:17:15 DEBUG ontology.learning.expert.TripleStoreExpert - resultsRhs:[]
+13:17:15 ERROR ontology.learning.expert.TripleStoreExpert - ASK and SELECT not equivalent!
+13:17:15 DEBUG ontology.learning.expert.TripleStoreExpert - query starting
+13:17:15 TRACE ontology.learning.expert.TripleStoreExpert - ax: SubClassOf(ObjectIntersectionOf(<http://www.wikidata.org/entity/Q84048852>) ObjectSomeValuesFrom(<http://www.wikidata.org/prop/direct/P40> <http://www.wikidata.org/entity/Q5>))
+13:17:15 TRACE ontology.learning.expert.TripleStoreExpert - queryStrLhs:
+PREFIX owl: <http://www.w3.org/2002/07/owl/>
+PREFIX wd: <http://www.wikidata.org/entity/>
+PREFIX wdt: <http://www.wikidata.org/prop/direct/>
+
+SELECT DISTINCT ?1 WHERE {
+?1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.wikidata.org/entity/Q84048852>.
+}
+13:17:15 TRACE ontology.learning.expert.TripleStoreExpert - queryStrRhs:
+PREFIX owl: <http://www.w3.org/2002/07/owl/>
+PREFIX wd: <http://www.wikidata.org/entity/>
+PREFIX wdt: <http://www.wikidata.org/prop/direct/>
+
+SELECT DISTINCT ?1 WHERE {
+?1 <http://www.wikidata.org/prop/direct/P40> ?10. 
+?10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.wikidata.org/entity/Q5>.
+}
+13:17:15 TRACE ontology.learning.expert.TripleStoreExpert - ASK Query:
+PREFIX owl: <http://www.w3.org/2002/07/owl/>
+PREFIX wd: <http://www.wikidata.org/entity/>
+PREFIX wdt: <http://www.wikidata.org/prop/direct/>
+
+ASK {
+?1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.wikidata.org/entity/Q84048852>.
+FILTER NOT EXISTS {
+?1 <http://www.wikidata.org/prop/direct/P40> ?109. 
+?109 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.wikidata.org/entity/Q5>.
+}
+}
+
+13:17:15 DEBUG ontology.learning.expert.TripleStoreExpert - query executed
+13:17:15 DEBUG ontology.learning.expert.TripleStoreExpert - resultsLhs:[http://example.org/anna, http://example.org/lea, http://example.org/kathrin]
+13:17:15 DEBUG ontology.learning.expert.TripleStoreExpert - resultsRhs:[http://example.org/anna, http://example.org/lukas, http://example.org/baris, http://example.org/kathrin]
+13:17:15 ERROR ontology.learning.expert.TripleStoreExpert - ASK and SELECT not equivalent!
+13:17:15 DEBUG ontology.learning.expert.TripleStoreExpert - query starting
+13:17:15 TRACE ontology.learning.expert.TripleStoreExpert - ax: SubClassOf(ObjectIntersectionOf(<http://www.wikidata.org/entity/Q84048852>) ObjectSomeValuesFrom(<http://www.wikidata.org/prop/direct/P40> <http://www.wikidata.org/entity/Q84048852>))
+13:17:15 TRACE ontology.learning.expert.TripleStoreExpert - queryStrLhs:
+PREFIX owl: <http://www.w3.org/2002/07/owl/>
+PREFIX wd: <http://www.wikidata.org/entity/>
+PREFIX wdt: <http://www.wikidata.org/prop/direct/>
+
+SELECT DISTINCT ?1 WHERE {
+?1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.wikidata.org/entity/Q84048852>.
+}
+13:17:15 TRACE ontology.learning.expert.TripleStoreExpert - queryStrRhs:
+PREFIX owl: <http://www.w3.org/2002/07/owl/>
+PREFIX wd: <http://www.wikidata.org/entity/>
+PREFIX wdt: <http://www.wikidata.org/prop/direct/>
+
+SELECT DISTINCT ?1 WHERE {
+?1 <http://www.wikidata.org/prop/direct/P40> ?10. 
+?10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.wikidata.org/entity/Q84048852>.
+}
+13:17:15 TRACE ontology.learning.expert.TripleStoreExpert - ASK Query:
+PREFIX owl: <http://www.w3.org/2002/07/owl/>
+PREFIX wd: <http://www.wikidata.org/entity/>
+PREFIX wdt: <http://www.wikidata.org/prop/direct/>
+
+ASK {
+?1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.wikidata.org/entity/Q84048852>.
+FILTER NOT EXISTS {
+?1 <http://www.wikidata.org/prop/direct/P40> ?109. 
+?109 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.wikidata.org/entity/Q84048852>.
+}
+}
+
+13:17:15 DEBUG ontology.learning.expert.TripleStoreExpert - query executed
+13:17:15 DEBUG ontology.learning.expert.TripleStoreExpert - resultsLhs:[http://example.org/anna, http://example.org/lea, http://example.org/kathrin]
+13:17:15 DEBUG ontology.learning.expert.TripleStoreExpert - resultsRhs:[http://example.org/anna, http://example.org/lukas]
+13:17:15 ERROR ontology.learning.expert.TripleStoreExpert - ASK and SELECT not equivalent!
+13:17:15 DEBUG ontology.learning.expert.TripleStoreExpert - query starting
+13:17:15 TRACE ontology.learning.expert.TripleStoreExpert - ax: SubClassOf(ObjectIntersectionOf(<http://www.wikidata.org/entity/Q84048852>) ObjectSomeValuesFrom(<http://www.wikidata.org/prop/direct/P40> <http://www.wikidata.org/entity/Q84048850>))
+13:17:15 TRACE ontology.learning.expert.TripleStoreExpert - queryStrLhs:
+PREFIX owl: <http://www.w3.org/2002/07/owl/>
+PREFIX wd: <http://www.wikidata.org/entity/>
+PREFIX wdt: <http://www.wikidata.org/prop/direct/>
+
+SELECT DISTINCT ?1 WHERE {
+?1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.wikidata.org/entity/Q84048852>.
+}
+13:17:15 TRACE ontology.learning.expert.TripleStoreExpert - queryStrRhs:
+PREFIX owl: <http://www.w3.org/2002/07/owl/>
+PREFIX wd: <http://www.wikidata.org/entity/>
+PREFIX wdt: <http://www.wikidata.org/prop/direct/>
+
+SELECT DISTINCT ?1 WHERE {
+?1 <http://www.wikidata.org/prop/direct/P40> ?10. 
+?10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.wikidata.org/entity/Q84048850>.
+}
+13:17:15 TRACE ontology.learning.expert.TripleStoreExpert - ASK Query:
+PREFIX owl: <http://www.w3.org/2002/07/owl/>
+PREFIX wd: <http://www.wikidata.org/entity/>
+PREFIX wdt: <http://www.wikidata.org/prop/direct/>
+
+ASK {
+?1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.wikidata.org/entity/Q84048852>.
+FILTER NOT EXISTS {
+?1 <http://www.wikidata.org/prop/direct/P40> ?109. 
+?109 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.wikidata.org/entity/Q84048850>.
+}
+}
+
+13:17:15 DEBUG ontology.learning.expert.TripleStoreExpert - query executed
+13:17:15 DEBUG ontology.learning.expert.TripleStoreExpert - resultsLhs:[http://example.org/anna, http://example.org/lea, http://example.org/kathrin]
+13:17:15 DEBUG ontology.learning.expert.TripleStoreExpert - resultsRhs:[http://example.org/anna, http://example.org/lukas, http://example.org/baris, http://example.org/kathrin]
+13:17:15 ERROR ontology.learning.expert.TripleStoreExpert - ASK and SELECT not equivalent!
+13:17:15 DEBUG PACOntologyLearningSub - Added non-auxiliary axiom: SubClassOf(ObjectIntersectionOf(Q84048852) ObjectIntersectionOf(Q5))
+13:17:15 INFO  PACOntologyLearningSub - Samples at this iteration: 1
+13:17:15 INFO  PACOntologyLearningSub - iteration:5
+13:17:15 INFO  PACOntologyLearningSub - auxiliary axioms:2
+13:17:15 INFO  PACOntologyLearningSub - expert queries:8
+13:17:15 INFO  PACOntologyLearningSub - implications:1
+13:17:15 DEBUG PACOntologyLearningSub - Added non-auxiliary axiom: SubClassOf(ObjectIntersectionOf(Q5 Q84048850 Q84048852 ObjectSomeValuesFrom(<http://www.wikidata.org/prop/direct/P40 Q84048850) ObjectSomeValuesFrom(<http://www.wikidata.org/prop/direct/P40 Q84048852)) ObjectIntersectionOf(owl:Nothing))
+13:17:15 DEBUG ontology.learning.expert.TripleStoreExpert - query starting
+13:17:15 TRACE ontology.learning.expert.TripleStoreExpert - ax: SubClassOf(ObjectIntersectionOf(ObjectSomeValuesFrom(<http://www.wikidata.org/prop/direct/P40> <http://www.wikidata.org/entity/Q5>) ObjectSomeValuesFrom(<http://www.wikidata.org/prop/direct/P40> <http://www.wikidata.org/entity/Q84048850>)) ObjectSomeValuesFrom(<http://www.wikidata.org/prop/direct/P40> <http://www.wikidata.org/entity/Q84048852>))
+13:17:15 TRACE ontology.learning.expert.TripleStoreExpert - queryStrLhs:
+PREFIX owl: <http://www.w3.org/2002/07/owl/>
+PREFIX wd: <http://www.wikidata.org/entity/>
+PREFIX wdt: <http://www.wikidata.org/prop/direct/>
+
+SELECT DISTINCT ?1 WHERE {
+?1 <http://www.wikidata.org/prop/direct/P40> ?10. 
+?10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.wikidata.org/entity/Q5>.
+?1 <http://www.wikidata.org/prop/direct/P40> ?11. 
+?11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.wikidata.org/entity/Q84048850>.
+}
+13:17:15 TRACE ontology.learning.expert.TripleStoreExpert - queryStrRhs:
+PREFIX owl: <http://www.w3.org/2002/07/owl/>
+PREFIX wd: <http://www.wikidata.org/entity/>
+PREFIX wdt: <http://www.wikidata.org/prop/direct/>
+
+SELECT DISTINCT ?1 WHERE {
+?1 <http://www.wikidata.org/prop/direct/P40> ?10. 
+?10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.wikidata.org/entity/Q84048852>.
+}
+13:17:15 TRACE ontology.learning.expert.TripleStoreExpert - ASK Query:
+PREFIX owl: <http://www.w3.org/2002/07/owl/>
+PREFIX wd: <http://www.wikidata.org/entity/>
+PREFIX wdt: <http://www.wikidata.org/prop/direct/>
+
+ASK {
+?1 <http://www.wikidata.org/prop/direct/P40> ?10. 
+?10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.wikidata.org/entity/Q5>.
+?1 <http://www.wikidata.org/prop/direct/P40> ?11. 
+?11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.wikidata.org/entity/Q84048850>.
+FILTER NOT EXISTS {
+?1 <http://www.wikidata.org/prop/direct/P40> ?109. 
+?109 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.wikidata.org/entity/Q84048852>.
+}
+}
+
+13:17:15 DEBUG ontology.learning.expert.TripleStoreExpert - query executed
+13:17:15 DEBUG ontology.learning.expert.TripleStoreExpert - resultsLhs:[http://example.org/anna, http://example.org/lukas, http://example.org/baris, http://example.org/kathrin]
+13:17:15 DEBUG ontology.learning.expert.TripleStoreExpert - resultsRhs:[http://example.org/anna, http://example.org/lukas]
+13:17:15 ERROR ontology.learning.expert.TripleStoreExpert - ASK and SELECT not equivalent!
+13:17:15 DEBUG ontology.learning.expert.TripleStoreExpert - query starting
+13:17:15 TRACE ontology.learning.expert.TripleStoreExpert - ax: SubClassOf(ObjectIntersectionOf(<http://www.wikidata.org/entity/Q84048852> ObjectSomeValuesFrom(<http://www.wikidata.org/prop/direct/P40> <http://www.wikidata.org/entity/Q84048850>) ObjectSomeValuesFrom(<http://www.wikidata.org/prop/direct/P40> <http://www.wikidata.org/entity/Q84048852>)) <http://www.wikidata.org/entity/Q84048850>)
+13:17:15 TRACE ontology.learning.expert.TripleStoreExpert - queryStrLhs:
+PREFIX owl: <http://www.w3.org/2002/07/owl/>
+PREFIX wd: <http://www.wikidata.org/entity/>
+PREFIX wdt: <http://www.wikidata.org/prop/direct/>
+
+SELECT DISTINCT ?1 WHERE {
+?1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.wikidata.org/entity/Q84048852>.
+?1 <http://www.wikidata.org/prop/direct/P40> ?10. 
+?10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.wikidata.org/entity/Q84048850>.
+?1 <http://www.wikidata.org/prop/direct/P40> ?11. 
+?11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.wikidata.org/entity/Q84048852>.
+}
+13:17:15 TRACE ontology.learning.expert.TripleStoreExpert - queryStrRhs:
+PREFIX owl: <http://www.w3.org/2002/07/owl/>
+PREFIX wd: <http://www.wikidata.org/entity/>
+PREFIX wdt: <http://www.wikidata.org/prop/direct/>
+
+SELECT DISTINCT ?1 WHERE {
+?1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.wikidata.org/entity/Q84048850>.
+}
+13:17:15 TRACE ontology.learning.expert.TripleStoreExpert - ASK Query:
+PREFIX owl: <http://www.w3.org/2002/07/owl/>
+PREFIX wd: <http://www.wikidata.org/entity/>
+PREFIX wdt: <http://www.wikidata.org/prop/direct/>
+
+ASK {
+?1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.wikidata.org/entity/Q84048852>.
+?1 <http://www.wikidata.org/prop/direct/P40> ?10. 
+?10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.wikidata.org/entity/Q84048850>.
+?1 <http://www.wikidata.org/prop/direct/P40> ?11. 
+?11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.wikidata.org/entity/Q84048852>.
+FILTER NOT EXISTS {
+?1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.wikidata.org/entity/Q84048850>.
+}
+}
+
+13:17:15 DEBUG ontology.learning.expert.TripleStoreExpert - query executed
+13:17:15 DEBUG ontology.learning.expert.TripleStoreExpert - resultsLhs:[http://example.org/anna]
+13:17:15 DEBUG ontology.learning.expert.TripleStoreExpert - resultsRhs:[http://example.org/lukas, http://example.org/matis, http://example.org/baris, http://example.org/joni, http://example.org/jannik, http://example.org/levin, http://example.org/teo]
+13:17:15 ERROR ontology.learning.expert.TripleStoreExpert - ASK and SELECT not equivalent!
+13:17:15 DEBUG ontology.learning.expert.TripleStoreExpert - query starting
+13:17:15 TRACE ontology.learning.expert.TripleStoreExpert - ax: SubClassOf(ObjectIntersectionOf(ObjectSomeValuesFrom(<http://www.wikidata.org/prop/direct/P40> <http://www.wikidata.org/entity/Q5>) ObjectSomeValuesFrom(<http://www.wikidata.org/prop/direct/P40> <http://www.wikidata.org/entity/Q84048850>) ObjectSomeValuesFrom(<http://www.wikidata.org/prop/direct/P40> <http://www.wikidata.org/entity/Q84048852>)) <http://www.wikidata.org/entity/Q5>)
+13:17:15 TRACE ontology.learning.expert.TripleStoreExpert - queryStrLhs:
+PREFIX owl: <http://www.w3.org/2002/07/owl/>
+PREFIX wd: <http://www.wikidata.org/entity/>
+PREFIX wdt: <http://www.wikidata.org/prop/direct/>
+
+SELECT DISTINCT ?1 WHERE {
+?1 <http://www.wikidata.org/prop/direct/P40> ?10. 
+?10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.wikidata.org/entity/Q5>.
+?1 <http://www.wikidata.org/prop/direct/P40> ?11. 
+?11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.wikidata.org/entity/Q84048850>.
+?1 <http://www.wikidata.org/prop/direct/P40> ?12. 
+?12 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.wikidata.org/entity/Q84048852>.
+}
+13:17:15 TRACE ontology.learning.expert.TripleStoreExpert - queryStrRhs:
+PREFIX owl: <http://www.w3.org/2002/07/owl/>
+PREFIX wd: <http://www.wikidata.org/entity/>
+PREFIX wdt: <http://www.wikidata.org/prop/direct/>
+
+SELECT DISTINCT ?1 WHERE {
+?1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.wikidata.org/entity/Q5>.
+}
+13:17:15 TRACE ontology.learning.expert.TripleStoreExpert - ASK Query:
+PREFIX owl: <http://www.w3.org/2002/07/owl/>
+PREFIX wd: <http://www.wikidata.org/entity/>
+PREFIX wdt: <http://www.wikidata.org/prop/direct/>
+
+ASK {
+?1 <http://www.wikidata.org/prop/direct/P40> ?10. 
+?10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.wikidata.org/entity/Q5>.
+?1 <http://www.wikidata.org/prop/direct/P40> ?11. 
+?11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.wikidata.org/entity/Q84048850>.
+?1 <http://www.wikidata.org/prop/direct/P40> ?12. 
+?12 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.wikidata.org/entity/Q84048852>.
+FILTER NOT EXISTS {
+?1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.wikidata.org/entity/Q5>.
+}
+}
+
+13:17:15 DEBUG ontology.learning.expert.TripleStoreExpert - query executed
+13:17:15 DEBUG ontology.learning.expert.TripleStoreExpert - resultsLhs:[http://example.org/anna, http://example.org/lukas]
+13:17:15 DEBUG ontology.learning.expert.TripleStoreExpert - resultsRhs:[http://example.org/anna, http://example.org/lukas, http://example.org/baris, http://example.org/lea, http://example.org/matis, http://example.org/kathrin, http://example.org/joni, http://example.org/jannik, http://example.org/levin, http://example.org/teo]
+13:17:15 ERROR ontology.learning.expert.TripleStoreExpert - ASK and SELECT not equivalent!
+13:17:15 DEBUG PACOntologyLearningSub - Added auxiliary axiom: SubClassOf(ObjectIntersectionOf(ObjectSomeValuesFrom(<http://www.wikidata.org/prop/direct/P40> <http://www.wikidata.org/entity/Q5>) ObjectSomeValuesFrom(<http://www.wikidata.org/prop/direct/P40> <http://www.wikidata.org/entity/Q84048850>) ObjectSomeValuesFrom(<http://www.wikidata.org/prop/direct/P40> <http://www.wikidata.org/entity/Q84048852>)) <http://www.wikidata.org/entity/Q5>)
+13:17:15 INFO  PACOntologyLearningSub - Samples at this iteration: 3
+13:17:15 INFO  PACOntologyLearningSub - iteration:6
+13:17:15 INFO  PACOntologyLearningSub - auxiliary axioms:3
+13:17:15 INFO  PACOntologyLearningSub - expert queries:11
+13:17:15 INFO  PACOntologyLearningSub - implications:2
+13:17:15 DEBUG ontology.learning.expert.TripleStoreExpert - query starting
+13:17:15 TRACE ontology.learning.expert.TripleStoreExpert - ax: SubClassOf(owl:Thing <http://www.wikidata.org/entity/Q5>)
+13:17:15 TRACE ontology.learning.expert.TripleStoreExpert - queryStrLhs:
+PREFIX owl: <http://www.w3.org/2002/07/owl/>
+PREFIX wd: <http://www.wikidata.org/entity/>
+PREFIX wdt: <http://www.wikidata.org/prop/direct/>
+
+SELECT DISTINCT ?1 WHERE {
+?1 ?p ?o.
+}
+13:17:15 TRACE ontology.learning.expert.TripleStoreExpert - queryStrRhs:
+PREFIX owl: <http://www.w3.org/2002/07/owl/>
+PREFIX wd: <http://www.wikidata.org/entity/>
+PREFIX wdt: <http://www.wikidata.org/prop/direct/>
+
+SELECT DISTINCT ?1 WHERE {
+?1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.wikidata.org/entity/Q5>.
+}
+13:17:15 TRACE ontology.learning.expert.TripleStoreExpert - ASK Query:
+PREFIX owl: <http://www.w3.org/2002/07/owl/>
+PREFIX wd: <http://www.wikidata.org/entity/>
+PREFIX wdt: <http://www.wikidata.org/prop/direct/>
+
+ASK {
+?1 ?p ?o.
+FILTER NOT EXISTS {
+?1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.wikidata.org/entity/Q5>.
+}
+}
+
+13:17:15 DEBUG ontology.learning.expert.TripleStoreExpert - query executed
+13:17:15 DEBUG ontology.learning.expert.TripleStoreExpert - resultsLhs:[http://example.org/lukas, http://www.w3.org/1999/02/22-rdf-syntax-ns#Statement, http://www.wikidata.org/entity/Q84048850, http://www.w3.org/1999/02/22-rdf-syntax-ns#value, http://www.wikidata.org/entity/Q84048852, http://www.w3.org/1999/02/22-rdf-syntax-ns#Bag, http://www.w3.org/1999/02/22-rdf-syntax-ns#List, http://www.w3.org/1999/02/22-rdf-syntax-ns#rest, http://example.org/anna, http://www.w3.org/2000/01/rdf-schema#subClassOf, http://www.wikidata.org/prop/direct/P3373, http://www.w3.org/2000/01/rdf-schema#comment, http://example.org/jannik, http://www.w3.org/1999/02/22-rdf-syntax-ns#Property, http://www.wikidata.org/entity/Q5, http://www.w3.org/1999/02/22-rdf-syntax-ns#XMLLiteral, http://www.w3.org/2000/01/rdf-schema#Container, http://www.w3.org/1999/02/22-rdf-syntax-ns#Seq, http://www.w3.org/2000/01/rdf-schema#range, http://www.w3.org/2000/01/rdf-schema#subPropertyOf, http://example.org/baris, http://www.w3.org/2000/01/rdf-schema#Datatype, http://www.w3.org/2000/01/rdf-schema#isDefinedBy, http://www.w3.org/1999/02/22-rdf-syntax-ns#subject, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, http://www.w3.org/2000/01/rdf-schema#Class, http://example.org/levin, http://www.w3.org/2000/01/rdf-schema#domain, http://example.org/teo, http://www.w3.org/1999/02/22-rdf-syntax-ns#Alt, http://www.wikidata.org/prop/direct/P40, http://example.org/lea, http://example.org/matis, http://example.org/kathrin, http://www.w3.org/1999/02/22-rdf-syntax-ns#nil, http://www.w3.org/2000/01/rdf-schema#Literal, http://example.org/joni, http://www.w3.org/2000/01/rdf-schema#member, http://www.w3.org/2000/01/rdf-schema#label, http://www.w3.org/2000/01/rdf-schema#seeAlso, http://www.w3.org/1999/02/22-rdf-syntax-ns#object, http://www.w3.org/2000/01/rdf-schema#Resource, http://www.w3.org/1999/02/22-rdf-syntax-ns#predicate, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://www.w3.org/2000/01/rdf-schema#ContainerMembershipProperty]
+13:17:15 DEBUG ontology.learning.expert.TripleStoreExpert - resultsRhs:[http://example.org/anna, http://example.org/lukas, http://example.org/baris, http://example.org/lea, http://example.org/matis, http://example.org/kathrin, http://example.org/joni, http://example.org/jannik, http://example.org/levin, http://example.org/teo]
+13:17:15 ERROR ontology.learning.expert.TripleStoreExpert - ASK and SELECT not equivalent!
+13:17:15 DEBUG ontology.learning.expert.TripleStoreExpert - query starting
+13:17:15 TRACE ontology.learning.expert.TripleStoreExpert - ax: SubClassOf(owl:Thing <http://www.wikidata.org/entity/Q84048852>)
+13:17:15 TRACE ontology.learning.expert.TripleStoreExpert - queryStrLhs:
+PREFIX owl: <http://www.w3.org/2002/07/owl/>
+PREFIX wd: <http://www.wikidata.org/entity/>
+PREFIX wdt: <http://www.wikidata.org/prop/direct/>
+
+SELECT DISTINCT ?1 WHERE {
+?1 ?p ?o.
+}
+13:17:15 TRACE ontology.learning.expert.TripleStoreExpert - queryStrRhs:
+PREFIX owl: <http://www.w3.org/2002/07/owl/>
+PREFIX wd: <http://www.wikidata.org/entity/>
+PREFIX wdt: <http://www.wikidata.org/prop/direct/>
+
+SELECT DISTINCT ?1 WHERE {
+?1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.wikidata.org/entity/Q84048852>.
+}
+13:17:15 TRACE ontology.learning.expert.TripleStoreExpert - ASK Query:
+PREFIX owl: <http://www.w3.org/2002/07/owl/>
+PREFIX wd: <http://www.wikidata.org/entity/>
+PREFIX wdt: <http://www.wikidata.org/prop/direct/>
+
+ASK {
+?1 ?p ?o.
+FILTER NOT EXISTS {
+?1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.wikidata.org/entity/Q84048852>.
+}
+}
+
+13:17:15 DEBUG ontology.learning.expert.TripleStoreExpert - query executed
+13:17:15 DEBUG ontology.learning.expert.TripleStoreExpert - resultsLhs:[http://example.org/lukas, http://www.w3.org/1999/02/22-rdf-syntax-ns#Statement, http://www.wikidata.org/entity/Q84048850, http://www.w3.org/1999/02/22-rdf-syntax-ns#value, http://www.wikidata.org/entity/Q84048852, http://www.w3.org/1999/02/22-rdf-syntax-ns#Bag, http://www.w3.org/1999/02/22-rdf-syntax-ns#List, http://www.w3.org/1999/02/22-rdf-syntax-ns#rest, http://example.org/anna, http://www.w3.org/2000/01/rdf-schema#subClassOf, http://www.wikidata.org/prop/direct/P3373, http://www.w3.org/2000/01/rdf-schema#comment, http://example.org/jannik, http://www.w3.org/1999/02/22-rdf-syntax-ns#Property, http://www.wikidata.org/entity/Q5, http://www.w3.org/1999/02/22-rdf-syntax-ns#XMLLiteral, http://www.w3.org/2000/01/rdf-schema#Container, http://www.w3.org/1999/02/22-rdf-syntax-ns#Seq, http://www.w3.org/2000/01/rdf-schema#range, http://www.w3.org/2000/01/rdf-schema#subPropertyOf, http://example.org/baris, http://www.w3.org/2000/01/rdf-schema#Datatype, http://www.w3.org/2000/01/rdf-schema#isDefinedBy, http://www.w3.org/1999/02/22-rdf-syntax-ns#subject, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, http://www.w3.org/2000/01/rdf-schema#Class, http://example.org/levin, http://www.w3.org/2000/01/rdf-schema#domain, http://example.org/teo, http://www.w3.org/1999/02/22-rdf-syntax-ns#Alt, http://www.wikidata.org/prop/direct/P40, http://example.org/lea, http://example.org/matis, http://example.org/kathrin, http://www.w3.org/1999/02/22-rdf-syntax-ns#nil, http://www.w3.org/2000/01/rdf-schema#Literal, http://example.org/joni, http://www.w3.org/2000/01/rdf-schema#member, http://www.w3.org/2000/01/rdf-schema#label, http://www.w3.org/2000/01/rdf-schema#seeAlso, http://www.w3.org/1999/02/22-rdf-syntax-ns#object, http://www.w3.org/2000/01/rdf-schema#Resource, http://www.w3.org/1999/02/22-rdf-syntax-ns#predicate, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://www.w3.org/2000/01/rdf-schema#ContainerMembershipProperty]
+13:17:15 DEBUG ontology.learning.expert.TripleStoreExpert - resultsRhs:[http://example.org/anna, http://example.org/lea, http://example.org/kathrin]
+13:17:15 ERROR ontology.learning.expert.TripleStoreExpert - ASK and SELECT not equivalent!
+13:17:15 DEBUG ontology.learning.expert.TripleStoreExpert - query starting
+13:17:15 TRACE ontology.learning.expert.TripleStoreExpert - ax: SubClassOf(ObjectIntersectionOf(ObjectSomeValuesFrom(<http://www.wikidata.org/prop/direct/P40> <http://www.wikidata.org/entity/Q84048850>) ObjectSomeValuesFrom(<http://www.wikidata.org/prop/direct/P40> <http://www.wikidata.org/entity/Q84048852>)) owl:Nothing)
+13:17:15 TRACE ontology.learning.expert.TripleStoreExpert - queryStrLhs:
+PREFIX owl: <http://www.w3.org/2002/07/owl/>
+PREFIX wd: <http://www.wikidata.org/entity/>
+PREFIX wdt: <http://www.wikidata.org/prop/direct/>
+
+SELECT DISTINCT ?1 WHERE {
+?1 <http://www.wikidata.org/prop/direct/P40> ?10. 
+?10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.wikidata.org/entity/Q84048850>.
+?1 <http://www.wikidata.org/prop/direct/P40> ?11. 
+?11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.wikidata.org/entity/Q84048852>.
+}
+13:17:15 TRACE ontology.learning.expert.TripleStoreExpert - queryStrRhs:
+PREFIX owl: <http://www.w3.org/2002/07/owl/>
+PREFIX wd: <http://www.wikidata.org/entity/>
+PREFIX wdt: <http://www.wikidata.org/prop/direct/>
+
+SELECT DISTINCT ?1 WHERE {
+?1 wdt:NONEXISTING_PROPERTY wd:NONEXISTING_OBJECT.
+}
+13:17:15 TRACE ontology.learning.expert.TripleStoreExpert - ASK Query:
+PREFIX owl: <http://www.w3.org/2002/07/owl/>
+PREFIX wd: <http://www.wikidata.org/entity/>
+PREFIX wdt: <http://www.wikidata.org/prop/direct/>
+
+ASK {
+?1 <http://www.wikidata.org/prop/direct/P40> ?10. 
+?10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.wikidata.org/entity/Q84048850>.
+?1 <http://www.wikidata.org/prop/direct/P40> ?11. 
+?11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.wikidata.org/entity/Q84048852>.
+FILTER NOT EXISTS {
+?1 wdt:NONEXISTING_PROPERTY wd:NONEXISTING_OBJECT.
+}
+}
+
+13:17:15 DEBUG ontology.learning.expert.TripleStoreExpert - query executed
+13:17:15 DEBUG ontology.learning.expert.TripleStoreExpert - resultsLhs:[http://example.org/anna, http://example.org/lukas]
+13:17:15 DEBUG ontology.learning.expert.TripleStoreExpert - resultsRhs:[]
+13:17:15 ERROR ontology.learning.expert.TripleStoreExpert - ASK and SELECT not equivalent!
+13:17:15 DEBUG ontology.learning.expert.TripleStoreExpert - query starting
+13:17:15 TRACE ontology.learning.expert.TripleStoreExpert - ax: SubClassOf(ObjectIntersectionOf(ObjectSomeValuesFrom(<http://www.wikidata.org/prop/direct/P40> <http://www.wikidata.org/entity/Q84048850>) ObjectSomeValuesFrom(<http://www.wikidata.org/prop/direct/P40> <http://www.wikidata.org/entity/Q84048852>)) <http://www.wikidata.org/entity/Q84048852>)
+13:17:15 TRACE ontology.learning.expert.TripleStoreExpert - queryStrLhs:
+PREFIX owl: <http://www.w3.org/2002/07/owl/>
+PREFIX wd: <http://www.wikidata.org/entity/>
+PREFIX wdt: <http://www.wikidata.org/prop/direct/>
+
+SELECT DISTINCT ?1 WHERE {
+?1 <http://www.wikidata.org/prop/direct/P40> ?10. 
+?10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.wikidata.org/entity/Q84048850>.
+?1 <http://www.wikidata.org/prop/direct/P40> ?11. 
+?11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.wikidata.org/entity/Q84048852>.
+}
+13:17:15 TRACE ontology.learning.expert.TripleStoreExpert - queryStrRhs:
+PREFIX owl: <http://www.w3.org/2002/07/owl/>
+PREFIX wd: <http://www.wikidata.org/entity/>
+PREFIX wdt: <http://www.wikidata.org/prop/direct/>
+
+SELECT DISTINCT ?1 WHERE {
+?1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.wikidata.org/entity/Q84048852>.
+}
+13:17:15 TRACE ontology.learning.expert.TripleStoreExpert - ASK Query:
+PREFIX owl: <http://www.w3.org/2002/07/owl/>
+PREFIX wd: <http://www.wikidata.org/entity/>
+PREFIX wdt: <http://www.wikidata.org/prop/direct/>
+
+ASK {
+?1 <http://www.wikidata.org/prop/direct/P40> ?10. 
+?10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.wikidata.org/entity/Q84048850>.
+?1 <http://www.wikidata.org/prop/direct/P40> ?11. 
+?11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.wikidata.org/entity/Q84048852>.
+FILTER NOT EXISTS {
+?1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.wikidata.org/entity/Q84048852>.
+}
+}
+
+13:17:15 DEBUG ontology.learning.expert.TripleStoreExpert - query executed
+13:17:15 DEBUG ontology.learning.expert.TripleStoreExpert - resultsLhs:[http://example.org/anna, http://example.org/lukas]
+13:17:15 DEBUG ontology.learning.expert.TripleStoreExpert - resultsRhs:[http://example.org/anna, http://example.org/lea, http://example.org/kathrin]
+13:17:15 ERROR ontology.learning.expert.TripleStoreExpert - ASK and SELECT not equivalent!
+13:17:15 DEBUG PACOntologyLearningSub - Added non-auxiliary axiom: SubClassOf(ObjectIntersectionOf(ObjectSomeValuesFrom(<http://www.wikidata.org/prop/direct/P40 Q84048850) ObjectSomeValuesFrom(<http://www.wikidata.org/prop/direct/P40 Q84048852)) ObjectIntersectionOf(Q5 ObjectSomeValuesFrom(<http://www.wikidata.org/prop/direct/P40 Q5)))
+13:17:15 DEBUG ontology.learning.expert.TripleStoreExpert - query starting
+13:17:15 TRACE ontology.learning.expert.TripleStoreExpert - ax: SubClassOf(ObjectIntersectionOf(<http://www.wikidata.org/entity/Q84048852> ObjectSomeValuesFrom(<http://www.wikidata.org/prop/direct/P40> <http://www.wikidata.org/entity/Q84048852>)) ObjectSomeValuesFrom(<http://www.wikidata.org/prop/direct/P40> <http://www.wikidata.org/entity/Q84048850>))
+13:17:15 TRACE ontology.learning.expert.TripleStoreExpert - queryStrLhs:
+PREFIX owl: <http://www.w3.org/2002/07/owl/>
+PREFIX wd: <http://www.wikidata.org/entity/>
+PREFIX wdt: <http://www.wikidata.org/prop/direct/>
+
+SELECT DISTINCT ?1 WHERE {
+?1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.wikidata.org/entity/Q84048852>.
+?1 <http://www.wikidata.org/prop/direct/P40> ?10. 
+?10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.wikidata.org/entity/Q84048852>.
+}
+13:17:15 TRACE ontology.learning.expert.TripleStoreExpert - queryStrRhs:
+PREFIX owl: <http://www.w3.org/2002/07/owl/>
+PREFIX wd: <http://www.wikidata.org/entity/>
+PREFIX wdt: <http://www.wikidata.org/prop/direct/>
+
+SELECT DISTINCT ?1 WHERE {
+?1 <http://www.wikidata.org/prop/direct/P40> ?10. 
+?10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.wikidata.org/entity/Q84048850>.
+}
+13:17:15 TRACE ontology.learning.expert.TripleStoreExpert - ASK Query:
+PREFIX owl: <http://www.w3.org/2002/07/owl/>
+PREFIX wd: <http://www.wikidata.org/entity/>
+PREFIX wdt: <http://www.wikidata.org/prop/direct/>
+
+ASK {
+?1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.wikidata.org/entity/Q84048852>.
+?1 <http://www.wikidata.org/prop/direct/P40> ?10. 
+?10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.wikidata.org/entity/Q84048852>.
+FILTER NOT EXISTS {
+?1 <http://www.wikidata.org/prop/direct/P40> ?109. 
+?109 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.wikidata.org/entity/Q84048850>.
+}
+}
+
+13:17:15 DEBUG ontology.learning.expert.TripleStoreExpert - query executed
+13:17:15 DEBUG ontology.learning.expert.TripleStoreExpert - resultsLhs:[http://example.org/anna]
+13:17:15 DEBUG ontology.learning.expert.TripleStoreExpert - resultsRhs:[http://example.org/anna, http://example.org/lukas, http://example.org/baris, http://example.org/kathrin]
+13:17:15 ERROR ontology.learning.expert.TripleStoreExpert - ASK and SELECT not equivalent!
+13:17:15 DEBUG PACOntologyLearningSub - Added auxiliary axiom: SubClassOf(ObjectIntersectionOf(<http://www.wikidata.org/entity/Q84048852> ObjectSomeValuesFrom(<http://www.wikidata.org/prop/direct/P40> <http://www.wikidata.org/entity/Q84048852>)) ObjectSomeValuesFrom(<http://www.wikidata.org/prop/direct/P40> <http://www.wikidata.org/entity/Q84048850>))
+13:17:15 INFO  PACOntologyLearningSub - Samples at this iteration: 1
+13:17:15 INFO  PACOntologyLearningSub - iteration:7
+13:17:15 INFO  PACOntologyLearningSub - auxiliary axioms:4
+13:17:15 INFO  PACOntologyLearningSub - expert queries:16
+13:17:15 INFO  PACOntologyLearningSub - implications:2
+13:17:15 DEBUG ontology.learning.expert.TripleStoreExpert - query starting
+13:17:15 TRACE ontology.learning.expert.TripleStoreExpert - ax: SubClassOf(ObjectIntersectionOf(ObjectSomeValuesFrom(<http://www.wikidata.org/prop/direct/P40> <http://www.wikidata.org/entity/Q84048852>)) <http://www.wikidata.org/entity/Q5>)
+13:17:15 TRACE ontology.learning.expert.TripleStoreExpert - queryStrLhs:
+PREFIX owl: <http://www.w3.org/2002/07/owl/>
+PREFIX wd: <http://www.wikidata.org/entity/>
+PREFIX wdt: <http://www.wikidata.org/prop/direct/>
+
+SELECT DISTINCT ?1 WHERE {
+?1 <http://www.wikidata.org/prop/direct/P40> ?10. 
+?10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.wikidata.org/entity/Q84048852>.
+}
+13:17:15 TRACE ontology.learning.expert.TripleStoreExpert - queryStrRhs:
+PREFIX owl: <http://www.w3.org/2002/07/owl/>
+PREFIX wd: <http://www.wikidata.org/entity/>
+PREFIX wdt: <http://www.wikidata.org/prop/direct/>
+
+SELECT DISTINCT ?1 WHERE {
+?1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.wikidata.org/entity/Q5>.
+}
+13:17:15 TRACE ontology.learning.expert.TripleStoreExpert - ASK Query:
+PREFIX owl: <http://www.w3.org/2002/07/owl/>
+PREFIX wd: <http://www.wikidata.org/entity/>
+PREFIX wdt: <http://www.wikidata.org/prop/direct/>
+
+ASK {
+?1 <http://www.wikidata.org/prop/direct/P40> ?10. 
+?10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.wikidata.org/entity/Q84048852>.
+FILTER NOT EXISTS {
+?1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.wikidata.org/entity/Q5>.
+}
+}
+
+13:17:15 DEBUG ontology.learning.expert.TripleStoreExpert - query executed
+13:17:15 DEBUG ontology.learning.expert.TripleStoreExpert - resultsLhs:[http://example.org/anna, http://example.org/lukas]
+13:17:15 DEBUG ontology.learning.expert.TripleStoreExpert - resultsRhs:[http://example.org/anna, http://example.org/lukas, http://example.org/baris, http://example.org/lea, http://example.org/matis, http://example.org/kathrin, http://example.org/joni, http://example.org/jannik, http://example.org/levin, http://example.org/teo]
+13:17:15 ERROR ontology.learning.expert.TripleStoreExpert - ASK and SELECT not equivalent!
+13:17:15 DEBUG PACOntologyLearningSub - Added auxiliary axiom: SubClassOf(ObjectIntersectionOf(ObjectSomeValuesFrom(<http://www.wikidata.org/prop/direct/P40> <http://www.wikidata.org/entity/Q84048852>)) <http://www.wikidata.org/entity/Q5>)
+13:17:15 DEBUG ontology.learning.expert.TripleStoreExpert - query starting
+13:17:15 TRACE ontology.learning.expert.TripleStoreExpert - ax: SubClassOf(ObjectIntersectionOf(ObjectSomeValuesFrom(<http://www.wikidata.org/prop/direct/P40> <http://www.wikidata.org/entity/Q84048852>)) ObjectSomeValuesFrom(<http://www.wikidata.org/prop/direct/P40> <http://www.wikidata.org/entity/Q84048850>))
+13:17:15 TRACE ontology.learning.expert.TripleStoreExpert - queryStrLhs:
+PREFIX owl: <http://www.w3.org/2002/07/owl/>
+PREFIX wd: <http://www.wikidata.org/entity/>
+PREFIX wdt: <http://www.wikidata.org/prop/direct/>
+
+SELECT DISTINCT ?1 WHERE {
+?1 <http://www.wikidata.org/prop/direct/P40> ?10. 
+?10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.wikidata.org/entity/Q84048852>.
+}
+13:17:15 TRACE ontology.learning.expert.TripleStoreExpert - queryStrRhs:
+PREFIX owl: <http://www.w3.org/2002/07/owl/>
+PREFIX wd: <http://www.wikidata.org/entity/>
+PREFIX wdt: <http://www.wikidata.org/prop/direct/>
+
+SELECT DISTINCT ?1 WHERE {
+?1 <http://www.wikidata.org/prop/direct/P40> ?10. 
+?10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.wikidata.org/entity/Q84048850>.
+}
+13:17:15 TRACE ontology.learning.expert.TripleStoreExpert - ASK Query:
+PREFIX owl: <http://www.w3.org/2002/07/owl/>
+PREFIX wd: <http://www.wikidata.org/entity/>
+PREFIX wdt: <http://www.wikidata.org/prop/direct/>
+
+ASK {
+?1 <http://www.wikidata.org/prop/direct/P40> ?10. 
+?10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.wikidata.org/entity/Q84048852>.
+FILTER NOT EXISTS {
+?1 <http://www.wikidata.org/prop/direct/P40> ?109. 
+?109 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.wikidata.org/entity/Q84048850>.
+}
+}
+
+13:17:15 DEBUG ontology.learning.expert.TripleStoreExpert - query executed
+13:17:15 DEBUG ontology.learning.expert.TripleStoreExpert - resultsLhs:[http://example.org/anna, http://example.org/lukas]
+13:17:15 DEBUG ontology.learning.expert.TripleStoreExpert - resultsRhs:[http://example.org/anna, http://example.org/lukas, http://example.org/baris, http://example.org/kathrin]
+13:17:15 ERROR ontology.learning.expert.TripleStoreExpert - ASK and SELECT not equivalent!
+13:17:15 DEBUG PACOntologyLearningSub - Added auxiliary axiom: SubClassOf(ObjectIntersectionOf(ObjectSomeValuesFrom(<http://www.wikidata.org/prop/direct/P40> <http://www.wikidata.org/entity/Q84048852>)) ObjectSomeValuesFrom(<http://www.wikidata.org/prop/direct/P40> <http://www.wikidata.org/entity/Q84048850>))
+13:17:15 DEBUG PACOntologyLearningSub - Added non-auxiliary axiom: SubClassOf(ObjectIntersectionOf(ObjectSomeValuesFrom(<http://www.wikidata.org/prop/direct/P40 Q84048852)) ObjectIntersectionOf(Q5 ObjectSomeValuesFrom(<http://www.wikidata.org/prop/direct/P40 Q5) ObjectSomeValuesFrom(<http://www.wikidata.org/prop/direct/P40 Q84048850)))
+13:17:15 DEBUG ontology.learning.expert.TripleStoreExpert - query starting
+13:17:15 TRACE ontology.learning.expert.TripleStoreExpert - ax: SubClassOf(ObjectIntersectionOf(ObjectSomeValuesFrom(<http://www.wikidata.org/prop/direct/P40> <http://www.wikidata.org/entity/Q5>) ObjectSomeValuesFrom(<http://www.wikidata.org/prop/direct/P40> <http://www.wikidata.org/entity/Q84048850>)) <http://www.wikidata.org/entity/Q5>)
+13:17:15 TRACE ontology.learning.expert.TripleStoreExpert - queryStrLhs:
+PREFIX owl: <http://www.w3.org/2002/07/owl/>
+PREFIX wd: <http://www.wikidata.org/entity/>
+PREFIX wdt: <http://www.wikidata.org/prop/direct/>
+
+SELECT DISTINCT ?1 WHERE {
+?1 <http://www.wikidata.org/prop/direct/P40> ?10. 
+?10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.wikidata.org/entity/Q5>.
+?1 <http://www.wikidata.org/prop/direct/P40> ?11. 
+?11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.wikidata.org/entity/Q84048850>.
+}
+13:17:15 TRACE ontology.learning.expert.TripleStoreExpert - queryStrRhs:
+PREFIX owl: <http://www.w3.org/2002/07/owl/>
+PREFIX wd: <http://www.wikidata.org/entity/>
+PREFIX wdt: <http://www.wikidata.org/prop/direct/>
+
+SELECT DISTINCT ?1 WHERE {
+?1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.wikidata.org/entity/Q5>.
+}
+13:17:15 TRACE ontology.learning.expert.TripleStoreExpert - ASK Query:
+PREFIX owl: <http://www.w3.org/2002/07/owl/>
+PREFIX wd: <http://www.wikidata.org/entity/>
+PREFIX wdt: <http://www.wikidata.org/prop/direct/>
+
+ASK {
+?1 <http://www.wikidata.org/prop/direct/P40> ?10. 
+?10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.wikidata.org/entity/Q5>.
+?1 <http://www.wikidata.org/prop/direct/P40> ?11. 
+?11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.wikidata.org/entity/Q84048850>.
+FILTER NOT EXISTS {
+?1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.wikidata.org/entity/Q5>.
+}
+}
+
+13:17:15 DEBUG ontology.learning.expert.TripleStoreExpert - query executed
+13:17:15 DEBUG ontology.learning.expert.TripleStoreExpert - resultsLhs:[http://example.org/anna, http://example.org/lukas, http://example.org/baris, http://example.org/kathrin]
+13:17:15 DEBUG ontology.learning.expert.TripleStoreExpert - resultsRhs:[http://example.org/anna, http://example.org/lukas, http://example.org/baris, http://example.org/lea, http://example.org/matis, http://example.org/kathrin, http://example.org/joni, http://example.org/jannik, http://example.org/levin, http://example.org/teo]
+13:17:15 ERROR ontology.learning.expert.TripleStoreExpert - ASK and SELECT not equivalent!
+13:17:15 DEBUG PACOntologyLearningSub - Added auxiliary axiom: SubClassOf(ObjectIntersectionOf(ObjectSomeValuesFrom(<http://www.wikidata.org/prop/direct/P40> <http://www.wikidata.org/entity/Q5>) ObjectSomeValuesFrom(<http://www.wikidata.org/prop/direct/P40> <http://www.wikidata.org/entity/Q84048850>)) <http://www.wikidata.org/entity/Q5>)
+13:17:15 INFO  PACOntologyLearningSub - Samples at this iteration: 1
+13:17:15 INFO  PACOntologyLearningSub - iteration:8
+13:17:15 INFO  PACOntologyLearningSub - auxiliary axioms:7
+13:17:15 INFO  PACOntologyLearningSub - expert queries:19
+13:17:15 INFO  PACOntologyLearningSub - implications:2
+13:17:15 DEBUG ontology.learning.expert.TripleStoreExpert - query starting
+13:17:15 TRACE ontology.learning.expert.TripleStoreExpert - ax: SubClassOf(ObjectIntersectionOf(ObjectSomeValuesFrom(<http://www.wikidata.org/prop/direct/P40> <http://www.wikidata.org/entity/Q5>) ObjectSomeValuesFrom(<http://www.wikidata.org/prop/direct/P40> <http://www.wikidata.org/entity/Q84048850>)) owl:Nothing)
+13:17:15 TRACE ontology.learning.expert.TripleStoreExpert - queryStrLhs:
+PREFIX owl: <http://www.w3.org/2002/07/owl/>
+PREFIX wd: <http://www.wikidata.org/entity/>
+PREFIX wdt: <http://www.wikidata.org/prop/direct/>
+
+SELECT DISTINCT ?1 WHERE {
+?1 <http://www.wikidata.org/prop/direct/P40> ?10. 
+?10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.wikidata.org/entity/Q5>.
+?1 <http://www.wikidata.org/prop/direct/P40> ?11. 
+?11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.wikidata.org/entity/Q84048850>.
+}
+13:17:15 TRACE ontology.learning.expert.TripleStoreExpert - queryStrRhs:
+PREFIX owl: <http://www.w3.org/2002/07/owl/>
+PREFIX wd: <http://www.wikidata.org/entity/>
+PREFIX wdt: <http://www.wikidata.org/prop/direct/>
+
+SELECT DISTINCT ?1 WHERE {
+?1 wdt:NONEXISTING_PROPERTY wd:NONEXISTING_OBJECT.
+}
+13:17:15 TRACE ontology.learning.expert.TripleStoreExpert - ASK Query:
+PREFIX owl: <http://www.w3.org/2002/07/owl/>
+PREFIX wd: <http://www.wikidata.org/entity/>
+PREFIX wdt: <http://www.wikidata.org/prop/direct/>
+
+ASK {
+?1 <http://www.wikidata.org/prop/direct/P40> ?10. 
+?10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.wikidata.org/entity/Q5>.
+?1 <http://www.wikidata.org/prop/direct/P40> ?11. 
+?11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.wikidata.org/entity/Q84048850>.
+FILTER NOT EXISTS {
+?1 wdt:NONEXISTING_PROPERTY wd:NONEXISTING_OBJECT.
+}
+}
+
+13:17:15 DEBUG ontology.learning.expert.TripleStoreExpert - query executed
+13:17:15 DEBUG ontology.learning.expert.TripleStoreExpert - resultsLhs:[http://example.org/anna, http://example.org/lukas, http://example.org/baris, http://example.org/kathrin]
+13:17:15 DEBUG ontology.learning.expert.TripleStoreExpert - resultsRhs:[]
+13:17:15 ERROR ontology.learning.expert.TripleStoreExpert - ASK and SELECT not equivalent!
+13:17:15 DEBUG ontology.learning.expert.TripleStoreExpert - query starting
+13:17:15 TRACE ontology.learning.expert.TripleStoreExpert - ax: SubClassOf(ObjectIntersectionOf(ObjectSomeValuesFrom(<http://www.wikidata.org/prop/direct/P40> <http://www.wikidata.org/entity/Q5>) ObjectSomeValuesFrom(<http://www.wikidata.org/prop/direct/P40> <http://www.wikidata.org/entity/Q84048850>)) <http://www.wikidata.org/entity/Q84048852>)
+13:17:15 TRACE ontology.learning.expert.TripleStoreExpert - queryStrLhs:
+PREFIX owl: <http://www.w3.org/2002/07/owl/>
+PREFIX wd: <http://www.wikidata.org/entity/>
+PREFIX wdt: <http://www.wikidata.org/prop/direct/>
+
+SELECT DISTINCT ?1 WHERE {
+?1 <http://www.wikidata.org/prop/direct/P40> ?10. 
+?10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.wikidata.org/entity/Q5>.
+?1 <http://www.wikidata.org/prop/direct/P40> ?11. 
+?11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.wikidata.org/entity/Q84048850>.
+}
+13:17:15 TRACE ontology.learning.expert.TripleStoreExpert - queryStrRhs:
+PREFIX owl: <http://www.w3.org/2002/07/owl/>
+PREFIX wd: <http://www.wikidata.org/entity/>
+PREFIX wdt: <http://www.wikidata.org/prop/direct/>
+
+SELECT DISTINCT ?1 WHERE {
+?1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.wikidata.org/entity/Q84048852>.
+}
+13:17:15 TRACE ontology.learning.expert.TripleStoreExpert - ASK Query:
+PREFIX owl: <http://www.w3.org/2002/07/owl/>
+PREFIX wd: <http://www.wikidata.org/entity/>
+PREFIX wdt: <http://www.wikidata.org/prop/direct/>
+
+ASK {
+?1 <http://www.wikidata.org/prop/direct/P40> ?10. 
+?10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.wikidata.org/entity/Q5>.
+?1 <http://www.wikidata.org/prop/direct/P40> ?11. 
+?11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.wikidata.org/entity/Q84048850>.
+FILTER NOT EXISTS {
+?1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.wikidata.org/entity/Q84048852>.
+}
+}
+
+13:17:15 DEBUG ontology.learning.expert.TripleStoreExpert - query executed
+13:17:15 DEBUG ontology.learning.expert.TripleStoreExpert - resultsLhs:[http://example.org/anna, http://example.org/lukas, http://example.org/baris, http://example.org/kathrin]
+13:17:15 DEBUG ontology.learning.expert.TripleStoreExpert - resultsRhs:[http://example.org/anna, http://example.org/lea, http://example.org/kathrin]
+13:17:15 ERROR ontology.learning.expert.TripleStoreExpert - ASK and SELECT not equivalent!
+13:17:15 DEBUG ontology.learning.expert.TripleStoreExpert - query starting
+13:17:15 TRACE ontology.learning.expert.TripleStoreExpert - ax: SubClassOf(ObjectIntersectionOf(ObjectSomeValuesFrom(<http://www.wikidata.org/prop/direct/P40> <http://www.wikidata.org/entity/Q5>) ObjectSomeValuesFrom(<http://www.wikidata.org/prop/direct/P40> <http://www.wikidata.org/entity/Q84048850>)) <http://www.wikidata.org/entity/Q84048850>)
+13:17:15 TRACE ontology.learning.expert.TripleStoreExpert - queryStrLhs:
+PREFIX owl: <http://www.w3.org/2002/07/owl/>
+PREFIX wd: <http://www.wikidata.org/entity/>
+PREFIX wdt: <http://www.wikidata.org/prop/direct/>
+
+SELECT DISTINCT ?1 WHERE {
+?1 <http://www.wikidata.org/prop/direct/P40> ?10. 
+?10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.wikidata.org/entity/Q5>.
+?1 <http://www.wikidata.org/prop/direct/P40> ?11. 
+?11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.wikidata.org/entity/Q84048850>.
+}
+13:17:15 TRACE ontology.learning.expert.TripleStoreExpert - queryStrRhs:
+PREFIX owl: <http://www.w3.org/2002/07/owl/>
+PREFIX wd: <http://www.wikidata.org/entity/>
+PREFIX wdt: <http://www.wikidata.org/prop/direct/>
+
+SELECT DISTINCT ?1 WHERE {
+?1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.wikidata.org/entity/Q84048850>.
+}
+13:17:15 TRACE ontology.learning.expert.TripleStoreExpert - ASK Query:
+PREFIX owl: <http://www.w3.org/2002/07/owl/>
+PREFIX wd: <http://www.wikidata.org/entity/>
+PREFIX wdt: <http://www.wikidata.org/prop/direct/>
+
+ASK {
+?1 <http://www.wikidata.org/prop/direct/P40> ?10. 
+?10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.wikidata.org/entity/Q5>.
+?1 <http://www.wikidata.org/prop/direct/P40> ?11. 
+?11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.wikidata.org/entity/Q84048850>.
+FILTER NOT EXISTS {
+?1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.wikidata.org/entity/Q84048850>.
+}
+}
+
+13:17:15 DEBUG ontology.learning.expert.TripleStoreExpert - query executed
+13:17:15 DEBUG ontology.learning.expert.TripleStoreExpert - resultsLhs:[http://example.org/anna, http://example.org/lukas, http://example.org/baris, http://example.org/kathrin]
+13:17:15 DEBUG ontology.learning.expert.TripleStoreExpert - resultsRhs:[http://example.org/lukas, http://example.org/matis, http://example.org/baris, http://example.org/joni, http://example.org/jannik, http://example.org/levin, http://example.org/teo]
+13:17:15 ERROR ontology.learning.expert.TripleStoreExpert - ASK and SELECT not equivalent!
+13:17:15 DEBUG PACOntologyLearningSub - Added non-auxiliary axiom: SubClassOf(ObjectIntersectionOf(ObjectSomeValuesFrom(<http://www.wikidata.org/prop/direct/P40 Q5) ObjectSomeValuesFrom(<http://www.wikidata.org/prop/direct/P40 Q84048850)) ObjectIntersectionOf(Q5))
+13:17:15 INFO  PACOntologyLearningSub - Samples at this iteration: 6
+13:17:15 INFO  PACOntologyLearningSub - iteration:9
+13:17:15 INFO  PACOntologyLearningSub - auxiliary axioms:7
+13:17:15 INFO  PACOntologyLearningSub - expert queries:22
+13:17:15 INFO  PACOntologyLearningSub - implications:3
+13:17:15 DEBUG PACOntologyLearningSub - Added non-auxiliary axiom: SubClassOf(ObjectIntersectionOf(Q5 Q84048850 Q84048852) ObjectIntersectionOf(owl:Nothing))
+13:17:15 DEBUG ontology.learning.expert.TripleStoreExpert - query starting
+13:17:15 TRACE ontology.learning.expert.TripleStoreExpert - ax: SubClassOf(ObjectIntersectionOf(<http://www.wikidata.org/entity/Q5> <http://www.wikidata.org/entity/Q84048852> ObjectSomeValuesFrom(<http://www.wikidata.org/prop/direct/P40> <http://www.wikidata.org/entity/Q5>) ObjectSomeValuesFrom(<http://www.wikidata.org/prop/direct/P40> <http://www.wikidata.org/entity/Q84048850>)) ObjectSomeValuesFrom(<http://www.wikidata.org/prop/direct/P40> <http://www.wikidata.org/entity/Q84048852>))
+13:17:15 TRACE ontology.learning.expert.TripleStoreExpert - queryStrLhs:
+PREFIX owl: <http://www.w3.org/2002/07/owl/>
+PREFIX wd: <http://www.wikidata.org/entity/>
+PREFIX wdt: <http://www.wikidata.org/prop/direct/>
+
+SELECT DISTINCT ?1 WHERE {
+?1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.wikidata.org/entity/Q5>.
+?1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.wikidata.org/entity/Q84048852>.
+?1 <http://www.wikidata.org/prop/direct/P40> ?10. 
+?10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.wikidata.org/entity/Q5>.
+?1 <http://www.wikidata.org/prop/direct/P40> ?11. 
+?11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.wikidata.org/entity/Q84048850>.
+}
+13:17:15 TRACE ontology.learning.expert.TripleStoreExpert - queryStrRhs:
+PREFIX owl: <http://www.w3.org/2002/07/owl/>
+PREFIX wd: <http://www.wikidata.org/entity/>
+PREFIX wdt: <http://www.wikidata.org/prop/direct/>
+
+SELECT DISTINCT ?1 WHERE {
+?1 <http://www.wikidata.org/prop/direct/P40> ?10. 
+?10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.wikidata.org/entity/Q84048852>.
+}
+13:17:15 TRACE ontology.learning.expert.TripleStoreExpert - ASK Query:
+PREFIX owl: <http://www.w3.org/2002/07/owl/>
+PREFIX wd: <http://www.wikidata.org/entity/>
+PREFIX wdt: <http://www.wikidata.org/prop/direct/>
+
+ASK {
+?1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.wikidata.org/entity/Q5>.
+?1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.wikidata.org/entity/Q84048852>.
+?1 <http://www.wikidata.org/prop/direct/P40> ?10. 
+?10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.wikidata.org/entity/Q5>.
+?1 <http://www.wikidata.org/prop/direct/P40> ?11. 
+?11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.wikidata.org/entity/Q84048850>.
+FILTER NOT EXISTS {
+?1 <http://www.wikidata.org/prop/direct/P40> ?109. 
+?109 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.wikidata.org/entity/Q84048852>.
+}
+}
+
+13:17:15 DEBUG ontology.learning.expert.TripleStoreExpert - query executed
+13:17:15 DEBUG ontology.learning.expert.TripleStoreExpert - resultsLhs:[http://example.org/anna, http://example.org/kathrin]
+13:17:15 DEBUG ontology.learning.expert.TripleStoreExpert - resultsRhs:[http://example.org/anna, http://example.org/lukas]
+13:17:15 ERROR ontology.learning.expert.TripleStoreExpert - ASK and SELECT not equivalent!
+13:17:15 DEBUG ontology.learning.expert.TripleStoreExpert - query starting
+13:17:15 TRACE ontology.learning.expert.TripleStoreExpert - ax: SubClassOf(ObjectIntersectionOf(<http://www.wikidata.org/entity/Q5> <http://www.wikidata.org/entity/Q84048852> ObjectSomeValuesFrom(<http://www.wikidata.org/prop/direct/P40> <http://www.wikidata.org/entity/Q5>) ObjectSomeValuesFrom(<http://www.wikidata.org/prop/direct/P40> <http://www.wikidata.org/entity/Q84048850>) ObjectSomeValuesFrom(<http://www.wikidata.org/prop/direct/P40> <http://www.wikidata.org/entity/Q84048852>)) <http://www.wikidata.org/entity/Q84048850>)
+13:17:15 TRACE ontology.learning.expert.TripleStoreExpert - queryStrLhs:
+PREFIX owl: <http://www.w3.org/2002/07/owl/>
+PREFIX wd: <http://www.wikidata.org/entity/>
+PREFIX wdt: <http://www.wikidata.org/prop/direct/>
+
+SELECT DISTINCT ?1 WHERE {
+?1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.wikidata.org/entity/Q5>.
+?1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.wikidata.org/entity/Q84048852>.
+?1 <http://www.wikidata.org/prop/direct/P40> ?10. 
+?10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.wikidata.org/entity/Q5>.
+?1 <http://www.wikidata.org/prop/direct/P40> ?11. 
+?11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.wikidata.org/entity/Q84048850>.
+?1 <http://www.wikidata.org/prop/direct/P40> ?12. 
+?12 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.wikidata.org/entity/Q84048852>.
+}
+13:17:15 TRACE ontology.learning.expert.TripleStoreExpert - queryStrRhs:
+PREFIX owl: <http://www.w3.org/2002/07/owl/>
+PREFIX wd: <http://www.wikidata.org/entity/>
+PREFIX wdt: <http://www.wikidata.org/prop/direct/>
+
+SELECT DISTINCT ?1 WHERE {
+?1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.wikidata.org/entity/Q84048850>.
+}
+13:17:15 TRACE ontology.learning.expert.TripleStoreExpert - ASK Query:
+PREFIX owl: <http://www.w3.org/2002/07/owl/>
+PREFIX wd: <http://www.wikidata.org/entity/>
+PREFIX wdt: <http://www.wikidata.org/prop/direct/>
+
+ASK {
+?1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.wikidata.org/entity/Q5>.
+?1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.wikidata.org/entity/Q84048852>.
+?1 <http://www.wikidata.org/prop/direct/P40> ?10. 
+?10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.wikidata.org/entity/Q5>.
+?1 <http://www.wikidata.org/prop/direct/P40> ?11. 
+?11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.wikidata.org/entity/Q84048850>.
+?1 <http://www.wikidata.org/prop/direct/P40> ?12. 
+?12 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.wikidata.org/entity/Q84048852>.
+FILTER NOT EXISTS {
+?1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.wikidata.org/entity/Q84048850>.
+}
+}
+
+13:17:15 DEBUG ontology.learning.expert.TripleStoreExpert - query executed
+13:17:15 DEBUG ontology.learning.expert.TripleStoreExpert - resultsLhs:[http://example.org/anna]
+13:17:15 DEBUG ontology.learning.expert.TripleStoreExpert - resultsRhs:[http://example.org/lukas, http://example.org/matis, http://example.org/baris, http://example.org/joni, http://example.org/jannik, http://example.org/levin, http://example.org/teo]
+13:17:15 ERROR ontology.learning.expert.TripleStoreExpert - ASK and SELECT not equivalent!
+13:17:15 INFO  PACOntologyLearningSub - Samples at this iteration: 3
+13:17:15 INFO  PACOntologyLearningSub - iteration:10
+13:17:15 INFO  PACOntologyLearningSub - auxiliary axioms:7
+13:17:15 INFO  PACOntologyLearningSub - expert queries:24
+13:17:15 INFO  PACOntologyLearningSub - implications:4
+13:17:15 DEBUG PACOntologyLearningSub - Added non-auxiliary axiom: SubClassOf(ObjectIntersectionOf(ObjectSomeValuesFrom(<http://www.wikidata.org/prop/direct/P40 Q84048850)) ObjectIntersectionOf(Q5 ObjectSomeValuesFrom(<http://www.wikidata.org/prop/direct/P40 Q5)))
+13:17:15 INFO  PACOntologyLearningSub - Samples at this iteration: 2
+13:17:15 INFO  PACOntologyLearningSub - iteration:11
+13:17:15 INFO  PACOntologyLearningSub - auxiliary axioms:7
+13:17:15 INFO  PACOntologyLearningSub - expert queries:24
+13:17:15 INFO  PACOntologyLearningSub - implications:4
+13:17:15 DEBUG ontology.learning.expert.TripleStoreExpert - query starting
+13:17:15 TRACE ontology.learning.expert.TripleStoreExpert - ax: SubClassOf(ObjectIntersectionOf(<http://www.wikidata.org/entity/Q84048850>) owl:Nothing)
+13:17:15 TRACE ontology.learning.expert.TripleStoreExpert - queryStrLhs:
+PREFIX owl: <http://www.w3.org/2002/07/owl/>
+PREFIX wd: <http://www.wikidata.org/entity/>
+PREFIX wdt: <http://www.wikidata.org/prop/direct/>
+
+SELECT DISTINCT ?1 WHERE {
+?1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.wikidata.org/entity/Q84048850>.
+}
+13:17:15 TRACE ontology.learning.expert.TripleStoreExpert - queryStrRhs:
+PREFIX owl: <http://www.w3.org/2002/07/owl/>
+PREFIX wd: <http://www.wikidata.org/entity/>
+PREFIX wdt: <http://www.wikidata.org/prop/direct/>
+
+SELECT DISTINCT ?1 WHERE {
+?1 wdt:NONEXISTING_PROPERTY wd:NONEXISTING_OBJECT.
+}
+13:17:15 TRACE ontology.learning.expert.TripleStoreExpert - ASK Query:
+PREFIX owl: <http://www.w3.org/2002/07/owl/>
+PREFIX wd: <http://www.wikidata.org/entity/>
+PREFIX wdt: <http://www.wikidata.org/prop/direct/>
+
+ASK {
+?1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.wikidata.org/entity/Q84048850>.
+FILTER NOT EXISTS {
+?1 wdt:NONEXISTING_PROPERTY wd:NONEXISTING_OBJECT.
+}
+}
+
+13:17:15 DEBUG ontology.learning.expert.TripleStoreExpert - query executed
+13:17:15 DEBUG ontology.learning.expert.TripleStoreExpert - resultsLhs:[http://example.org/lukas, http://example.org/matis, http://example.org/baris, http://example.org/joni, http://example.org/jannik, http://example.org/levin, http://example.org/teo]
+13:17:15 DEBUG ontology.learning.expert.TripleStoreExpert - resultsRhs:[]
+13:17:15 ERROR ontology.learning.expert.TripleStoreExpert - ASK and SELECT not equivalent!
+13:17:15 DEBUG ontology.learning.expert.TripleStoreExpert - query starting
+13:17:15 TRACE ontology.learning.expert.TripleStoreExpert - ax: SubClassOf(ObjectIntersectionOf(<http://www.wikidata.org/entity/Q84048850>) <http://www.wikidata.org/entity/Q84048852>)
+13:17:15 TRACE ontology.learning.expert.TripleStoreExpert - queryStrLhs:
+PREFIX owl: <http://www.w3.org/2002/07/owl/>
+PREFIX wd: <http://www.wikidata.org/entity/>
+PREFIX wdt: <http://www.wikidata.org/prop/direct/>
+
+SELECT DISTINCT ?1 WHERE {
+?1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.wikidata.org/entity/Q84048850>.
+}
+13:17:15 TRACE ontology.learning.expert.TripleStoreExpert - queryStrRhs:
+PREFIX owl: <http://www.w3.org/2002/07/owl/>
+PREFIX wd: <http://www.wikidata.org/entity/>
+PREFIX wdt: <http://www.wikidata.org/prop/direct/>
+
+SELECT DISTINCT ?1 WHERE {
+?1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.wikidata.org/entity/Q84048852>.
+}
+13:17:15 TRACE ontology.learning.expert.TripleStoreExpert - ASK Query:
+PREFIX owl: <http://www.w3.org/2002/07/owl/>
+PREFIX wd: <http://www.wikidata.org/entity/>
+PREFIX wdt: <http://www.wikidata.org/prop/direct/>
+
+ASK {
+?1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.wikidata.org/entity/Q84048850>.
+FILTER NOT EXISTS {
+?1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.wikidata.org/entity/Q84048852>.
+}
+}
+
+13:17:15 DEBUG ontology.learning.expert.TripleStoreExpert - query executed
+13:17:15 DEBUG ontology.learning.expert.TripleStoreExpert - resultsLhs:[http://example.org/lukas, http://example.org/matis, http://example.org/baris, http://example.org/joni, http://example.org/jannik, http://example.org/levin, http://example.org/teo]
+13:17:15 DEBUG ontology.learning.expert.TripleStoreExpert - resultsRhs:[http://example.org/anna, http://example.org/lea, http://example.org/kathrin]
+13:17:15 ERROR ontology.learning.expert.TripleStoreExpert - ASK and SELECT not equivalent!
+13:17:15 DEBUG ontology.learning.expert.TripleStoreExpert - query starting
+13:17:15 TRACE ontology.learning.expert.TripleStoreExpert - ax: SubClassOf(ObjectIntersectionOf(<http://www.wikidata.org/entity/Q84048850>) ObjectSomeValuesFrom(<http://www.wikidata.org/prop/direct/P40> <http://www.wikidata.org/entity/Q5>))
+13:17:15 TRACE ontology.learning.expert.TripleStoreExpert - queryStrLhs:
+PREFIX owl: <http://www.w3.org/2002/07/owl/>
+PREFIX wd: <http://www.wikidata.org/entity/>
+PREFIX wdt: <http://www.wikidata.org/prop/direct/>
+
+SELECT DISTINCT ?1 WHERE {
+?1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.wikidata.org/entity/Q84048850>.
+}
+13:17:15 TRACE ontology.learning.expert.TripleStoreExpert - queryStrRhs:
+PREFIX owl: <http://www.w3.org/2002/07/owl/>
+PREFIX wd: <http://www.wikidata.org/entity/>
+PREFIX wdt: <http://www.wikidata.org/prop/direct/>
+
+SELECT DISTINCT ?1 WHERE {
+?1 <http://www.wikidata.org/prop/direct/P40> ?10. 
+?10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.wikidata.org/entity/Q5>.
+}
+13:17:15 TRACE ontology.learning.expert.TripleStoreExpert - ASK Query:
+PREFIX owl: <http://www.w3.org/2002/07/owl/>
+PREFIX wd: <http://www.wikidata.org/entity/>
+PREFIX wdt: <http://www.wikidata.org/prop/direct/>
+
+ASK {
+?1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.wikidata.org/entity/Q84048850>.
+FILTER NOT EXISTS {
+?1 <http://www.wikidata.org/prop/direct/P40> ?109. 
+?109 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.wikidata.org/entity/Q5>.
+}
+}
+
+13:17:15 DEBUG ontology.learning.expert.TripleStoreExpert - query executed
+13:17:15 DEBUG ontology.learning.expert.TripleStoreExpert - resultsLhs:[http://example.org/lukas, http://example.org/matis, http://example.org/baris, http://example.org/joni, http://example.org/jannik, http://example.org/levin, http://example.org/teo]
+13:17:15 DEBUG ontology.learning.expert.TripleStoreExpert - resultsRhs:[http://example.org/anna, http://example.org/lukas, http://example.org/baris, http://example.org/kathrin]
+13:17:15 ERROR ontology.learning.expert.TripleStoreExpert - ASK and SELECT not equivalent!
+13:17:15 DEBUG ontology.learning.expert.TripleStoreExpert - query starting
+13:17:15 TRACE ontology.learning.expert.TripleStoreExpert - ax: SubClassOf(ObjectIntersectionOf(<http://www.wikidata.org/entity/Q84048850>) ObjectSomeValuesFrom(<http://www.wikidata.org/prop/direct/P40> <http://www.wikidata.org/entity/Q84048852>))
+13:17:15 TRACE ontology.learning.expert.TripleStoreExpert - queryStrLhs:
+PREFIX owl: <http://www.w3.org/2002/07/owl/>
+PREFIX wd: <http://www.wikidata.org/entity/>
+PREFIX wdt: <http://www.wikidata.org/prop/direct/>
+
+SELECT DISTINCT ?1 WHERE {
+?1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.wikidata.org/entity/Q84048850>.
+}
+13:17:15 TRACE ontology.learning.expert.TripleStoreExpert - queryStrRhs:
+PREFIX owl: <http://www.w3.org/2002/07/owl/>
+PREFIX wd: <http://www.wikidata.org/entity/>
+PREFIX wdt: <http://www.wikidata.org/prop/direct/>
+
+SELECT DISTINCT ?1 WHERE {
+?1 <http://www.wikidata.org/prop/direct/P40> ?10. 
+?10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.wikidata.org/entity/Q84048852>.
+}
+13:17:15 TRACE ontology.learning.expert.TripleStoreExpert - ASK Query:
+PREFIX owl: <http://www.w3.org/2002/07/owl/>
+PREFIX wd: <http://www.wikidata.org/entity/>
+PREFIX wdt: <http://www.wikidata.org/prop/direct/>
+
+ASK {
+?1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.wikidata.org/entity/Q84048850>.
+FILTER NOT EXISTS {
+?1 <http://www.wikidata.org/prop/direct/P40> ?109. 
+?109 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.wikidata.org/entity/Q84048852>.
+}
+}
+
+13:17:15 DEBUG ontology.learning.expert.TripleStoreExpert - query executed
+13:17:15 DEBUG ontology.learning.expert.TripleStoreExpert - resultsLhs:[http://example.org/lukas, http://example.org/matis, http://example.org/baris, http://example.org/joni, http://example.org/jannik, http://example.org/levin, http://example.org/teo]
+13:17:15 DEBUG ontology.learning.expert.TripleStoreExpert - resultsRhs:[http://example.org/anna, http://example.org/lukas]
+13:17:15 ERROR ontology.learning.expert.TripleStoreExpert - ASK and SELECT not equivalent!
+13:17:15 DEBUG ontology.learning.expert.TripleStoreExpert - query starting
+13:17:15 TRACE ontology.learning.expert.TripleStoreExpert - ax: SubClassOf(ObjectIntersectionOf(<http://www.wikidata.org/entity/Q84048850>) ObjectSomeValuesFrom(<http://www.wikidata.org/prop/direct/P40> <http://www.wikidata.org/entity/Q84048850>))
+13:17:15 TRACE ontology.learning.expert.TripleStoreExpert - queryStrLhs:
+PREFIX owl: <http://www.w3.org/2002/07/owl/>
+PREFIX wd: <http://www.wikidata.org/entity/>
+PREFIX wdt: <http://www.wikidata.org/prop/direct/>
+
+SELECT DISTINCT ?1 WHERE {
+?1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.wikidata.org/entity/Q84048850>.
+}
+13:17:15 TRACE ontology.learning.expert.TripleStoreExpert - queryStrRhs:
+PREFIX owl: <http://www.w3.org/2002/07/owl/>
+PREFIX wd: <http://www.wikidata.org/entity/>
+PREFIX wdt: <http://www.wikidata.org/prop/direct/>
+
+SELECT DISTINCT ?1 WHERE {
+?1 <http://www.wikidata.org/prop/direct/P40> ?10. 
+?10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.wikidata.org/entity/Q84048850>.
+}
+13:17:15 TRACE ontology.learning.expert.TripleStoreExpert - ASK Query:
+PREFIX owl: <http://www.w3.org/2002/07/owl/>
+PREFIX wd: <http://www.wikidata.org/entity/>
+PREFIX wdt: <http://www.wikidata.org/prop/direct/>
+
+ASK {
+?1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.wikidata.org/entity/Q84048850>.
+FILTER NOT EXISTS {
+?1 <http://www.wikidata.org/prop/direct/P40> ?109. 
+?109 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.wikidata.org/entity/Q84048850>.
+}
+}
+
+13:17:15 DEBUG ontology.learning.expert.TripleStoreExpert - query executed
+13:17:15 DEBUG ontology.learning.expert.TripleStoreExpert - resultsLhs:[http://example.org/lukas, http://example.org/matis, http://example.org/baris, http://example.org/joni, http://example.org/jannik, http://example.org/levin, http://example.org/teo]
+13:17:15 DEBUG ontology.learning.expert.TripleStoreExpert - resultsRhs:[http://example.org/anna, http://example.org/lukas, http://example.org/baris, http://example.org/kathrin]
+13:17:15 ERROR ontology.learning.expert.TripleStoreExpert - ASK and SELECT not equivalent!
+13:17:15 DEBUG PACOntologyLearningSub - Added non-auxiliary axiom: SubClassOf(ObjectIntersectionOf(Q84048850) ObjectIntersectionOf(Q5))
+13:17:15 DEBUG ontology.learning.expert.TripleStoreExpert - query starting
+13:17:15 TRACE ontology.learning.expert.TripleStoreExpert - ax: SubClassOf(ObjectIntersectionOf(<http://www.wikidata.org/entity/Q5> <http://www.wikidata.org/entity/Q84048850> ObjectSomeValuesFrom(<http://www.wikidata.org/prop/direct/P40> <http://www.wikidata.org/entity/Q5>) ObjectSomeValuesFrom(<http://www.wikidata.org/prop/direct/P40> <http://www.wikidata.org/entity/Q84048850>) ObjectSomeValuesFrom(<http://www.wikidata.org/prop/direct/P40> <http://www.wikidata.org/entity/Q84048852>)) <http://www.wikidata.org/entity/Q84048852>)
+13:17:15 TRACE ontology.learning.expert.TripleStoreExpert - queryStrLhs:
+PREFIX owl: <http://www.w3.org/2002/07/owl/>
+PREFIX wd: <http://www.wikidata.org/entity/>
+PREFIX wdt: <http://www.wikidata.org/prop/direct/>
+
+SELECT DISTINCT ?1 WHERE {
+?1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.wikidata.org/entity/Q5>.
+?1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.wikidata.org/entity/Q84048850>.
+?1 <http://www.wikidata.org/prop/direct/P40> ?10. 
+?10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.wikidata.org/entity/Q5>.
+?1 <http://www.wikidata.org/prop/direct/P40> ?11. 
+?11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.wikidata.org/entity/Q84048850>.
+?1 <http://www.wikidata.org/prop/direct/P40> ?12. 
+?12 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.wikidata.org/entity/Q84048852>.
+}
+13:17:15 TRACE ontology.learning.expert.TripleStoreExpert - queryStrRhs:
+PREFIX owl: <http://www.w3.org/2002/07/owl/>
+PREFIX wd: <http://www.wikidata.org/entity/>
+PREFIX wdt: <http://www.wikidata.org/prop/direct/>
+
+SELECT DISTINCT ?1 WHERE {
+?1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.wikidata.org/entity/Q84048852>.
+}
+13:17:15 TRACE ontology.learning.expert.TripleStoreExpert - ASK Query:
+PREFIX owl: <http://www.w3.org/2002/07/owl/>
+PREFIX wd: <http://www.wikidata.org/entity/>
+PREFIX wdt: <http://www.wikidata.org/prop/direct/>
+
+ASK {
+?1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.wikidata.org/entity/Q5>.
+?1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.wikidata.org/entity/Q84048850>.
+?1 <http://www.wikidata.org/prop/direct/P40> ?10. 
+?10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.wikidata.org/entity/Q5>.
+?1 <http://www.wikidata.org/prop/direct/P40> ?11. 
+?11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.wikidata.org/entity/Q84048850>.
+?1 <http://www.wikidata.org/prop/direct/P40> ?12. 
+?12 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.wikidata.org/entity/Q84048852>.
+FILTER NOT EXISTS {
+?1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.wikidata.org/entity/Q84048852>.
+}
+}
+
+13:17:15 DEBUG ontology.learning.expert.TripleStoreExpert - query executed
+13:17:15 DEBUG ontology.learning.expert.TripleStoreExpert - resultsLhs:[http://example.org/lukas]
+13:17:15 DEBUG ontology.learning.expert.TripleStoreExpert - resultsRhs:[http://example.org/anna, http://example.org/lea, http://example.org/kathrin]
+13:17:15 ERROR ontology.learning.expert.TripleStoreExpert - ASK and SELECT not equivalent!
+13:17:15 INFO  PACOntologyLearningSub - Samples at this iteration: 12
+13:17:15 INFO  PACOntologyLearningSub - iteration:12
+13:17:15 INFO  PACOntologyLearningSub - auxiliary axioms:7
+13:17:15 INFO  PACOntologyLearningSub - expert queries:30
+13:17:15 INFO  PACOntologyLearningSub - implications:4
+13:17:15 DEBUG PACOntologyLearningSub - Added non-auxiliary axiom: SubClassOf(ObjectIntersectionOf(Q5 Q84048850 Q84048852 ObjectSomeValuesFrom(<http://www.wikidata.org/prop/direct/P40 Q5)) ObjectIntersectionOf(owl:Nothing))
+13:17:15 DEBUG ontology.learning.expert.TripleStoreExpert - query starting
+13:17:15 TRACE ontology.learning.expert.TripleStoreExpert - ax: SubClassOf(ObjectIntersectionOf(ObjectSomeValuesFrom(<http://www.wikidata.org/prop/direct/P40> <http://www.wikidata.org/entity/Q5>)) ObjectSomeValuesFrom(<http://www.wikidata.org/prop/direct/P40> <http://www.wikidata.org/entity/Q84048850>))
+13:17:15 TRACE ontology.learning.expert.TripleStoreExpert - queryStrLhs:
+PREFIX owl: <http://www.w3.org/2002/07/owl/>
+PREFIX wd: <http://www.wikidata.org/entity/>
+PREFIX wdt: <http://www.wikidata.org/prop/direct/>
+
+SELECT DISTINCT ?1 WHERE {
+?1 <http://www.wikidata.org/prop/direct/P40> ?10. 
+?10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.wikidata.org/entity/Q5>.
+}
+13:17:15 TRACE ontology.learning.expert.TripleStoreExpert - queryStrRhs:
+PREFIX owl: <http://www.w3.org/2002/07/owl/>
+PREFIX wd: <http://www.wikidata.org/entity/>
+PREFIX wdt: <http://www.wikidata.org/prop/direct/>
+
+SELECT DISTINCT ?1 WHERE {
+?1 <http://www.wikidata.org/prop/direct/P40> ?10. 
+?10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.wikidata.org/entity/Q84048850>.
+}
+13:17:15 TRACE ontology.learning.expert.TripleStoreExpert - ASK Query:
+PREFIX owl: <http://www.w3.org/2002/07/owl/>
+PREFIX wd: <http://www.wikidata.org/entity/>
+PREFIX wdt: <http://www.wikidata.org/prop/direct/>
+
+ASK {
+?1 <http://www.wikidata.org/prop/direct/P40> ?10. 
+?10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.wikidata.org/entity/Q5>.
+FILTER NOT EXISTS {
+?1 <http://www.wikidata.org/prop/direct/P40> ?109. 
+?109 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.wikidata.org/entity/Q84048850>.
+}
+}
+
+13:17:15 DEBUG ontology.learning.expert.TripleStoreExpert - query executed
+13:17:15 DEBUG ontology.learning.expert.TripleStoreExpert - resultsLhs:[http://example.org/anna, http://example.org/lukas, http://example.org/baris, http://example.org/kathrin]
+13:17:15 DEBUG ontology.learning.expert.TripleStoreExpert - resultsRhs:[http://example.org/anna, http://example.org/lukas, http://example.org/baris, http://example.org/kathrin]
+13:17:15 ERROR ontology.learning.expert.TripleStoreExpert - ASK and SELECT not equivalent!
+13:17:15 DEBUG PACOntologyLearningSub - Added auxiliary axiom: SubClassOf(ObjectIntersectionOf(ObjectSomeValuesFrom(<http://www.wikidata.org/prop/direct/P40> <http://www.wikidata.org/entity/Q5>)) ObjectSomeValuesFrom(<http://www.wikidata.org/prop/direct/P40> <http://www.wikidata.org/entity/Q84048850>))
+13:17:15 INFO  PACOntologyLearningSub - Samples at this iteration: 4
+13:17:15 INFO  PACOntologyLearningSub - iteration:13
+13:17:15 INFO  PACOntologyLearningSub - auxiliary axioms:8
+13:17:15 INFO  PACOntologyLearningSub - expert queries:31
+13:17:15 INFO  PACOntologyLearningSub - implications:5
+13:17:15 DEBUG PACOntologyLearningSub - Added non-auxiliary axiom: SubClassOf(ObjectIntersectionOf(ObjectSomeValuesFrom(<http://www.wikidata.org/prop/direct/P40 Q5)) ObjectIntersectionOf(Q5 ObjectSomeValuesFrom(<http://www.wikidata.org/prop/direct/P40 Q84048850)))
+13:17:15 INFO  PACOntologyLearningSub - Samples at this iteration: 9
+13:17:15 INFO  PACOntologyLearningSub - iteration:14
+13:17:15 INFO  PACOntologyLearningSub - auxiliary axioms:8
+13:17:15 INFO  PACOntologyLearningSub - expert queries:31
+13:17:15 INFO  PACOntologyLearningSub - implications:5
+13:17:15 DEBUG PACOntologyLearningSub - Added non-auxiliary axiom: SubClassOf(ObjectIntersectionOf(Q5 Q84048850 Q84048852) ObjectIntersectionOf(owl:Nothing))
+13:17:15 DEBUG ontology.learning.expert.TripleStoreExpert - query starting
+13:17:15 TRACE ontology.learning.expert.TripleStoreExpert - ax: SubClassOf(ObjectIntersectionOf(<http://www.wikidata.org/entity/Q5> <http://www.wikidata.org/entity/Q84048852>) ObjectSomeValuesFrom(<http://www.wikidata.org/prop/direct/P40> <http://www.wikidata.org/entity/Q84048850>))
+13:17:15 TRACE ontology.learning.expert.TripleStoreExpert - queryStrLhs:
+PREFIX owl: <http://www.w3.org/2002/07/owl/>
+PREFIX wd: <http://www.wikidata.org/entity/>
+PREFIX wdt: <http://www.wikidata.org/prop/direct/>
+
+SELECT DISTINCT ?1 WHERE {
+?1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.wikidata.org/entity/Q5>.
+?1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.wikidata.org/entity/Q84048852>.
+}
+13:17:15 TRACE ontology.learning.expert.TripleStoreExpert - queryStrRhs:
+PREFIX owl: <http://www.w3.org/2002/07/owl/>
+PREFIX wd: <http://www.wikidata.org/entity/>
+PREFIX wdt: <http://www.wikidata.org/prop/direct/>
+
+SELECT DISTINCT ?1 WHERE {
+?1 <http://www.wikidata.org/prop/direct/P40> ?10. 
+?10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.wikidata.org/entity/Q84048850>.
+}
+13:17:15 TRACE ontology.learning.expert.TripleStoreExpert - ASK Query:
+PREFIX owl: <http://www.w3.org/2002/07/owl/>
+PREFIX wd: <http://www.wikidata.org/entity/>
+PREFIX wdt: <http://www.wikidata.org/prop/direct/>
+
+ASK {
+?1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.wikidata.org/entity/Q5>.
+?1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.wikidata.org/entity/Q84048852>.
+FILTER NOT EXISTS {
+?1 <http://www.wikidata.org/prop/direct/P40> ?109. 
+?109 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.wikidata.org/entity/Q84048850>.
+}
+}
+
+13:17:15 DEBUG ontology.learning.expert.TripleStoreExpert - query executed
+13:17:15 DEBUG ontology.learning.expert.TripleStoreExpert - resultsLhs:[http://example.org/anna, http://example.org/lea, http://example.org/kathrin]
+13:17:15 DEBUG ontology.learning.expert.TripleStoreExpert - resultsRhs:[http://example.org/anna, http://example.org/lukas, http://example.org/baris, http://example.org/kathrin]
+13:17:15 ERROR ontology.learning.expert.TripleStoreExpert - ASK and SELECT not equivalent!
+13:17:15 DEBUG ontology.learning.expert.TripleStoreExpert - query starting
+13:17:15 TRACE ontology.learning.expert.TripleStoreExpert - ax: SubClassOf(ObjectIntersectionOf(<http://www.wikidata.org/entity/Q5> <http://www.wikidata.org/entity/Q84048850> ObjectSomeValuesFrom(<http://www.wikidata.org/prop/direct/P40> <http://www.wikidata.org/entity/Q84048850>)) ObjectSomeValuesFrom(<http://www.wikidata.org/prop/direct/P40> <http://www.wikidata.org/entity/Q84048852>))
+13:17:15 TRACE ontology.learning.expert.TripleStoreExpert - queryStrLhs:
+PREFIX owl: <http://www.w3.org/2002/07/owl/>
+PREFIX wd: <http://www.wikidata.org/entity/>
+PREFIX wdt: <http://www.wikidata.org/prop/direct/>
+
+SELECT DISTINCT ?1 WHERE {
+?1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.wikidata.org/entity/Q5>.
+?1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.wikidata.org/entity/Q84048850>.
+?1 <http://www.wikidata.org/prop/direct/P40> ?10. 
+?10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.wikidata.org/entity/Q84048850>.
+}
+13:17:15 TRACE ontology.learning.expert.TripleStoreExpert - queryStrRhs:
+PREFIX owl: <http://www.w3.org/2002/07/owl/>
+PREFIX wd: <http://www.wikidata.org/entity/>
+PREFIX wdt: <http://www.wikidata.org/prop/direct/>
+
+SELECT DISTINCT ?1 WHERE {
+?1 <http://www.wikidata.org/prop/direct/P40> ?10. 
+?10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.wikidata.org/entity/Q84048852>.
+}
+13:17:15 TRACE ontology.learning.expert.TripleStoreExpert - ASK Query:
+PREFIX owl: <http://www.w3.org/2002/07/owl/>
+PREFIX wd: <http://www.wikidata.org/entity/>
+PREFIX wdt: <http://www.wikidata.org/prop/direct/>
+
+ASK {
+?1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.wikidata.org/entity/Q5>.
+?1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.wikidata.org/entity/Q84048850>.
+?1 <http://www.wikidata.org/prop/direct/P40> ?10. 
+?10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.wikidata.org/entity/Q84048850>.
+FILTER NOT EXISTS {
+?1 <http://www.wikidata.org/prop/direct/P40> ?109. 
+?109 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.wikidata.org/entity/Q84048852>.
+}
+}
+
+13:17:15 DEBUG ontology.learning.expert.TripleStoreExpert - query executed
+13:17:15 DEBUG ontology.learning.expert.TripleStoreExpert - resultsLhs:[http://example.org/lukas, http://example.org/baris]
+13:17:15 DEBUG ontology.learning.expert.TripleStoreExpert - resultsRhs:[http://example.org/anna, http://example.org/lukas]
+13:17:15 ERROR ontology.learning.expert.TripleStoreExpert - ASK and SELECT not equivalent!
+13:17:15 DEBUG ontology.learning.expert.TripleStoreExpert - query starting
+13:17:15 TRACE ontology.learning.expert.TripleStoreExpert - ax: SubClassOf(ObjectIntersectionOf(<http://www.wikidata.org/entity/Q5> <http://www.wikidata.org/entity/Q84048850> ObjectSomeValuesFrom(<http://www.wikidata.org/prop/direct/P40> <http://www.wikidata.org/entity/Q5>) ObjectSomeValuesFrom(<http://www.wikidata.org/prop/direct/P40> <http://www.wikidata.org/entity/Q84048850>)) ObjectSomeValuesFrom(<http://www.wikidata.org/prop/direct/P40> <http://www.wikidata.org/entity/Q84048852>))
+13:17:15 TRACE ontology.learning.expert.TripleStoreExpert - queryStrLhs:
+PREFIX owl: <http://www.w3.org/2002/07/owl/>
+PREFIX wd: <http://www.wikidata.org/entity/>
+PREFIX wdt: <http://www.wikidata.org/prop/direct/>
+
+SELECT DISTINCT ?1 WHERE {
+?1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.wikidata.org/entity/Q5>.
+?1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.wikidata.org/entity/Q84048850>.
+?1 <http://www.wikidata.org/prop/direct/P40> ?10. 
+?10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.wikidata.org/entity/Q5>.
+?1 <http://www.wikidata.org/prop/direct/P40> ?11. 
+?11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.wikidata.org/entity/Q84048850>.
+}
+13:17:15 TRACE ontology.learning.expert.TripleStoreExpert - queryStrRhs:
+PREFIX owl: <http://www.w3.org/2002/07/owl/>
+PREFIX wd: <http://www.wikidata.org/entity/>
+PREFIX wdt: <http://www.wikidata.org/prop/direct/>
+
+SELECT DISTINCT ?1 WHERE {
+?1 <http://www.wikidata.org/prop/direct/P40> ?10. 
+?10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.wikidata.org/entity/Q84048852>.
+}
+13:17:15 TRACE ontology.learning.expert.TripleStoreExpert - ASK Query:
+PREFIX owl: <http://www.w3.org/2002/07/owl/>
+PREFIX wd: <http://www.wikidata.org/entity/>
+PREFIX wdt: <http://www.wikidata.org/prop/direct/>
+
+ASK {
+?1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.wikidata.org/entity/Q5>.
+?1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.wikidata.org/entity/Q84048850>.
+?1 <http://www.wikidata.org/prop/direct/P40> ?10. 
+?10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.wikidata.org/entity/Q5>.
+?1 <http://www.wikidata.org/prop/direct/P40> ?11. 
+?11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.wikidata.org/entity/Q84048850>.
+FILTER NOT EXISTS {
+?1 <http://www.wikidata.org/prop/direct/P40> ?109. 
+?109 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.wikidata.org/entity/Q84048852>.
+}
+}
+
+13:17:15 DEBUG ontology.learning.expert.TripleStoreExpert - query executed
+13:17:15 DEBUG ontology.learning.expert.TripleStoreExpert - resultsLhs:[http://example.org/lukas, http://example.org/baris]
+13:17:15 DEBUG ontology.learning.expert.TripleStoreExpert - resultsRhs:[http://example.org/anna, http://example.org/lukas]
+13:17:15 ERROR ontology.learning.expert.TripleStoreExpert - ASK and SELECT not equivalent!
+13:17:15 INFO  PACOntologyLearningSub - Generated 74 samples
+13:17:15 DEBUG PACOntologyLearningSub - Did not add axiom: SubClassOf(ObjectIntersectionOf(<http://www.wikidata.org/entity/Q84048852>) ObjectIntersectionOf(<http://www.wikidata.org/entity/Q5>))
+13:17:15 DEBUG PACOntologyLearningSub - Added axiom: SubClassOf(ObjectIntersectionOf(ObjectSomeValuesFrom(<http://www.wikidata.org/prop/direct/P40> <http://www.wikidata.org/entity/Q84048852>)) ObjectIntersectionOf(<http://www.wikidata.org/entity/Q5> ObjectSomeValuesFrom(<http://www.wikidata.org/prop/direct/P40> <http://www.wikidata.org/entity/Q5>) ObjectSomeValuesFrom(<http://www.wikidata.org/prop/direct/P40> <http://www.wikidata.org/entity/Q84048850>)))
+13:17:15 DEBUG PACOntologyLearningSub - Added axiom: SubClassOf(ObjectIntersectionOf(ObjectSomeValuesFrom(<http://www.wikidata.org/prop/direct/P40> <http://www.wikidata.org/entity/Q84048850>)) ObjectIntersectionOf(<http://www.wikidata.org/entity/Q5> ObjectSomeValuesFrom(<http://www.wikidata.org/prop/direct/P40> <http://www.wikidata.org/entity/Q5>)))
+13:17:15 DEBUG PACOntologyLearningSub - Did not add axiom: SubClassOf(ObjectIntersectionOf(<http://www.wikidata.org/entity/Q84048850>) ObjectIntersectionOf(<http://www.wikidata.org/entity/Q5>))
+13:17:15 DEBUG PACOntologyLearningSub - Added axiom: SubClassOf(ObjectIntersectionOf(ObjectSomeValuesFrom(<http://www.wikidata.org/prop/direct/P40> <http://www.wikidata.org/entity/Q5>)) ObjectIntersectionOf(<http://www.wikidata.org/entity/Q5> ObjectSomeValuesFrom(<http://www.wikidata.org/prop/direct/P40> <http://www.wikidata.org/entity/Q84048850>)))
+13:17:15 DEBUG PACOntologyLearningSub - Added axiom: SubClassOf(ObjectIntersectionOf(<http://www.wikidata.org/entity/Q5> <http://www.wikidata.org/entity/Q84048850> <http://www.wikidata.org/entity/Q84048852>) ObjectIntersectionOf(owl:Nothing))
+13:17:15 INFO  PACOntologyLearningSub - Total iterations: 14
+13:17:15 INFO  PACOntologyLearningSub - Expert queries: 34
+13:17:15 INFO  PACOntologyLearningSub - Samples generated: 122
+13:17:15 INFO  PACOntologyLearningSub - Auxiliary axioms added: 8

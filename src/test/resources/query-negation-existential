@@ -1,0 +1,15 @@
+PREFIX wd: <http://www.wikidata.org/entity/> 
+PREFIX ex: <http://example.org/> 
+PREFIX wdt: <http://www.wikidata.org/prop/direct/> 
+
+# does not have a P40 successor which is E (negation of exists P40.E)
+SELECT DISTINCT ?s WHERE { 
+    ?s ?p [].
+    FILTER NOT EXISTS {
+      ?s wdt:P40 ?o.
+      # FILTER EXISTS {
+        ?o wdt:P31 ex:E.
+      # }
+    }
+
+}

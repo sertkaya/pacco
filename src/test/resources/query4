@@ -1,0 +1,11 @@
+PREFIX wd: <http://www.wikidata.org/entity/> 
+PREFIX ex: <http://example.org/> 
+PREFIX wdt: <http://www.wikidata.org/prop/direct/> 
+
+
+SELECT DISTINCT ?s WHERE { 
+  ?s wdt:P40 ?o .
+  FILTER NOT EXISTS {
+    ?o wdt:P31 wd:Q84048850.
+  }
+}

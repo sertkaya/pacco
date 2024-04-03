@@ -1,0 +1,79 @@
+@prefix : <http://purl.obolibrary.org/obo/TEMP#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://purl.obolibrary.org/obo/TEMP> .
+
+<http://purl.obolibrary.org/obo/TEMP> rdf:type owl:Ontology ;
+                                       <http://www.geneontology.org/formats/oboInOwl#ex> "anna wdt:P31 wd:Q5 ." ,
+                                                                                         "anna wdt:P31 wd:Q84048852 ." ,
+                                                                                         "anna wdt:P3373 ex:kathrin ." ,
+                                                                                         "anna wdt:P40 ex:jannik ." ,
+                                                                                         "anna wdt:P40 ex:joni ." ,
+                                                                                         "anna wdt:P40 ex:lea ." ,
+                                                                                         "baris wdt:P31 wd:Q5." ,
+                                                                                         "baris wdt:P31 wd:Q84048850." ,
+                                                                                         "baris wdt:P40 ex:levin ." ,
+                                                                                         "baris wdt:P40 ex:matis ." ,
+                                                                                         "baris wdt:P40 ex:teo ." ,
+                                                                                         "jannik wdt:P31 wd:Q5 ." ,
+                                                                                         "jannik wdt:P31 wd:Q84048850." ,
+                                                                                         "joni wdt:P31 wd:Q5 ." ,
+                                                                                         "joni wdt:P31 wd:Q84048850." ,
+                                                                                         "kathrin wdt:P31 wd:Q5 ." ,
+                                                                                         "kathrin wdt:P31 wd:Q84048852 ." ,
+                                                                                         "kathrin wdt:P40 ex:levin ." ,
+                                                                                         "kathrin wdt:P40 ex:matis ." ,
+                                                                                         "kathrin wdt:P40 ex:teo ." ,
+                                                                                         "lea wdt:P31 wd:Q5 ." ,
+                                                                                         "lea wdt:P31 wd:Q84048852 ." ,
+                                                                                         "levin wdt:P31 wd:Q5 ." ,
+                                                                                         "levin wdt:P31 wd:Q84048850." ,
+                                                                                         "lukas wdt:P31 wd:Q5." ,
+                                                                                         "lukas wdt:P31 wd:Q84048850." ,
+                                                                                         "lukas wdt:P40 ex:jannik ." ,
+                                                                                         "lukas wdt:P40 ex:joni ." ,
+                                                                                         "lukas wdt:P40 ex:lea ." ,
+                                                                                         "matis  wdt:P31 wd:Q84048850." ,
+                                                                                         "matis wdt:P31 wd:Q5 ." ,
+                                                                                         "teo wdt:P31 wd:Q5 ." ,
+                                                                                         "teo wdt:P31 wd:Q84048850." ;
+                                       <http://www.geneontology.org/formats/oboInOwl## wd> "Q5 Human" ,
+                                                                                           "Q84048850 Male human" ,
+                                                                                           "Q84048852 Female human" ;
+                                       <http://www.geneontology.org/formats/oboInOwl## wdt> "P40 Subject has object as child" ;
+                                       <http://www.geneontology.org/formats/oboInOwl#@prefix ex> "<http://example.org/> ." ;
+                                       <http://www.geneontology.org/formats/oboInOwl#@prefix wd> "<http://www.wikidata.org/entity/>" ;
+                                       <http://www.geneontology.org/formats/oboInOwl#@prefix wdt> "<http://www.wikidata.org/prop/direct/>" .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://www.geneontology.org/formats/oboInOwl#ex
+<http://www.geneontology.org/formats/oboInOwl#ex> rdf:type owl:AnnotationProperty .
+
+
+###  http://www.geneontology.org/formats/oboInOwl## wd
+<http://www.geneontology.org/formats/oboInOwl## wd> rdf:type owl:AnnotationProperty .
+
+
+###  http://www.geneontology.org/formats/oboInOwl## wdt
+<http://www.geneontology.org/formats/oboInOwl## wdt> rdf:type owl:AnnotationProperty .
+
+
+###  http://www.geneontology.org/formats/oboInOwl#@prefix ex
+<http://www.geneontology.org/formats/oboInOwl#@prefix ex> rdf:type owl:AnnotationProperty .
+
+
+###  http://www.geneontology.org/formats/oboInOwl#@prefix wd
+<http://www.geneontology.org/formats/oboInOwl#@prefix wd> rdf:type owl:AnnotationProperty .
+
+
+###  http://www.geneontology.org/formats/oboInOwl#@prefix wdt
+<http://www.geneontology.org/formats/oboInOwl#@prefix wdt> rdf:type owl:AnnotationProperty .
+
+
+###  Generated by the OWL API (version 4.5.25.2023-02-15T19:15:49Z) https://github.com/owlcs/owlapi

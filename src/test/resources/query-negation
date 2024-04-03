@@ -1,0 +1,11 @@
+PREFIX wd: <http://www.wikidata.org/entity/> 
+PREFIX ex: <http://example.org/> 
+PREFIX wdt: <http://www.wikidata.org/prop/direct/> 
+
+# those that are not of type A
+SELECT DISTINCT ?s WHERE { 
+    ?s ?p [].
+    FILTER NOT EXISTS {
+      ?s wdt:P31 ex:A.
+    }
+}

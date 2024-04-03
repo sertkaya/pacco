@@ -1,0 +1,13 @@
+# country
+<http://www.wikidata.org/entity/Q6256>
+# P47 shares border with
+(<http://www.wikidata.org/prop/direct/P47> some <http://www.wikidata.org/entity/Q6256>)
+# sovereign state
+<http://www.wikidata.org/entity/Q3624078>
+(<http://www.wikidata.org/prop/direct/P47> some <http://www.wikidata.org/entity/Q3624078>)
+# EU
+<http://www.wikidata.org/entity/Q458>
+# P463: member of
+(<http://www.wikidata.org/prop/direct/P463> some <http://www.wikidata.org/entity/Q458>)
+# P361 part of
+(<http://www.wikidata.org/prop/direct/P361> some <http://www.wikidata.org/entity/Q458>)

@@ -1,0 +1,420 @@
+15:30:50 INFO  PACOntologyLearningSub - Samples at this iteration: 1
+15:30:50 INFO  PACOntologyLearningSub - iteration:1
+15:30:50 INFO  PACOntologyLearningSub - auxiliary axioms:1
+15:30:50 INFO  PACOntologyLearningSub - expert queries:1
+15:30:50 INFO  PACOntologyLearningSub - implications:0
+15:30:51 INFO  PACOntologyLearningSub - Samples at this iteration: 1
+15:30:51 INFO  PACOntologyLearningSub - iteration:2
+15:30:51 INFO  PACOntologyLearningSub - auxiliary axioms:48
+15:30:51 INFO  PACOntologyLearningSub - expert queries:48
+15:30:51 INFO  PACOntologyLearningSub - implications:1
+15:30:51 INFO  PACOntologyLearningSub - Samples at this iteration: 1
+15:30:51 INFO  PACOntologyLearningSub - iteration:3
+15:30:51 INFO  PACOntologyLearningSub - auxiliary axioms:127
+15:30:51 INFO  PACOntologyLearningSub - expert queries:127
+15:30:51 INFO  PACOntologyLearningSub - implications:1
+15:30:52 INFO  PACOntologyLearningSub - Samples at this iteration: 1
+15:30:52 INFO  PACOntologyLearningSub - iteration:4
+15:30:52 INFO  PACOntologyLearningSub - auxiliary axioms:199
+15:30:52 INFO  PACOntologyLearningSub - expert queries:199
+15:30:52 INFO  PACOntologyLearningSub - implications:1
+15:30:52 INFO  PACOntologyLearningSub - Samples at this iteration: 1
+15:30:52 INFO  PACOntologyLearningSub - iteration:5
+15:30:52 INFO  PACOntologyLearningSub - auxiliary axioms:260
+15:30:52 INFO  PACOntologyLearningSub - expert queries:260
+15:30:52 INFO  PACOntologyLearningSub - implications:1
+15:30:52 INFO  PACOntologyLearningSub - Samples at this iteration: 1
+15:30:52 INFO  PACOntologyLearningSub - iteration:6
+15:30:52 INFO  PACOntologyLearningSub - auxiliary axioms:309
+15:30:52 INFO  PACOntologyLearningSub - expert queries:309
+15:30:52 INFO  PACOntologyLearningSub - implications:1
+15:30:52 INFO  PACOntologyLearningSub - Samples at this iteration: 1
+15:30:52 INFO  PACOntologyLearningSub - iteration:7
+15:30:52 INFO  PACOntologyLearningSub - auxiliary axioms:397
+15:30:52 INFO  PACOntologyLearningSub - expert queries:397
+15:30:52 INFO  PACOntologyLearningSub - implications:1
+15:30:52 INFO  PACOntologyLearningSub - Samples at this iteration: 1
+15:30:52 INFO  PACOntologyLearningSub - iteration:8
+15:30:52 INFO  PACOntologyLearningSub - auxiliary axioms:400
+15:30:52 INFO  PACOntologyLearningSub - expert queries:518
+15:30:52 INFO  PACOntologyLearningSub - implications:1
+15:30:52 INFO  PACOntologyLearningSub - Samples at this iteration: 1
+15:30:52 INFO  PACOntologyLearningSub - iteration:9
+15:30:52 INFO  PACOntologyLearningSub - auxiliary axioms:401
+15:30:52 INFO  PACOntologyLearningSub - expert queries:519
+15:30:52 INFO  PACOntologyLearningSub - implications:2
+15:30:54 INFO  PACOntologyLearningSub - Samples at this iteration: 1
+15:30:54 INFO  PACOntologyLearningSub - iteration:10
+15:30:54 INFO  PACOntologyLearningSub - auxiliary axioms:421
+15:30:54 INFO  PACOntologyLearningSub - expert queries:547
+15:30:54 INFO  PACOntologyLearningSub - implications:2
+15:30:54 INFO  PACOntologyLearningSub - Samples at this iteration: 1
+15:30:54 INFO  PACOntologyLearningSub - iteration:11
+15:30:54 INFO  PACOntologyLearningSub - auxiliary axioms:444
+15:30:54 INFO  PACOntologyLearningSub - expert queries:570
+15:30:54 INFO  PACOntologyLearningSub - implications:2
+15:30:54 INFO  PACOntologyLearningSub - Samples at this iteration: 1
+15:30:54 INFO  PACOntologyLearningSub - iteration:12
+15:30:54 INFO  PACOntologyLearningSub - auxiliary axioms:470
+15:30:54 INFO  PACOntologyLearningSub - expert queries:596
+15:30:54 INFO  PACOntologyLearningSub - implications:2
+15:30:54 INFO  PACOntologyLearningSub - Samples at this iteration: 1
+15:30:54 INFO  PACOntologyLearningSub - iteration:13
+15:30:54 INFO  PACOntologyLearningSub - auxiliary axioms:496
+15:30:54 INFO  PACOntologyLearningSub - expert queries:622
+15:30:54 INFO  PACOntologyLearningSub - implications:2
+15:30:54 INFO  PACOntologyLearningSub - Samples at this iteration: 1
+15:30:54 INFO  PACOntologyLearningSub - iteration:14
+15:30:54 INFO  PACOntologyLearningSub - auxiliary axioms:497
+15:30:54 INFO  PACOntologyLearningSub - expert queries:747
+15:30:54 INFO  PACOntologyLearningSub - implications:2
+15:30:54 INFO  PACOntologyLearningSub - Samples at this iteration: 1
+15:30:54 INFO  PACOntologyLearningSub - iteration:15
+15:30:54 INFO  PACOntologyLearningSub - auxiliary axioms:498
+15:30:54 INFO  PACOntologyLearningSub - expert queries:748
+15:30:54 INFO  PACOntologyLearningSub - implications:3
+15:30:54 INFO  PACOntologyLearningSub - Samples at this iteration: 1
+15:30:54 INFO  PACOntologyLearningSub - iteration:16
+15:30:54 INFO  PACOntologyLearningSub - auxiliary axioms:500
+15:30:54 INFO  PACOntologyLearningSub - expert queries:750
+15:30:54 INFO  PACOntologyLearningSub - implications:3
+15:30:54 INFO  PACOntologyLearningSub - Samples at this iteration: 1
+15:30:54 INFO  PACOntologyLearningSub - iteration:17
+15:30:54 INFO  PACOntologyLearningSub - auxiliary axioms:503
+15:30:54 INFO  PACOntologyLearningSub - expert queries:753
+15:30:54 INFO  PACOntologyLearningSub - implications:3
+15:30:54 INFO  PACOntologyLearningSub - Samples at this iteration: 1
+15:30:54 INFO  PACOntologyLearningSub - iteration:18
+15:30:54 INFO  PACOntologyLearningSub - auxiliary axioms:507
+15:30:54 INFO  PACOntologyLearningSub - expert queries:757
+15:30:54 INFO  PACOntologyLearningSub - implications:3
+15:30:54 INFO  PACOntologyLearningSub - Samples at this iteration: 1
+15:30:54 INFO  PACOntologyLearningSub - iteration:19
+15:30:54 INFO  PACOntologyLearningSub - auxiliary axioms:511
+15:30:54 INFO  PACOntologyLearningSub - expert queries:761
+15:30:54 INFO  PACOntologyLearningSub - implications:3
+15:30:54 INFO  PACOntologyLearningSub - Samples at this iteration: 1
+15:30:54 INFO  PACOntologyLearningSub - iteration:20
+15:30:54 INFO  PACOntologyLearningSub - auxiliary axioms:516
+15:30:54 INFO  PACOntologyLearningSub - expert queries:766
+15:30:54 INFO  PACOntologyLearningSub - implications:3
+15:30:54 INFO  PACOntologyLearningSub - Samples at this iteration: 1
+15:30:54 INFO  PACOntologyLearningSub - iteration:21
+15:30:54 INFO  PACOntologyLearningSub - auxiliary axioms:524
+15:30:54 INFO  PACOntologyLearningSub - expert queries:883
+15:30:54 INFO  PACOntologyLearningSub - implications:3
+15:30:54 INFO  PACOntologyLearningSub - Samples at this iteration: 1
+15:30:54 INFO  PACOntologyLearningSub - iteration:22
+15:30:54 INFO  PACOntologyLearningSub - auxiliary axioms:525
+15:30:54 INFO  PACOntologyLearningSub - expert queries:884
+15:30:54 INFO  PACOntologyLearningSub - implications:3
+15:30:54 INFO  PACOntologyLearningSub - Samples at this iteration: 2
+15:30:54 INFO  PACOntologyLearningSub - iteration:23
+15:30:54 INFO  PACOntologyLearningSub - auxiliary axioms:532
+15:30:54 INFO  PACOntologyLearningSub - expert queries:891
+15:30:54 INFO  PACOntologyLearningSub - implications:3
+15:30:54 INFO  PACOntologyLearningSub - Samples at this iteration: 1
+15:30:54 INFO  PACOntologyLearningSub - iteration:24
+15:30:54 INFO  PACOntologyLearningSub - auxiliary axioms:532
+15:30:54 INFO  PACOntologyLearningSub - expert queries:891
+15:30:54 INFO  PACOntologyLearningSub - implications:4
+15:30:54 INFO  PACOntologyLearningSub - Samples at this iteration: 2
+15:30:54 INFO  PACOntologyLearningSub - iteration:25
+15:30:54 INFO  PACOntologyLearningSub - auxiliary axioms:532
+15:30:54 INFO  PACOntologyLearningSub - expert queries:891
+15:30:54 INFO  PACOntologyLearningSub - implications:4
+15:30:54 INFO  PACOntologyLearningSub - Samples at this iteration: 1
+15:30:54 INFO  PACOntologyLearningSub - iteration:26
+15:30:54 INFO  PACOntologyLearningSub - auxiliary axioms:532
+15:30:54 INFO  PACOntologyLearningSub - expert queries:891
+15:30:54 INFO  PACOntologyLearningSub - implications:4
+15:30:54 INFO  PACOntologyLearningSub - Samples at this iteration: 1
+15:30:54 INFO  PACOntologyLearningSub - iteration:27
+15:30:54 INFO  PACOntologyLearningSub - auxiliary axioms:532
+15:30:54 INFO  PACOntologyLearningSub - expert queries:891
+15:30:54 INFO  PACOntologyLearningSub - implications:4
+15:30:54 INFO  PACOntologyLearningSub - Samples at this iteration: 1
+15:30:54 INFO  PACOntologyLearningSub - iteration:28
+15:30:54 INFO  PACOntologyLearningSub - auxiliary axioms:532
+15:30:54 INFO  PACOntologyLearningSub - expert queries:891
+15:30:54 INFO  PACOntologyLearningSub - implications:4
+15:30:54 INFO  PACOntologyLearningSub - Samples at this iteration: 1
+15:30:54 INFO  PACOntologyLearningSub - iteration:29
+15:30:54 INFO  PACOntologyLearningSub - auxiliary axioms:537
+15:30:54 INFO  PACOntologyLearningSub - expert queries:896
+15:30:54 INFO  PACOntologyLearningSub - implications:4
+15:30:54 INFO  PACOntologyLearningSub - Samples at this iteration: 1
+15:30:54 INFO  PACOntologyLearningSub - iteration:30
+15:30:54 INFO  PACOntologyLearningSub - auxiliary axioms:542
+15:30:54 INFO  PACOntologyLearningSub - expert queries:901
+15:30:54 INFO  PACOntologyLearningSub - implications:4
+15:30:54 INFO  PACOntologyLearningSub - Samples at this iteration: 1
+15:30:54 INFO  PACOntologyLearningSub - iteration:31
+15:30:54 INFO  PACOntologyLearningSub - auxiliary axioms:547
+15:30:54 INFO  PACOntologyLearningSub - expert queries:906
+15:30:54 INFO  PACOntologyLearningSub - implications:4
+15:30:55 INFO  PACOntologyLearningSub - Samples at this iteration: 3
+15:30:55 INFO  PACOntologyLearningSub - iteration:32
+15:30:55 INFO  PACOntologyLearningSub - auxiliary axioms:548
+15:30:55 INFO  PACOntologyLearningSub - expert queries:907
+15:30:55 INFO  PACOntologyLearningSub - implications:4
+15:30:55 INFO  PACOntologyLearningSub - Samples at this iteration: 1
+15:30:55 INFO  PACOntologyLearningSub - iteration:33
+15:30:55 INFO  PACOntologyLearningSub - auxiliary axioms:553
+15:30:55 INFO  PACOntologyLearningSub - expert queries:912
+15:30:55 INFO  PACOntologyLearningSub - implications:4
+15:30:55 INFO  PACOntologyLearningSub - Samples at this iteration: 7
+15:30:55 INFO  PACOntologyLearningSub - iteration:34
+15:30:55 INFO  PACOntologyLearningSub - auxiliary axioms:553
+15:30:55 INFO  PACOntologyLearningSub - expert queries:912
+15:30:55 INFO  PACOntologyLearningSub - implications:5
+15:30:55 INFO  PACOntologyLearningSub - Samples at this iteration: 1
+15:30:55 INFO  PACOntologyLearningSub - iteration:35
+15:30:55 INFO  PACOntologyLearningSub - auxiliary axioms:558
+15:30:55 INFO  PACOntologyLearningSub - expert queries:917
+15:30:55 INFO  PACOntologyLearningSub - implications:5
+15:30:55 INFO  PACOntologyLearningSub - Samples at this iteration: 1
+15:30:55 INFO  PACOntologyLearningSub - iteration:36
+15:30:55 INFO  PACOntologyLearningSub - auxiliary axioms:558
+15:30:55 INFO  PACOntologyLearningSub - expert queries:917
+15:30:55 INFO  PACOntologyLearningSub - implications:5
+15:30:55 INFO  PACOntologyLearningSub - Samples at this iteration: 20
+15:30:55 INFO  PACOntologyLearningSub - iteration:37
+15:30:55 INFO  PACOntologyLearningSub - auxiliary axioms:563
+15:30:55 INFO  PACOntologyLearningSub - expert queries:922
+15:30:55 INFO  PACOntologyLearningSub - implications:5
+15:30:55 INFO  PACOntologyLearningSub - Samples at this iteration: 3
+15:30:55 INFO  PACOntologyLearningSub - iteration:38
+15:30:55 INFO  PACOntologyLearningSub - auxiliary axioms:568
+15:30:55 INFO  PACOntologyLearningSub - expert queries:927
+15:30:55 INFO  PACOntologyLearningSub - implications:5
+15:30:55 INFO  PACOntologyLearningSub - Samples at this iteration: 4
+15:30:55 INFO  PACOntologyLearningSub - iteration:39
+15:30:55 INFO  PACOntologyLearningSub - auxiliary axioms:573
+15:30:55 INFO  PACOntologyLearningSub - expert queries:932
+15:30:55 INFO  PACOntologyLearningSub - implications:5
+15:30:55 INFO  PACOntologyLearningSub - Samples at this iteration: 1
+15:30:55 INFO  PACOntologyLearningSub - iteration:40
+15:30:55 INFO  PACOntologyLearningSub - auxiliary axioms:579
+15:30:55 INFO  PACOntologyLearningSub - expert queries:938
+15:30:55 INFO  PACOntologyLearningSub - implications:5
+15:30:55 INFO  PACOntologyLearningSub - Samples at this iteration: 12
+15:30:55 INFO  PACOntologyLearningSub - iteration:41
+15:30:55 INFO  PACOntologyLearningSub - auxiliary axioms:579
+15:30:55 INFO  PACOntologyLearningSub - expert queries:938
+15:30:55 INFO  PACOntologyLearningSub - implications:5
+15:30:55 INFO  PACOntologyLearningSub - Samples at this iteration: 5
+15:30:55 INFO  PACOntologyLearningSub - iteration:42
+15:30:55 INFO  PACOntologyLearningSub - auxiliary axioms:581
+15:30:55 INFO  PACOntologyLearningSub - expert queries:940
+15:30:55 INFO  PACOntologyLearningSub - implications:5
+15:30:55 INFO  PACOntologyLearningSub - Samples at this iteration: 34
+15:30:55 INFO  PACOntologyLearningSub - iteration:43
+15:30:55 INFO  PACOntologyLearningSub - auxiliary axioms:593
+15:30:55 INFO  PACOntologyLearningSub - expert queries:1059
+15:30:55 INFO  PACOntologyLearningSub - implications:5
+15:30:55 INFO  PACOntologyLearningSub - Samples at this iteration: 11
+15:30:55 INFO  PACOntologyLearningSub - iteration:44
+15:30:55 INFO  PACOntologyLearningSub - auxiliary axioms:593
+15:30:55 INFO  PACOntologyLearningSub - expert queries:1059
+15:30:55 INFO  PACOntologyLearningSub - implications:6
+15:30:55 INFO  PACOntologyLearningSub - Samples at this iteration: 8
+15:30:55 INFO  PACOntologyLearningSub - iteration:45
+15:30:55 INFO  PACOntologyLearningSub - auxiliary axioms:598
+15:30:55 INFO  PACOntologyLearningSub - expert queries:1064
+15:30:55 INFO  PACOntologyLearningSub - implications:6
+15:30:55 INFO  PACOntologyLearningSub - Samples at this iteration: 5
+15:30:55 INFO  PACOntologyLearningSub - iteration:46
+15:30:55 INFO  PACOntologyLearningSub - auxiliary axioms:603
+15:30:55 INFO  PACOntologyLearningSub - expert queries:1069
+15:30:55 INFO  PACOntologyLearningSub - implications:6
+15:30:55 INFO  PACOntologyLearningSub - Samples at this iteration: 7
+15:30:55 INFO  PACOntologyLearningSub - iteration:47
+15:30:55 INFO  PACOntologyLearningSub - auxiliary axioms:609
+15:30:55 INFO  PACOntologyLearningSub - expert queries:1075
+15:30:55 INFO  PACOntologyLearningSub - implications:6
+15:30:55 INFO  PACOntologyLearningSub - Samples at this iteration: 11
+15:30:55 INFO  PACOntologyLearningSub - iteration:48
+15:30:55 INFO  PACOntologyLearningSub - auxiliary axioms:615
+15:30:55 INFO  PACOntologyLearningSub - expert queries:1081
+15:30:55 INFO  PACOntologyLearningSub - implications:6
+15:30:55 INFO  PACOntologyLearningSub - Samples at this iteration: 8
+15:30:55 INFO  PACOntologyLearningSub - iteration:49
+15:30:55 INFO  PACOntologyLearningSub - auxiliary axioms:621
+15:30:55 INFO  PACOntologyLearningSub - expert queries:1087
+15:30:55 INFO  PACOntologyLearningSub - implications:6
+15:30:55 INFO  PACOntologyLearningSub - Samples at this iteration: 1
+15:30:55 INFO  PACOntologyLearningSub - iteration:50
+15:30:55 INFO  PACOntologyLearningSub - auxiliary axioms:627
+15:30:55 INFO  PACOntologyLearningSub - expert queries:1093
+15:30:55 INFO  PACOntologyLearningSub - implications:6
+15:30:55 INFO  PACOntologyLearningSub - Samples at this iteration: 3
+15:30:55 INFO  PACOntologyLearningSub - iteration:51
+15:30:55 INFO  PACOntologyLearningSub - auxiliary axioms:630
+15:30:55 INFO  PACOntologyLearningSub - expert queries:1202
+15:30:55 INFO  PACOntologyLearningSub - implications:6
+15:30:55 INFO  PACOntologyLearningSub - Samples at this iteration: 3
+15:30:55 INFO  PACOntologyLearningSub - iteration:52
+15:30:55 INFO  PACOntologyLearningSub - auxiliary axioms:631
+15:30:55 INFO  PACOntologyLearningSub - expert queries:1218
+15:30:55 INFO  PACOntologyLearningSub - implications:6
+15:30:55 INFO  PACOntologyLearningSub - Samples at this iteration: 4
+15:30:55 INFO  PACOntologyLearningSub - iteration:53
+15:30:55 INFO  PACOntologyLearningSub - auxiliary axioms:631
+15:30:55 INFO  PACOntologyLearningSub - expert queries:1218
+15:30:55 INFO  PACOntologyLearningSub - implications:7
+15:30:55 INFO  PACOntologyLearningSub - Samples at this iteration: 21
+15:30:55 INFO  PACOntologyLearningSub - iteration:54
+15:30:55 INFO  PACOntologyLearningSub - auxiliary axioms:631
+15:30:55 INFO  PACOntologyLearningSub - expert queries:1218
+15:30:55 INFO  PACOntologyLearningSub - implications:7
+15:30:55 INFO  PACOntologyLearningSub - Samples at this iteration: 22
+15:30:55 INFO  PACOntologyLearningSub - iteration:55
+15:30:55 INFO  PACOntologyLearningSub - auxiliary axioms:635
+15:30:55 INFO  PACOntologyLearningSub - expert queries:1222
+15:30:55 INFO  PACOntologyLearningSub - implications:7
+15:30:56 INFO  PACOntologyLearningSub - Samples at this iteration: 11
+15:30:56 INFO  PACOntologyLearningSub - iteration:56
+15:30:56 INFO  PACOntologyLearningSub - auxiliary axioms:641
+15:30:56 INFO  PACOntologyLearningSub - expert queries:1228
+15:30:56 INFO  PACOntologyLearningSub - implications:7
+15:30:56 INFO  PACOntologyLearningSub - Samples at this iteration: 19
+15:30:56 INFO  PACOntologyLearningSub - iteration:57
+15:30:56 INFO  PACOntologyLearningSub - auxiliary axioms:647
+15:30:56 INFO  PACOntologyLearningSub - expert queries:1234
+15:30:56 INFO  PACOntologyLearningSub - implications:7
+15:30:56 INFO  PACOntologyLearningSub - Samples at this iteration: 3
+15:30:56 INFO  PACOntologyLearningSub - iteration:58
+15:30:56 INFO  PACOntologyLearningSub - auxiliary axioms:647
+15:30:56 INFO  PACOntologyLearningSub - expert queries:1357
+15:30:56 INFO  PACOntologyLearningSub - implications:7
+15:30:56 INFO  PACOntologyLearningSub - Samples at this iteration: 2
+15:30:56 INFO  PACOntologyLearningSub - iteration:59
+15:30:56 INFO  PACOntologyLearningSub - auxiliary axioms:647
+15:30:56 INFO  PACOntologyLearningSub - expert queries:1357
+15:30:56 INFO  PACOntologyLearningSub - implications:8
+15:30:56 INFO  PACOntologyLearningSub - Samples at this iteration: 3
+15:30:56 INFO  PACOntologyLearningSub - iteration:60
+15:30:56 INFO  PACOntologyLearningSub - auxiliary axioms:647
+15:30:56 INFO  PACOntologyLearningSub - expert queries:1357
+15:30:56 INFO  PACOntologyLearningSub - implications:8
+15:30:56 INFO  PACOntologyLearningSub - Samples at this iteration: 21
+15:30:56 INFO  PACOntologyLearningSub - iteration:61
+15:30:56 INFO  PACOntologyLearningSub - auxiliary axioms:647
+15:30:56 INFO  PACOntologyLearningSub - expert queries:1357
+15:30:56 INFO  PACOntologyLearningSub - implications:8
+15:30:56 INFO  PACOntologyLearningSub - Samples at this iteration: 12
+15:30:56 INFO  PACOntologyLearningSub - iteration:62
+15:30:56 INFO  PACOntologyLearningSub - auxiliary axioms:653
+15:30:56 INFO  PACOntologyLearningSub - expert queries:1363
+15:30:56 INFO  PACOntologyLearningSub - implications:8
+15:30:56 INFO  PACOntologyLearningSub - Samples at this iteration: 3
+15:30:56 INFO  PACOntologyLearningSub - iteration:63
+15:30:56 INFO  PACOntologyLearningSub - auxiliary axioms:659
+15:30:56 INFO  PACOntologyLearningSub - expert queries:1369
+15:30:56 INFO  PACOntologyLearningSub - implications:8
+15:30:56 INFO  PACOntologyLearningSub - Samples at this iteration: 13
+15:30:56 INFO  PACOntologyLearningSub - iteration:64
+15:30:56 INFO  PACOntologyLearningSub - auxiliary axioms:665
+15:30:56 INFO  PACOntologyLearningSub - expert queries:1375
+15:30:56 INFO  PACOntologyLearningSub - implications:8
+15:30:56 INFO  PACOntologyLearningSub - Samples at this iteration: 15
+15:30:56 INFO  PACOntologyLearningSub - iteration:65
+15:30:56 INFO  PACOntologyLearningSub - auxiliary axioms:671
+15:30:56 INFO  PACOntologyLearningSub - expert queries:1381
+15:30:56 INFO  PACOntologyLearningSub - implications:8
+15:30:56 INFO  PACOntologyLearningSub - Samples at this iteration: 6
+15:30:56 INFO  PACOntologyLearningSub - iteration:66
+15:30:56 INFO  PACOntologyLearningSub - auxiliary axioms:677
+15:30:56 INFO  PACOntologyLearningSub - expert queries:1387
+15:30:56 INFO  PACOntologyLearningSub - implications:8
+15:30:56 INFO  PACOntologyLearningSub - Samples at this iteration: 14
+15:30:56 INFO  PACOntologyLearningSub - iteration:67
+15:30:56 INFO  PACOntologyLearningSub - auxiliary axioms:683
+15:30:56 INFO  PACOntologyLearningSub - expert queries:1393
+15:30:56 INFO  PACOntologyLearningSub - implications:8
+15:30:56 INFO  PACOntologyLearningSub - Samples at this iteration: 13
+15:30:56 INFO  PACOntologyLearningSub - iteration:68
+15:30:56 INFO  PACOntologyLearningSub - auxiliary axioms:684
+15:30:56 INFO  PACOntologyLearningSub - expert queries:1514
+15:30:56 INFO  PACOntologyLearningSub - implications:8
+15:30:56 INFO  PACOntologyLearningSub - Samples at this iteration: 2
+15:30:56 INFO  PACOntologyLearningSub - iteration:69
+15:30:56 INFO  PACOntologyLearningSub - auxiliary axioms:684
+15:30:56 INFO  PACOntologyLearningSub - expert queries:1514
+15:30:56 INFO  PACOntologyLearningSub - implications:9
+15:30:56 INFO  PACOntologyLearningSub - Samples at this iteration: 5
+15:30:56 INFO  PACOntologyLearningSub - iteration:70
+15:30:56 INFO  PACOntologyLearningSub - auxiliary axioms:684
+15:30:56 INFO  PACOntologyLearningSub - expert queries:1514
+15:30:56 INFO  PACOntologyLearningSub - implications:9
+15:30:56 INFO  PACOntologyLearningSub - Samples at this iteration: 2
+15:30:56 INFO  PACOntologyLearningSub - iteration:71
+15:30:56 INFO  PACOntologyLearningSub - auxiliary axioms:684
+15:30:56 INFO  PACOntologyLearningSub - expert queries:1514
+15:30:56 INFO  PACOntologyLearningSub - implications:9
+15:30:56 INFO  PACOntologyLearningSub - Samples at this iteration: 9
+15:30:56 INFO  PACOntologyLearningSub - iteration:72
+15:30:56 INFO  PACOntologyLearningSub - auxiliary axioms:684
+15:30:56 INFO  PACOntologyLearningSub - expert queries:1514
+15:30:56 INFO  PACOntologyLearningSub - implications:9
+15:30:56 INFO  PACOntologyLearningSub - Samples at this iteration: 6
+15:30:56 INFO  PACOntologyLearningSub - iteration:73
+15:30:56 INFO  PACOntologyLearningSub - auxiliary axioms:684
+15:30:56 INFO  PACOntologyLearningSub - expert queries:1514
+15:30:56 INFO  PACOntologyLearningSub - implications:9
+15:30:56 INFO  PACOntologyLearningSub - Samples at this iteration: 30
+15:30:56 INFO  PACOntologyLearningSub - iteration:74
+15:30:56 INFO  PACOntologyLearningSub - auxiliary axioms:684
+15:30:56 INFO  PACOntologyLearningSub - expert queries:1514
+15:30:56 INFO  PACOntologyLearningSub - implications:9
+15:30:56 INFO  PACOntologyLearningSub - Samples at this iteration: 10
+15:30:56 INFO  PACOntologyLearningSub - iteration:75
+15:30:56 INFO  PACOntologyLearningSub - auxiliary axioms:689
+15:30:56 INFO  PACOntologyLearningSub - expert queries:1519
+15:30:56 INFO  PACOntologyLearningSub - implications:9
+15:30:56 INFO  PACOntologyLearningSub - Samples at this iteration: 1
+15:30:56 INFO  PACOntologyLearningSub - iteration:76
+15:30:56 INFO  PACOntologyLearningSub - auxiliary axioms:691
+15:30:56 INFO  PACOntologyLearningSub - expert queries:1521
+15:30:56 INFO  PACOntologyLearningSub - implications:9
+15:30:57 INFO  PACOntologyLearningSub - Samples at this iteration: 38
+15:30:57 INFO  PACOntologyLearningSub - iteration:77
+15:30:57 INFO  PACOntologyLearningSub - auxiliary axioms:695
+15:30:57 INFO  PACOntologyLearningSub - expert queries:1640
+15:30:57 INFO  PACOntologyLearningSub - implications:9
+15:30:57 INFO  PACOntologyLearningSub - Samples at this iteration: 6
+15:30:57 INFO  PACOntologyLearningSub - iteration:78
+15:30:57 INFO  PACOntologyLearningSub - auxiliary axioms:695
+15:30:57 INFO  PACOntologyLearningSub - expert queries:1640
+15:30:57 INFO  PACOntologyLearningSub - implications:10
+15:30:57 INFO  PACOntologyLearningSub - Samples at this iteration: 4
+15:30:57 INFO  PACOntologyLearningSub - iteration:79
+15:30:57 INFO  PACOntologyLearningSub - auxiliary axioms:695
+15:30:57 INFO  PACOntologyLearningSub - expert queries:1640
+15:30:57 INFO  PACOntologyLearningSub - implications:10
+15:30:57 INFO  PACOntologyLearningSub - Samples at this iteration: 14
+15:30:57 INFO  PACOntologyLearningSub - iteration:80
+15:30:57 INFO  PACOntologyLearningSub - auxiliary axioms:695
+15:30:57 INFO  PACOntologyLearningSub - expert queries:1640
+15:30:57 INFO  PACOntologyLearningSub - implications:10
+15:30:57 INFO  PACOntologyLearningSub - Samples at this iteration: 9
+15:30:57 INFO  PACOntologyLearningSub - iteration:81
+15:30:57 INFO  PACOntologyLearningSub - auxiliary axioms:700
+15:30:57 INFO  PACOntologyLearningSub - expert queries:1645
+15:30:57 INFO  PACOntologyLearningSub - implications:10
+15:30:57 INFO  PACOntologyLearningSub - Samples at this iteration: 8
+15:30:57 INFO  PACOntologyLearningSub - iteration:82
+15:30:57 INFO  PACOntologyLearningSub - auxiliary axioms:706
+15:30:57 INFO  PACOntologyLearningSub - expert queries:1651
+15:30:57 INFO  PACOntologyLearningSub - implications:10
+15:30:57 INFO  PACOntologyLearningSub - Samples at this iteration: 8
+15:30:57 INFO  PACOntologyLearningSub - iteration:83
+15:30:57 INFO  PACOntologyLearningSub - auxiliary axioms:712
+15:30:57 INFO  PACOntologyLearningSub - expert queries:1657
+15:30:57 INFO  PACOntologyLearningSub - implications:10
+15:30:57 INFO  PACOntologyLearningSub - Generated 38 samples
+15:30:57 INFO  PACOntologyLearningSub - Total iterations: 83
+15:30:57 INFO  PACOntologyLearningSub - Expert queries: 1663
+15:30:57 INFO  PACOntologyLearningSub - Samples generated: 554
+15:30:57 INFO  PACOntologyLearningSub - Auxiliary axioms added: 718
