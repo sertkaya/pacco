@@ -1,7 +1,0 @@
-PREFIX wd: <http://www.wikidata.org/entity/>
-PREFIX ex: <http://example.org/> 
-PREFIX wdt: <http://www.wikidata.org/prop/direct/>
-
-SELECT ?s ?o WHERE {
-  ?s wdt:P279 ?o
-}
